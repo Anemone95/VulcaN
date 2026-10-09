@@ -1492,6 +1492,23 @@
     ],
     "note": "Code '(too large)' -> the block's actual first line; lines unchanged. The compiled class is dist/ApolloServer.js lines 17-37."
   },
+  "153_GHSA-jcw8-r9xm-32c6": {
+    "vulnerability_location": [
+      {
+        "source": {
+          "file": "lib/dns-sync.js",
+          "lineno": 19,
+          "code": "cmd = util.format('\"%s\" \"%s\" %s', nodeBinary, scriptPath, hostname);"
+        },
+        "sink": {
+          "file": "node_modules/shelljs/src/exec.js",
+          "lineno": 48,
+          "code": "\"child.exec('\"+escape(cmd)+\"', {env: process.env, maxBuffer: 20*1024*1024}, function(err) {\" +"
+        }
+      }
+    ],
+    "note": "Sink moved from the shell.exec(cmd, {silent: true}) wrapper call to the operation that runs cmd in shelljs 0.2.6: without a callback, exec() takes execSync, which escapes cmd into a generated script (child.exec('...' + escape(cmd) + '...'), line 48), writes it to a temp file (56) and runs it with node (57)."
+  },
   "183_GHSA-ff29-f57w-2mm3": {
     "vulnerability_location": [
       {
@@ -2295,6 +2312,23 @@
       }
     ],
     "note": "Sink moved from infoControl.addInfo(json.attribution) to the innerHTML write in InfoControl._update that addInfo reaches."
+  },
+  "523": {
+    "vulnerability_location": [
+      {
+        "source": {
+          "file": "lib/dns-sync.js",
+          "lineno": 14,
+          "code": "resolve: function resolve(hostname) {"
+        },
+        "sink": {
+          "file": "node_modules/shelljs/src/exec.js",
+          "lineno": 48,
+          "code": "\"child.exec('\"+escape(cmd)+\"', {env: process.env, maxBuffer: 20*1024*1024}, function(err) {\" +"
+        }
+      }
+    ],
+    "note": "Sink moved from the shell.exec(cmd, {silent: true}) wrapper call to the operation that runs cmd in shelljs 0.2.6: without a callback, exec() takes execSync, which escapes cmd into a generated script (child.exec('...' + escape(cmd) + '...'), line 48), writes it to a temp file (56) and runs it with node (57)."
   },
   "531_GHSA-x5pg-88wf-qq4p": {
     "vulnerability_location": [
@@ -3835,6 +3869,19 @@
     ],
     "note": "File path fixed: src/helper/route -> src/helper/route.js."
   },
+  "97_GHSA-r87w-47m8-22w3": {
+    "vulnerability_location": [
+      {
+        "block": {
+          "file": "jsrender.js",
+          "start_lineno": 1789,
+          "end_lineno": 1789,
+          "code": "code = new Function(\"data,view,j,u\", code);"
+        }
+      }
+    ],
+    "note": "Block moved from (0, eval)('this') (lines 16-17, a constant the patch also removed) to the template compilation new Function(\"data,view,j,u\", code) (1789): CVE-2016-3942 is template injection, where an expression in a template tag is compiled into the generated function."
+  },
   "980_GHSA-7qcx-jmrc-h2rr": {
     "vulnerability_location": [
       {
@@ -4043,29 +4090,9 @@
           "lineno": 20,
           "code": "expression = new(Function)('return (' + expression + ')');"
         }
-      },
-      {
-        "source": {
-          "file": "lib/thirdparty/less/functions.js",
-          "lineno": 215,
-          "code": "e: function (str) {"
-        },
-        "sink": {
-          "file": "lib/thirdparty/less/functions.js",
-          "lineno": 216,
-          "code": "return new(tree.Anonymous)(str instanceof tree.JavaScript ? str.evaluated : str);"
-        }
-      },
-      {
-        "block": {
-          "file": "lib/thirdparty/less/parser.js",
-          "start_lineno": 1001,
-          "end_lineno": 1016,
-          "code": "javascript: function () {"
-        }
       }
     ],
-    "note": "Location 0 sink moved to new(Function)('return (' + expression + ')') in tree/javascript.js (20), which the JavaScript node's eval runs; location 1 (Variable eval for @{} interpolation, same source) reaches that same sink and was merged into it. Location 2 file fixed: function.js -> functions.js. Location 3 block moved to the javascript parser at 1001-1016."
+    "note": "Sink moved to new(Function)('return (' + expression + ')') in tree/javascript.js (20), which the JavaScript node's eval runs; location 1 (Variable eval for @{} interpolation, same source) reaches that same sink and was merged into it. The e() escape function (functions.js 215-216) and the parser for `...` JavaScript (parser.js 1001-1016) are not dangerous operations and are not locations."
   },
   "GHSA-4r62-v4vq-hr96": {
     "vulnerability_location": [
@@ -4613,13 +4640,13 @@
       {
         "block": {
           "file": "lib/XMLHttpRequest.js",
-          "start_lineno": 531,
-          "end_lineno": 531,
-          "code": "+ (data ? \"req.write('\" + data.replace(/'/g, \"\\\\'\") + \"');\":\"\")"
+          "start_lineno": 534,
+          "end_lineno": 534,
+          "code": "var syncProc = spawn(process.argv[0], [\"-e\", execString]);"
         }
       }
     ],
-    "note": "Block moved to line 531, where request data is concatenated into the script passed to `spawn(process.argv[0], [\"-e\", execString])`."
+    "note": "Block moved to line 534, spawn(process.argv[0], [\"-e\", execString]), which runs the script into which request data is concatenated (line 531)."
   },
   "GHSA-h6q6-9hqw-rwfv": {
     "vulnerability_location": [
