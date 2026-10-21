@@ -6,5 +6,6 @@ In this repository you will find:
 
 * The curated dataset in **dataset/**;
 * The VulcaN framework and tool docker files in **vulcan/**.
+* The changes from the original dataset (extracted packages, removed advisories, corrected reviews) in **DIFF_WITH_ORIGINAL.md**.
 
 In the dataset directory you will find documentation regarding the structure of the review file and how to interpret it.

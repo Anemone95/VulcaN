@@ -8,11 +8,9 @@
 1016_GHSA-c53x-wwx2-pg96
 1017_GHSA-2598-2f59-rmhq
 1019
-1020_GHSA-w725-67p7-xv22
 1021_GHSA-r3x4-wr4h-pw33
 1025_GHSA-crf7-fvjx-863q
 1028_GHSA-9qgh-7pgp-hp7r
-1029_GHSA-h97g-4mx7-5p2p
 1034_GHSA-5634-rv46-48jf
 1036_GHSA-v9wp-8r97-v6xg
 1037_GHSA-gvff-25cc-4f66
@@ -96,7 +94,6 @@
 1221_GHSA-876r-hj45-fw7g
 1222_GHSA-mfcp-34xw-p57x
 1227_GHSA-gr4j-r575-g665
-123_GHSA-7f59-x49p-v8mq
 124_GHSA-v2jq-9475-r5g8
 125_GHSA-c7pp-g2v2-2766
 126_GHSA-p239-93f7-h6xf
@@ -105,8 +102,6 @@
 1303_GHSA-j27j-4w6m-8fc4
 1305_GHSA-jrj9-5qp6-2v8q
 130_GHSA-qhv9-728r-6jqg
-1311_GHSA-6xc2-mj39-q599
-1316_GHSA-2cf5-4w76-r9qv
 1319_GHSA-3gpc-w23c-w59w
 1321_GHSA-54qm-37qr-w5wq
 1322_GHSA-hrpq-r399-whgw
@@ -254,7 +249,6 @@
 228_GHSA-qjvf-rmwg-64fr
 229_GHSA-747p-jfqv-f43r
 22_GHSA-9cw2-jqp5-7x39
-232_GHSA-4pf7-579w-f4gm
 234_GHSA-c2vr-2c89-ph88
 235_GHSA-7r8m-45gc-m2c8
 237_GHSA-cwp7-92h5-82wx
@@ -313,7 +307,6 @@
 312_GHSA-pjmx-9xr3-82qr
 313_GHSA-mm62-wxc8-cf7m
 314_GHSA-qw3g-35hc-fcrh
-315_GHSA-cwcp-6c48-fm7m
 316_GHSA-pmg9-p9r2-6q87
 317_GHSA-mxjr-xmcg-fg7w
 318_GHSA-q257-vv4p-fg92
@@ -665,7 +658,6 @@
 823_GHSA-984p-xq9m-4rjw
 825_GHSA-3xc7-xg67-pw99
 826_GHSA-pgr8-jg6h-8gw6
-827_GHSA-c35v-qwqg-87jc
 828_GHSA-8948-ffc6-jg52
 829_GHSA-rffp-mc78-wjf7
 830_GHSA-9q64-mpxx-87fg
@@ -716,7 +708,6 @@
 979_GHSA-q43c-g2g7-6gxj
 97_GHSA-r87w-47m8-22w3
 980_GHSA-7qcx-jmrc-h2rr
-981_GHSA-7cv6-gvx3-m54m
 982_GHSA-8fw4-xh83-3j6q
 983_GHSA-j8r2-2x94-2q67
 986_GHSA-vp93-gcx5-4w52
@@ -741,7 +732,6 @@ GHSA-2mm9-c2fx-c7m4
 GHSA-2v5f-23xc-v9qr
 GHSA-333x-qr3v-g4xx
 GHSA-339j-hqgx-qrrx
-GHSA-34r7-q49f-h37c
 GHSA-35g4-qx3c-vjhx
 GHSA-35jh-r3h4-6jhm
 GHSA-35q2-47q7-3pc3
@@ -912,7 +902,6 @@ GHSA-qr9h-vr5p-pwwx
 GHSA-qwp9-52h8-xgg8
 GHSA-qxg5-2qff-p49r
 GHSA-r3j7-x2g5-9gx6
-GHSA-r578-pj6f-r4ff
 GHSA-r9p9-mrjm-926w
 GHSA-r9vm-rhmf-7hxx
 GHSA-rc4q-9m69-gqp8
@@ -927,7 +916,6 @@ GHSA-v2jv-33gh-xx29
 GHSA-v3px-6cc8-f8j3
 GHSA-v659-54cx-g4qr
 GHSA-v756-4whv-48vc
-GHSA-vc9j-fhvv-8vrf
 GHSA-vh5w-fg69-rc8m
 GHSA-vh6r-g38f-q3w8
 GHSA-vh8f-xw5v-8993
