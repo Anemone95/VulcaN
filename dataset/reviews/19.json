@@ -26,37 +26,5 @@
         {
             "url": "https://github.com/vesse/node-ldapauth-fork/commit/3feea43e243698bcaeffa904a7324f4d96df60e4"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "D"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

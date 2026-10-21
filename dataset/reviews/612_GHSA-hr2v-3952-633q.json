@@ -81,37 +81,5 @@
         {
             "url": "https://registry.npmjs.org/deep-extend/-/deep-extend-0.5.1.tgz"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "D"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

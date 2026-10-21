@@ -36,34 +36,5 @@
         {
             "url": "https://github.com/nextauthjs/next-auth/commit/c5bb0ac3646b672047e51a42ebe281d7e7727f02"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "A"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

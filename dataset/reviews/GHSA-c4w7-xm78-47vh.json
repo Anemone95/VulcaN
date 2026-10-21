@@ -35,34 +35,5 @@
         {
             "url": "https://github.com/yargs/y18n/pull/108/commits/e90e8ce71b2fd5aa27c5109884ea47525fde961f"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "D"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

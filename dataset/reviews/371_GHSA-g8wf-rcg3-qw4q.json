@@ -33,37 +33,5 @@
         {
             "file_path": "371_GHSA-g8wf-rcg3-qw4q.patch"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "A"
-        },
-        "njsscan": {
-            "score": "A"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

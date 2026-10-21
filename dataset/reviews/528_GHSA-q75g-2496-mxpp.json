@@ -33,37 +33,5 @@
         {
             "url": "https://github.com/florimondmanca/personal/pull/10/commits/3ab0b985a96a28c1c55744663a7e4e0a4976f0df"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "B"
-        }
-    }
+    ]
 }

@@ -36,34 +36,5 @@
         {
             "url": "https://github.com/manvel-khnkoyan/jpv/commit/e3eec1215caa8d5c560f5e88d0943422831927d6"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

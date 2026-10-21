@@ -24,37 +24,5 @@
         {
             "url": "https://github.com/jshttp/forwarded/commit/d469116eda4931fbe1c0ccb29497b35930bfa328"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "D"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "D"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

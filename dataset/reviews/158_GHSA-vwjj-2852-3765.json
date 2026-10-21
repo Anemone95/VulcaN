@@ -25,37 +25,5 @@
         {
             "url": "https://github.com/caolan/forms/commit/bc01e534a0ff863dedb2026a50bd03153bbc6a5d"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "D"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

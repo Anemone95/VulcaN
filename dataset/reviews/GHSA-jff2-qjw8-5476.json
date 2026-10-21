@@ -109,34 +109,5 @@
                 "https://github.com/sebhildebrandt/systeminformation/commit/7922366d707de7f20995fc8e30ac3153636bf35f#diff-970ae648187190f86bafc8f193b7538200eba164fad0674428b6487582c089cc"
             ]
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "D"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

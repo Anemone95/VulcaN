@@ -33,37 +33,5 @@
         {
             "url": "https://github.com/jonschlinkert/mixin-deep/commit/8f464c8ce9761a8c9c2b3457eaeee9d404fa7af9"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "A"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "D"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

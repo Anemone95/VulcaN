@@ -36,37 +36,5 @@
         {
             "url": "https://github.com/mapbox/mapbox.js/pull/1102/commits/1b393c4178da71930aa06a5d6d0c2318acd3eed8"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "C"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

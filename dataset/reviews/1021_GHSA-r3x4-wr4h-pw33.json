@@ -40,37 +40,5 @@
         {
             "url": "https://github.com/commenthol/safer-eval/compare/v1.3.3...v1.3.4"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

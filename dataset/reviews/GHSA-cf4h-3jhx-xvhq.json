@@ -32,34 +32,5 @@
         {
             "url": "https://github.com/jashkenas/underscore/pull/2917/commits/4c73526d43838ad6ab43a6134728776632adeb66"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "D"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

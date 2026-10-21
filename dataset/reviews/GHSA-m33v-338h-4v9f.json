@@ -80,34 +80,5 @@
         {
             "url": "https://github.com/node-red/node-red/commit/74db3e17d075f23d9c95d7871586cf461524c456"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "A"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

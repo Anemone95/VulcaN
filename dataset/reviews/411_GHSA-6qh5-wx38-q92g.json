@@ -32,37 +32,5 @@
         {
             "file_path": "411_GHSA-6qh5-wx38-q92g.patch"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "A"
-        },
-        "njsscan": {
-            "score": "A"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "appinspector": {
-            "score": "D"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "A"
-        }
-    }
+    ]
 }

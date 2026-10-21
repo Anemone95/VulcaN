@@ -32,37 +32,5 @@
         {
             "url": "https://github.com/npm/marky-markdown/commit/74e4b9d36ba9f784c330d4860294cbd420bd2a73"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

@@ -316,34 +316,5 @@
         {
             "url": "https://github.com/PrismJS/prism/commit/c2f6a64426f44497a675cb32dccb079b3eff1609"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "A"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "A"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "A"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

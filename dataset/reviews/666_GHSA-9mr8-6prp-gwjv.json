@@ -25,37 +25,5 @@
         ]
     },
     "poc": [],
-    "patch": [],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "A"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "appinspector": {
-            "score": "D"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "A"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    "patch": []
 }

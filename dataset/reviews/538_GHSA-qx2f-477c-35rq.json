@@ -24,37 +24,5 @@
         {
             "url": "https://github.com/expressjs/method-override/releases/tag/3.0.0"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "D"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

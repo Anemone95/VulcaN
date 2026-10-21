@@ -29,37 +29,5 @@
             "url": "https://github.com/JacksonGL/NPM-Vuln-PoC/tree/master/directory-traversal/datachannel-client"
         }
     ],
-    "patch": [],
-    "tools": {
-        "codeql": {
-            "score": "A"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "C"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "A"
-        }
-    }
+    "patch": []
 }

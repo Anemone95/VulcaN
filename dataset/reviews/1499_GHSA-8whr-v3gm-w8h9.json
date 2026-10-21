@@ -68,37 +68,5 @@
         {
             "url": "https://github.com/mithunsatheesh/node-rules/commit/100862223904bb6478fcc33b701c7dee11f7b832"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "B"
-        },
-        "mosca": {
-            "score": "A"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

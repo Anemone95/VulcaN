@@ -27,37 +27,5 @@
         {
             "code": "var gnuplot = require('gnuplot'); \n    const title = '\"\\nset title system(\"touch testing\")\\n#'; \n    gnuplot() .set('term png') .set('output \"out.png\"') .set(title \"${title}\") .set('xrange [-10:10]') .set('yrange [-2:2]') .set('zeroaxis') .plot('(x/4)**2, sin(x), 1/x') .end();"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

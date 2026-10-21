@@ -30,37 +30,5 @@
         {
             "file_path": "810_GHSA-pqpp-2363-649v.patch"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "B"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

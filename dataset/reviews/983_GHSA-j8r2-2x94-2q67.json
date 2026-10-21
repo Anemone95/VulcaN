@@ -32,37 +32,5 @@
         {
             "url": "https://github.com/bpmn-io/diagram-js-direct-editing/pull/14/files#diff-7ea87a29ebfaccded6f49d61a0def9d5aaffd5bfff92d7e0707cf4c2f1e5a7ea"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "E"
-        },
-        "appinspector": {
-            "score": "D"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

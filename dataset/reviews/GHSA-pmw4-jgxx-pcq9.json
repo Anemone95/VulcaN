@@ -92,34 +92,5 @@
         {
             "url": "https://github.com/QuorumDMS/ftp-srv/commit/457b859450a37cba10ff3c431eb4aa67771122e3"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "A"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "A"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

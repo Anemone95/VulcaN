@@ -29,37 +29,5 @@
         {
             "url": "https://github.com/Strider-CD/strider-sauce/commit/5ff6d6593f89aee505b4e86958ab6f8898baa9eb"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "A"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "A"
-        },
-        "msdevskim": {
-            "score": "A"
-        },
-        "drek": {
-            "score": "C"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

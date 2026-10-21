@@ -45,37 +45,5 @@
         {
             "url": "https://github.com/tnantoka/public/commit/eae8ad8017b260f8667ded5e12801bd72b877af2"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "A"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "appinspector": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "D"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

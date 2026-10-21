@@ -32,37 +32,5 @@
         {
             "url": ""
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "E"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "A"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

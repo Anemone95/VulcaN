@@ -29,37 +29,5 @@
         {
             "url": "https://github.com/parse-community/parse-server/commit/73b0f9a339b81f5d757725dc557955a7b670a3ec"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "E"
-        },
-        "drek": {
-            "score": "C"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "E"
-        },
-        "insidersec": {
-            "score": "B"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

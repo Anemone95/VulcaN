@@ -98,34 +98,5 @@
         {
             "url": "https://github.com/xmldom/xmldom/commit/d4201b9dfbf760049f457f9f08a3888d48835135#diff-6094f8bdb5be3b3a86a672a54ee51bde18b2cfa939c46149c4c7934839b9d2f0"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

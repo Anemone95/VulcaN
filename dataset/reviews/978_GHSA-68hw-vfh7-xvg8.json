@@ -33,37 +33,5 @@
         {
             "url": "https://github.com/BodCar/CSF/blob/main/1/L3/978/Patch/patch.js"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "A"
-        },
-        "njsscan": {
-            "score": "A"
-        },
-        "graudit": {
-            "score": "A"
-        },
-        "insidersec": {
-            "score": "B"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "B"
-        },
-        "msdevskim": {
-            "score": "B"
-        },
-        "drek": {
-            "score": "B"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

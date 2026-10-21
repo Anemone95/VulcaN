@@ -33,37 +33,5 @@
         {
             "file_path": "366_GHSA-rx32-c25r-79mx.patch"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "A"
-        },
-        "njsscan": {
-            "score": "A"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "appinspector": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "odgen": {
-            "score": "A"
-        }
-    }
+    ]
 }

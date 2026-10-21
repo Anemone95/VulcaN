@@ -32,34 +32,5 @@
         {
             "url": "https://github.com/JefferyHus/es6-crawler-detect/pull/27/commits/2e525feb4774f572f5e6fd71583ea61df1443f82"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "C"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

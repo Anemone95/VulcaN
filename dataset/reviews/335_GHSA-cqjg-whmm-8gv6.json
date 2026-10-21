@@ -29,37 +29,5 @@
         {
             "url": "https://github.com/hapijs/hapi/commit/770cc7bad15122f796d938738b7c05b66d2f4b7f"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

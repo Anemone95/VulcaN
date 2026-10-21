@@ -33,37 +33,5 @@
         {
             "url": "https://github.com/sequelize/sequelize/commit/c03a18e2671fbea68a2d6aedfa44b8da8f7c36a8?branch=c03a18e2671fbea68a2d6aedfa44b8da8f7c36a8&diff=unified"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "C"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

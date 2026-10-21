@@ -36,34 +36,5 @@
         {
             "url": "https://github.com/matrix-org/matrix-react-sdk/commit/b386f0c73b95ecbb6ea7f8f79c6ff5171a8dedd1#diff-15e77fa5a9955f111e58faf80b8d44ab81b4dab5e6f9f8273fc4e6eeb06793d6"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "C"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

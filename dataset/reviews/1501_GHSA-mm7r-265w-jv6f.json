@@ -33,37 +33,5 @@
         {
             "url": "https://github.com/transloadit/uppy/pull/2083/commits/35d51b5d12c7e0b7a5911d3c7c9bb74334176acd"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "B"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

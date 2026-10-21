@@ -32,34 +32,5 @@
         {
             "url": "https://github.com/Turistforeningen/node-im-resize/commit/de624dacf6a50e39fe3472af1414d44937ce1f03"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "A"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "D"
-        },
-        "insidersec": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "A"
-        }
-    }
+    ]
 }

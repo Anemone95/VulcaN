@@ -28,37 +28,5 @@
             "url": "https://github.com/gf3/sandbox/issues/50"
         }
     ],
-    "patch": [],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "B"
-        },
-        "mosca": {
-            "score": "B"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    "patch": []
 }

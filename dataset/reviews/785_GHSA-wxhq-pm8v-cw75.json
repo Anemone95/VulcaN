@@ -28,37 +28,5 @@
         {
             "url": "https://github.com/jakubpawlowicz/clean-css/commit/2929bafbf8cdf7dccb24e0949c70833764fa87e3"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "B"
-        },
-        "njsscan": {
-            "score": "A"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "D"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

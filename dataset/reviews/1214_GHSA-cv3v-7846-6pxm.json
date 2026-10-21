@@ -32,37 +32,5 @@
         {
             "url": "https://github.com/gabrielcsapo/node-git-server/pull/62/commits/dbb81fb1e7fd44e897046a0acbfe032bb49d800f"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "C"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

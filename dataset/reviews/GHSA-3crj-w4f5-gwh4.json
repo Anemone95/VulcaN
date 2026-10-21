@@ -35,34 +35,5 @@
         {
             "url": "https://github.com/SAP/less-openui5/commit/c0d3a8572974a20ea6cee42da11c614a54f100e8#diff-6b69dff5fb9d0cc8e3a12aadc300daae3ac2afd10b283cf00b41ef568514e85c"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "A"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

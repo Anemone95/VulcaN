@@ -33,37 +33,5 @@
         {
             "url": "https://github.com/marcbachmann/node-html-pdf/pull/556/files/7e8f6a72746c8454581089d398935d547bfc1536"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

@@ -25,37 +25,5 @@
             "url": "https://www.npmjs.com/advisories/38#proof-of-concept"
         }
     ],
-    "patch": [],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "C"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    "patch": []
 }

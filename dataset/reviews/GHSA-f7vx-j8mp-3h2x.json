@@ -44,34 +44,5 @@
         {
             "url": "https://github.com/eclipse-theia/theia/commit/b212d07f915df1509180944ee3132714bc2636bf#diff-0084a93dcfe85de37559201b19bc019b21a84393d33b40036df20aad9b4a2d4d"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "A"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

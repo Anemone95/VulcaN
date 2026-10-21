@@ -29,37 +29,5 @@
             "url": "https://github.com/JacksonGL/NPM-Vuln-PoC/tree/master/directory-traversal/jn_jj_server"
         }
     ],
-    "patch": [],
-    "tools": {
-        "codeql": {
-            "score": "A"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "C"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "A"
-        }
-    }
+    "patch": []
 }

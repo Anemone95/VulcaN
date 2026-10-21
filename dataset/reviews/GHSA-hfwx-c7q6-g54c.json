@@ -58,34 +58,5 @@
         {
             "url": "https://github.com/highcharts/node-export-server/commit/53fa992a96785a5a08390e55ec30ea2ad217dfe6#diff-1b48bb429de959672dadab9c87c215e19177dd70e3bd932d131ce74294c44cd5"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "A"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "C"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

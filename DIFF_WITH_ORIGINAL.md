@@ -2,9 +2,10 @@
 
 This repository holds the VulcaN dataset of reviewed npm advisories, prepared for taint analysis with
 jelly-taint (jelly-benchmarks, `misc/taint/vulcan/`). The original dataset is the state of commit `e72589b4a`
-(2023-04-04, the last commit of the VulcaN authors): 957 advisory reviews. This repository differs from it in three
-ways: the packages are extracted with their dependencies installed, 12 advisories are removed, and the
-vulnerability locations of 199 reviews are corrected. It holds 945 advisory reviews.
+(2023-04-04, the last commit of the VulcaN authors): 957 advisory reviews. This repository differs from it in four
+ways: the packages are extracted with their dependencies installed, 12 advisories are removed, the
+vulnerability locations of 199 reviews are corrected, and the reviews no longer hold the scores of the
+vulnerability detection tools. It holds 945 advisory reviews.
 
 ## 1. Extracted packages
 
@@ -244,3 +245,9 @@ reviews are unchanged.
 - GHSA-w46j-8hm6-h8mm: Location 0: the innerHTML write (line 192) is the sink; source set to the legend text read `let text = legendFormatter(legendNames[i], ...)` (line 96). Location 1: code corrected to `ttYLabel.innerHTML = seriesName ? seriesName : ''`.
 - GHSA-whq6-mj2r-mjqc: File path corrected to lib/lsof.js.
 - GHSA-xmxh-g7wj-8m4m: File path corrected to lib/curl-transport.js.
+
+## 4. Removed tool scores
+
+The `tools` field of every review, the scores (A to D) of the vulnerability detection tools of the VulcaN study
+(codeql, njsscan, graudit, insidersec, eslint, msdevskim, drek, mosca, odgen, appinspector), is removed, and so is
+its description in `dataset/README.md`. The outputs of those tools in `dataset/packages/<id>/` are unchanged.

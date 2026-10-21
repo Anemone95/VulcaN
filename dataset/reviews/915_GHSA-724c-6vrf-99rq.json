@@ -32,37 +32,5 @@
         {
             "url": "https://github.com/strongloop/loopback/pull/4208/commits/58a0e6c8e95c346442a055510bc14e36207e7d85"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "A"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "D"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "B"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

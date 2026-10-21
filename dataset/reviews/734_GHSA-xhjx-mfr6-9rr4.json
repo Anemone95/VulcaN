@@ -32,37 +32,5 @@
         {
             "url": "https://github.com/natalan/samsung-remote/commit/064f3cfc14397d5d1b96d19d7696354540077e80#diff-d900091fe9d498719ee1a0684ef1003dde79320c7e660a0fb7108725bb413c05"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "A"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

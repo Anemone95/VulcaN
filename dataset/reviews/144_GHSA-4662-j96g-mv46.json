@@ -33,37 +33,5 @@
         {
             "url": "https://github.com/MoOx/reduce-css-calc/commit/aebe8f7adce937c0fec4c1315e4113ef74cadb6a"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "A"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "B"
-        },
-        "mosca": {
-            "score": "A"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

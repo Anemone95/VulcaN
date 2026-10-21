@@ -29,37 +29,5 @@
         {
             "url": "https://github.com/http-party/node-http-proxy/commit/07c8d2ee6017264c3d4deac9f42ca264a3740b48"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

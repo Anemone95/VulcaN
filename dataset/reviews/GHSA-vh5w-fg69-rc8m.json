@@ -28,34 +28,5 @@
         {
             "url": "https://github.com/google/closure-library/commit/294fc00b01d248419d8f8de37580adf2a0024fc9"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "D"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "A"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "C"
-        },
-        "mosca": {
-            "score": "B"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

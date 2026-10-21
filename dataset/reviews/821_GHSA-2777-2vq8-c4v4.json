@@ -33,37 +33,5 @@
         {
             "url": "https://github.com/sequelize/sequelize/pull/10746/files"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "C"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "B"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "A"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

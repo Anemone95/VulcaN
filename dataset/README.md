@@ -39,17 +39,3 @@ Each advisory review contains:
 - **Proof of Concept**: Exploit which proves the existence of the reported vulnerability. It can be an URL referenced by the reporter in the advisory or the name of a file created by the reviewer and located in the *pocs/* directory.
 
 - **Patch**: A possible fix to eliminate the reported vulnerability. It can be an URL referenced by the reporter in the advisory or the name of a file created by the reviewer and located in the *patches/* directory.
-
-- **Tools' Outputs**: Characterized according to a common discrete classification score:
-
-    - **Score A:** The tool correctly detects and classifies the
-    vulnerability reported in the advisory (true positive).
-
-    - **Score B:** The tool shows a warning for the vulnerable
-    code, but does not explicitly classify the finding as a
-    vulnerability (true positive).
-
-    - **Score C:** The tool only shows results that do not match
-    the vulnerability in the advisory report (false positives).
-
-    - **Score D:** The tool produces no output (false negative).

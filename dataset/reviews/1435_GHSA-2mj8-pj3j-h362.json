@@ -27,37 +27,5 @@
         {
             "url": "https://github.com/npm/bin-links/commit/642cd1890d1e0ca32b5f9ceadc6a587d94a63d69#diff-e727e4bdf3657fd1d798edcd6b099d6e092f8573cba266154583a746bba0f346"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "D"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

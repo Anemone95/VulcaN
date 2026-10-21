@@ -32,37 +32,5 @@
         {
             "url": "https://github.com/mateodelnorte/meta-git/commit/affdd44225d79398b3f8d5eb6183089126bba8c6#diff-8df1c1bf0978668ace12f643bb79cb53c0edcce0fae974090d5095f35239de47"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "B"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    ]
 }

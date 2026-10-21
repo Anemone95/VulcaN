@@ -28,34 +28,5 @@
         {
             "url": "https://github.com/waysact/webpack-subresource-integrity/commit/3d7090c08c333fcfb10ad9e2d6cf72e2acb7d87f#diff-94ba8b0c5acdee689d3ddbfabace19ca52b5e65fd3950d35394ae79101178e01"
         }
-    ],
-    "tools": {
-        "codeql": {
-            "score": "C"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "C"
-        },
-        "drek": {
-            "score": "D"
-        },
-        "mosca": {
-            "score": "D"
-        },
-        "odgen": {
-            "score": "C"
-        }
-    }
+    ]
 }

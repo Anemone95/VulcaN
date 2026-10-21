@@ -51,37 +51,5 @@
             "url": "https://github.com/espadrine/localeval/issues/9"
         }
     ],
-    "patch": [],
-    "tools": {
-        "codeql": {
-            "score": "D"
-        },
-        "njsscan": {
-            "score": "D"
-        },
-        "drek": {
-            "score": "B"
-        },
-        "mosca": {
-            "score": "C"
-        },
-        "msdevskim": {
-            "score": "D"
-        },
-        "appinspector": {
-            "score": "C"
-        },
-        "eslint": {
-            "score": "C"
-        },
-        "insidersec": {
-            "score": "D"
-        },
-        "graudit": {
-            "score": "B"
-        },
-        "odgen": {
-            "score": "D"
-        }
-    }
+    "patch": []
 }
