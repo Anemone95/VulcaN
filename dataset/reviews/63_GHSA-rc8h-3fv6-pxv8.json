@@ -12,12 +12,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "transmit.js",
+                    "file": "lib/transmit.js",
                     "lineno": 74,
                     "code": "var ifModifiedSinceHeader = request.headers['if-modified-since'];"
                 },
                 "sink": {
-                    "file": "transmit.js",
+                    "file": "lib/transmit.js",
                     "lineno": 82,
                     "code": "var ifModifiedSince = internals.parseDate(ifModifiedSinceHeader);"
                 }

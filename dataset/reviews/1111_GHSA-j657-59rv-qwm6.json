@@ -17,9 +17,9 @@
                     "code": "let _content = await content( ctx, fullStaticPath )"
                 },
                 "sink": {
-                    "file": "file.js",
-                    "lineno": 10,
-                    "code": " let content = fs.readFileSync(filePath, 'binary' )"
+                    "file": "index.js",
+                    "lineno": 44,
+                    "code": "ctx.body = _content"
                 }
             }
         ]

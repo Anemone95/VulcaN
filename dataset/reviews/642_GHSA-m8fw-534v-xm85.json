@@ -16,7 +16,7 @@
                     "code": "const link = prefix + FS + path + file.name;"
                 },
                 "sink": {
-                    "file": "commmon/cloudfunc.js",
+                    "file": "common/cloudfunc.js",
                     "lineno": 203,
                     "code": "return rendy(templateFile, {"
                 }

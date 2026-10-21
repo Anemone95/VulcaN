@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "oled-exp.js",
+                    "file": "src/oled-exp.js",
                     "lineno": 90,
                     "code": "scroll: function (direction) {"
                 },
                 "sink": {
-                    "file": "oled-exp.js",
+                    "file": "src/oled-exp.js",
                     "lineno": 91,
                     "code": "return exec(oledExecutable + ' write ' + direction);"
                 }

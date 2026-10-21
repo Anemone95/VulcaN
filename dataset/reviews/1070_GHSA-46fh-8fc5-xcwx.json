@@ -11,10 +11,10 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "lodash.js",
+                    "file": "index.js",
                     "start_lineno": 853,
                     "end_lineno": 858,
-                    "code": "(assignMergeValue is vulnerable)"
+                    "code": "function assignMergeValue(object, key, value) {"
                 }
             }
         ]

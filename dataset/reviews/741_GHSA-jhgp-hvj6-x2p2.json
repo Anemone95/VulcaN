@@ -13,13 +13,13 @@
             {
                 "source": {
                     "file": "index.js",
-                    "lineno": 126,
-                    "code": "var absolute = resolve(root, pathname);"
+                    "lineno": 160,
+                    "code": "var result = yield *read(decodeURI(req.pathname));"
                 },
                 "sink": {
                     "file": "index.js",
-                    "lineno": 133,
-                    "code": "data: yield fs.readFile(absolute)"
+                    "lineno": 79,
+                    "code": "return util.format(TEMPLATE, base, base, list);"
                 }
             }
         ]

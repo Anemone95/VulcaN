@@ -18,8 +18,8 @@
                 },
                 "sink": {
                     "file": "http-file-server.js",
-                    "lineno": 168,
-                    "code": ".replace(/#LINK#/g, './'+name+'/')"
+                    "lineno": 194,
+                    "code": "res.end(html);"
                 }
             }
         ]

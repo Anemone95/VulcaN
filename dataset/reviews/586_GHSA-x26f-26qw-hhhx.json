@@ -54,7 +54,7 @@
                 },
                 "sink": {
                     "file": "bin/hekto.js",
-                    "lineno": 106,
+                    "lineno": 116,
                     "code": "this.body = fs.createReadStream(file);"
                 }
             },
@@ -115,7 +115,7 @@
                 "sink": {
                     "file": "bin/hekto.js",
                     "lineno": 183,
-                    "code": "tif (fs.existsSync(file + '.html') && fs.lstatSync(file + '.html').isFile()) {"
+                    "code": "if (fs.existsSync(file + '.html') && fs.lstatSync(file + '.html').isFile()) {"
                 }
             },
             {

@@ -11,38 +11,38 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "package/plotter.js",
+                    "file": "plotter.js",
                     "lineno": 87,
                     "code": "function setup_gnuplot(gnuplot, options) {"
                 },
                 "sink": {
-                    "file": "package/plotter.js",
+                    "file": "plotter.js",
                     "lineno": 106,
-                    "code": "gnuplot.stdin.write('set title \"'+options.title+'\"\n');"
+                    "code": "gnuplot.stdin.write('set title \"'+options.title+'\"\\n');"
                 }
             },
             {
                 "source": {
-                    "file": "package/plotter.js",
+                    "file": "plotter.js",
                     "lineno": 87,
                     "code": "function setup_gnuplot(gnuplot, options) {"
                 },
                 "sink": {
-                    "file": "package/plotter.js",
+                    "file": "plotter.js",
                     "lineno": 112,
-                    "code": "gnuplot.stdin.write('set xlabel \"'+options.xlabel+'\"\n');"
+                    "code": "gnuplot.stdin.write('set xlabel \"'+options.xlabel+'\"\\n');"
                 }
             },
             {
                 "source": {
-                    "file": "package/plotter.js",
+                    "file": "plotter.js",
                     "lineno": 87,
                     "code": "function setup_gnuplot(gnuplot, options) {"
                 },
                 "sink": {
-                    "file": "package/plotter.js",
+                    "file": "plotter.js",
                     "lineno": 115,
-                    "code": "gnuplot.stdin.write('set ylabel \"'+options.ylabel+'\"\n');"
+                    "code": "gnuplot.stdin.write('set ylabel \"'+options.ylabel+'\"\\n');"
                 }
             }
         ]

@@ -12,7 +12,7 @@
             {
                 "source": {
                     "file": "index.js",
-                    "lineno": 53,
+                    "lineno": 54,
                     "code": "function mwParse(req, res, cb) { that.mwParse(req, res, cb); },"
                 },
                 "sink": {

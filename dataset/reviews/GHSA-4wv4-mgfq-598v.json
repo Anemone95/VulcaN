@@ -10,12 +10,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "index.js",
+                    "file": "lib/index.js",
                     "lineno": 12,
                     "code": "constructor(data) {"
                 },
                 "sink": {
-                    "file": "index.js",
+                    "file": "lib/index.js",
                     "lineno": 13,
                     "code": "this.laureates = eval(`(${data})`).laureates;"
                 }

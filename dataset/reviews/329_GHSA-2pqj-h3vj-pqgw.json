@@ -18,8 +18,8 @@
                 },
                 "sink": {
                     "file": "tmp/jquery.js",
-                    "lineno": 119,
-                    "code": "               match = rquickExpr.exec( selector );"
+                    "lineno": 6325,
+                    "code": "div.innerHTML = wrap[1] + elem + wrap[2];"
                 }
             },
             {
@@ -30,8 +30,8 @@
                 },
                 "sink": {
                     "file": "lib/node-jquery.js",
-                    "lineno": 144,
-                    "code": "               match = rquickExpr.exec( selector );"
+                    "lineno": 6350,
+                    "code": "div.innerHTML = wrap[1] + elem + wrap[2];"
                 }
             }
         ]

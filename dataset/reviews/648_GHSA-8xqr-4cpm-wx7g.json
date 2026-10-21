@@ -11,10 +11,10 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "ReactSVG.js",
+                    "file": "dist/ReactSVG.js",
                     "start_lineno": 203,
                     "end_lineno": 203,
-                    "code": " evalScripts: 'once',"
+                    "code": "evalScripts: 'once',"
                 }
             }
         ]

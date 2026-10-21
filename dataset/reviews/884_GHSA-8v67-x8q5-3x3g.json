@@ -12,12 +12,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "lib/simeditor.js",
+                    "file": "lib/simditor.js",
                     "lineno": 2345,
                     "code": "_this.editor.body.get(0).innerHTML = state.html;"
                 },
                 "sink": {
-                    "file": "lib/simeditor.js",
+                    "file": "lib/simditor.js",
                     "lineno": 2366,
                     "code": "return callback(pasteContent);"
                 }

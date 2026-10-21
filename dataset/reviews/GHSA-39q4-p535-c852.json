@@ -11,10 +11,10 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "lib/index.js",
+                    "file": "php/net-gopher/gopher_parsedir.js",
                     "start_lineno": 28,
-                    "end_lineno": 28,
-                    "code": "var entryPattern = /^(.)(.*?)\t(.*?)\t(.*?)\t(.*?)\r\n$/;"
+                    "end_lineno": 29,
+                    "code": "var entryPattern = /^(.)(.*?)\\t(.*?)\\t(.*?)\\t(.*?)\\u000d\\u000a$/;"
                 }
             }
         ]

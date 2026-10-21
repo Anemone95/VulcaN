@@ -13,12 +13,12 @@
                 "source": {
                     "file": "underscore.js",
                     "lineno": 875,
-                    "code": "function template(text, settings, oldSettings) {) {"
+                    "code": "function template(text, settings, oldSettings) {"
                 },
                 "sink": {
                     "file": "underscore.js",
-                    "lineno": 922,
-                    "code": "return render.call(this, data, _);"
+                    "lineno": 915,
+                    "code": "render = new Function(settings.variable || 'obj', '_', source);"
                 }
             }
         ]

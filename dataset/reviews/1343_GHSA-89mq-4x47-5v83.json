@@ -12,14 +12,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "src/angular.js",
-                    "lineno": 324,
+                    "file": "angular.js",
+                    "lineno": 463,
                     "code": "function baseExtend(dst, objs, deep) {"
                 },
                 "sink": {
-                    "file": "src/angular.js",
-                    "lineno": 346,
-                    "code": "baseExtend(dst[key], [src], true);"
+                    "file": "angular.js",
+                    "lineno": 488,
+                    "code": "dst[key] = src;"
                 }
             }
         ]

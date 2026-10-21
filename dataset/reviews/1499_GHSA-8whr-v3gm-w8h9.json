@@ -18,7 +18,7 @@
                 "sink": {
                     "file": "lib/node-rules.js",
                     "lineno": 152,
-                    "code": "rule.condition = eval(rule.condition);"
+                    "code": "rule.condition = eval(\"(\" + rule.condition + \")\");"
                 }
             },
             {
@@ -30,7 +30,7 @@
                 "sink": {
                     "file": "lib/node-rules.js",
                     "lineno": 153,
-                    "code": "rule.consequence = eval( rule.consequence);"
+                    "code": "rule.consequence = eval(\"(\" + rule.consequence + \")\");"
                 }
             },
             {
@@ -42,7 +42,7 @@
                 "sink": {
                     "file": "lib/node-rules.js",
                     "lineno": 157,
-                    "code": "rules.condition = eval( rules.condition );"
+                    "code": "rules.condition = eval(\"(\" + rules.condition + \")\");"
                 }
             },
             {
@@ -54,7 +54,7 @@
                 "sink": {
                     "file": "lib/node-rules.js",
                     "lineno": 158,
-                    "code": "rules.consequence = eval(rules.consequence);"
+                    "code": "rules.consequence = eval(\"(\" + rules.consequence + \")\");"
                 }
             }
         ]

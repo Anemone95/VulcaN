@@ -14,7 +14,7 @@
                     "file": "index.js",
                     "start_lineno": 116,
                     "end_lineno": 285,
-                    "code": "Code is too large"
+                    "code": "const compare = (value, pattern, options) => {"
                 }
             },
             {
@@ -22,7 +22,7 @@
                     "file": "index.js",
                     "start_lineno": 372,
                     "end_lineno": 446,
-                    "code": "Code is too large"
+                    "code": "const iterate = (value, pattern, valid, cb, options) => {"
                 }
             }
         ]

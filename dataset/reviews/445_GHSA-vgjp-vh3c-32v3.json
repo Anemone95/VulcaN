@@ -17,7 +17,7 @@
                     "code": "app.use((req, res, next) => {"
                 },
                 "sink": {
-                    "file": "mock.js",
+                    "file": "mocks.js",
                     "lineno": 73,
                     "code": "var contentString = fs.readFileSync(filename, {"
                 }

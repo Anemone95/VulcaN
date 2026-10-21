@@ -10,13 +10,13 @@
     "vulnerability": {
         "vulnerability_location": [
             {
-                "sink": {
-                    "file": "middleware.js",
-                    "lineno": 62,
-                    "code": "router.post('/', function(req, res, next){"
-                },
                 "source": {
-                    "file": "controller.js",
+                    "file": "src/middleware.js",
+                    "lineno": 63,
+                    "code": "var params = req.body;"
+                },
+                "sink": {
+                    "file": "src/controller.js",
                     "lineno": 140,
                     "code": "var child = spawn(cmd, params.args, {"
                 }

@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "model.js",
+                    "file": "lib/model.js",
                     "lineno": 50,
                     "code": "function all_generator(temp){"
                 },
                 "sink": {
-                    "file": "model.js",
+                    "file": "lib/model.js",
                     "lineno": 53,
                     "code": "con.query(\"SELECT * FROM \" + temp.model + \";\",function (e,data){"
                 }

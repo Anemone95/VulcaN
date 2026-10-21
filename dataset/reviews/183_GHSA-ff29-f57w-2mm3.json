@@ -12,14 +12,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "updatedb.js",
-                    "lineno": 242,
-                    "code": "async.forEachSeries(databases, function(database, nextDatabase) {"
-                },
-                "sink": {
-                    "file": "updatedb.js",
+                    "file": "scripts/updatedb.js",
                     "lineno": 32,
                     "code": "url: 'http://geolite.maxmind.com/download/geoip/database/GeoIPCountryCSV.zip',"
+                },
+                "sink": {
+                    "file": "scripts/updatedb.js",
+                    "lineno": 117,
+                    "code": "var client = http.get(getOptions(), onResponse);"
                 }
             }
         ]

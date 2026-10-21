@@ -12,24 +12,24 @@
             {
                 "source": {
                     "file": "lib/mongodb.js",
-                    "lineno": 1197,
+                    "lineno": 1196,
                     "code": "MongoDB.prototype.all = function all(model, filter, options, callback) {"
                 },
                 "sink": {
                     "file": "lib/mongodb.js",
-                    "lineno": 1216,
+                    "lineno": 1215,
                     "code": "this.execute(model, 'find', query, findOpts, processResponse);"
                 }
             },
             {
                 "source": {
                     "file": "lib/mongodb.js",
-                    "lineno": 1197,
+                    "lineno": 1196,
                     "code": "MongoDB.prototype.all = function all(model, filter, options, callback) {"
                 },
                 "sink": {
                     "file": "lib/mongodb.js",
-                    "lineno": 1218,
+                    "lineno": 1217,
                     "code": "this.execute(model, 'find', query, processResponse);"
                 }
             }

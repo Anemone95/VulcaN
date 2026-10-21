@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "package/source/index.js",
+                    "file": "src/index.js",
                     "lineno": 17,
                     "code": "setStatus(service, status) {"
                 },
                 "sink": {
-                    "file": "package/source/index.js",
+                    "file": "src/index.js",
                     "lineno": 18,
                     "code": "this.statusMap[service] = status;"
                 }

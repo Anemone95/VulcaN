@@ -17,9 +17,9 @@
                     "code": "_initialize: function(json) {"
                 },
                 "sink": {
-                    "file": "src/map.js",
-                    "lineno": 146,
-                    "code": "this.infoControl.addInfo(json.attribution);"
+                    "file": "src/info_control.js",
+                    "lineno": 87,
+                    "code": "this._content.innerHTML += info.join(' | ');"
                 }
             }
         ]

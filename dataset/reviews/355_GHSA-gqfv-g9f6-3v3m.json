@@ -19,7 +19,7 @@
                 "sink": {
                     "file": "index.js",
                     "lineno": 5,
-                    "code": "fs.readFile*path,function(error,data){"
+                    "code": "fs.readFile(path,function(error,data){"
                 }
             }
         ]

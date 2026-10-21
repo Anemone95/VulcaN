@@ -17,7 +17,7 @@
                 },
                 "sink": {
                     "file": "lib/index.js",
-                    "lineno": 305,
+                    "lineno": 100,
                     "code": "const decoder = (this.settings.decoders || internals.decoders)[contentEncoding];"
                 }
             }

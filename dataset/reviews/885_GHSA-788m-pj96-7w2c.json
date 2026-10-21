@@ -41,8 +41,20 @@
                 },
                 "sink": {
                     "file": "src/definitions/modules/dropdown.js",
-                    "lineno": 728,
-                    "code": "module.add.userSuggestion(query);"
+                    "lineno": 2761,
+                    "code": ".html(html)"
+                }
+            },
+            {
+                "source": {
+                    "file": "src/definitions/modules/dropdown.js",
+                    "lineno": 692,
+                    "code": "filter: function(query) {"
+                },
+                "sink": {
+                    "file": "src/definitions/modules/dropdown.js",
+                    "lineno": 214,
+                    "code": ".html(html)"
                 }
             }
         ]

@@ -18,8 +18,8 @@
                 },
                 "sink": {
                     "file": "lib/send.js",
-                    "lineno": 445,
-                    "code": "access = parts[parts.length - 1][0] === '.'"
+                    "lineno": 648,
+                    "code": "var stream = fs.createReadStream(path, options);"
                 }
             }
         ]

@@ -12,8 +12,8 @@
             {
                 "source": {
                     "file": "common/models/user.js",
-                    "lineno": 208,
-                    "code": " var query = self.normalizeCredentials(credentials, realmRequired,realmDelimiter);"
+                    "lineno": 232,
+                    "code": "var query = self.normalizeCredentials(credentials, realmRequired,"
                 },
                 "sink": {
                     "file": "common/models/user.js",

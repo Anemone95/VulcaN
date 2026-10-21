@@ -17,19 +17,7 @@
                 },
                 "sink": {
                     "file": "lib/ecstatic.js",
-                    "lineno": 378,
-                    "code": "url: (handleError ? `/${path.join(baseDir, `404.${defaultExt}`)}` : req.url),"
-                }
-            },
-            {
-                "source": {
-                    "file": "lib/ecstatic.js",
-                    "lineno": 175,
-                    "code": "return function middleware(req, res, next) {"
-                },
-                "sink": {
-                    "file": "lib/ecstatic.js",
-                    "lineno": 396,
+                    "lineno": 395,
                     "code": "res.setHeader('location', `${parsed.pathname}/${q}`);"
                 }
             }

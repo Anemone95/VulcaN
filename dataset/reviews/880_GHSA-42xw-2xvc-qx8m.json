@@ -12,10 +12,10 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "lib/adaptares/http.js",
+                    "file": "lib/adapters/http.js",
                     "start_lineno": 183,
                     "end_lineno": 186,
-                    "code": "if (config.maxContentLength > -1 && Buffer.concat(responseBuffer).length > config.maxContentLength) {|reject(createError('maxContentLength size of ' + config.maxContentLength + ' exceeded',|config, null, lastRequest));|}"
+                    "code": "if (config.maxContentLength > -1 && Buffer.concat(responseBuffer).length > config.maxContentLength) {"
                 }
             }
         ]

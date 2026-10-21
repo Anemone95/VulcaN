@@ -15,7 +15,7 @@
             {
                 "source": {
                     "file": "index.js",
-                    "lineno": 11,
+                    "lineno": 44,
                     "code": "setter: function(path) {"
                 },
                 "sink": {

@@ -12,14 +12,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "src/angular.js",
+                    "file": "angular.js",
                     "lineno": 7595,
                     "code": "$set: function(key, value, writeAttr, attrName) {"
                 },
                 "sink": {
-                    "file": "src/angular.js",
-                    "lineno": 7628,
-                    "code": "if ((nodeName === 'a' && key === 'href') || (nodeName === 'img' && key === 'src')) { // sanitize a[href] and img[src] values"
+                    "file": "angular.js",
+                    "lineno": 7672,
+                    "code": "this.$$element.attr(attrName, value);"
                 }
             }
         ]

@@ -13,12 +13,12 @@
                 "source": {
                     "file": "lib/router/index.js",
                     "lineno": 182,
-                    "code": "f app.all(\"*\", (request, response)=>{"
+                    "code": "app.all(\"*\", (request, response)=>{"
                 },
                 "sink": {
                     "file": "lib/router/index.js",
-                    "lineno": 183,
-                    "code": " var endpointData = matchPath(manifest, forbiddenStaticFiles, buildPath, request.url)"
+                    "lineno": 190,
+                    "code": "return staticHandler(request, response)"
                 }
             }
         ]

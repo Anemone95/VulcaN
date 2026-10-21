@@ -18,8 +18,8 @@
                 },
                 "sink": {
                     "file": "src/html-janitor.js",
-                    "lineno": 44,
-                    "code": "sandbox.innerHTML = html;"
+                    "lineno": 45,
+                    "code": "root.innerHTML = html;"
                 }
             }
         ]

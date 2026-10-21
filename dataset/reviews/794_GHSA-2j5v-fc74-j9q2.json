@@ -13,9 +13,9 @@
             {
                 "block": {
                     "file": "src/editormd.js",
-                    "start_lineno": 3971,
-                    "end_lineno": 3971,
-                    "code": "div.addClass('markdown-body ' + this.classPrefix + 'html-preview').append(markdownParsed);"
+                    "start_lineno": 3959,
+                    "end_lineno": 3959,
+                    "code": "div.addClass(\"markdown-body \" + this.classPrefix + \"html-preview\").append(markdownParsed);"
                 }
             }
         ]

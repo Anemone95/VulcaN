@@ -12,14 +12,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "/app.js",
+                    "file": "app.js",
                     "lineno": 35,
                     "code": "var uri = url.parse(request.url).pathname"
                 },
                 "sink": {
-                    "file": "/app.js",
-                    "lineno": 61,
-                    "code": "response.write(file, \"binary\");"
+                    "file": "app.js",
+                    "lineno": 50,
+                    "code": "fs.readFile(filename, \"binary\", function(err, file) {"
                 }
             }
         ]

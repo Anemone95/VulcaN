@@ -13,49 +13,97 @@
             {
                 "source": {
                     "file": "crud-file-server.js",
-                    "lineno": 6,
-                    "code": "while(url.indexOf('..').length > 0) { url = url.replace('..', ''); }"
+                    "lineno": 36,
+                    "code": "var parsedUrl = require('url').parse(req.url);"
                 },
                 "sink": {
                     "file": "crud-file-server.js",
-                    "lineno": 91,
-                    "code": "case 'GET': // returns file or directory contents"
+                    "lineno": 107,
+                    "code": "fs.readdir(relativePath, function(err, files) {"
                 }
             },
             {
                 "source": {
                     "file": "crud-file-server.js",
-                    "lineno": 6,
-                    "code": "while(url.indexOf('..').length > 0) { url = url.replace('..', ''); }"
+                    "lineno": 36,
+                    "code": "var parsedUrl = require('url').parse(req.url);"
                 },
                 "sink": {
                     "file": "crud-file-server.js",
-                    "lineno": 185,
-                    "code": "case 'PUT': // write a file"
+                    "lineno": 160,
+                    "code": "fs.readFile(relativePath, function(err, data) {"
                 }
             },
             {
                 "source": {
                     "file": "crud-file-server.js",
-                    "lineno": 6,
-                    "code": "while(url.indexOf('..').length > 0) { url = url.replace('..', ''); }"
+                    "lineno": 36,
+                    "code": "var parsedUrl = require('url').parse(req.url);"
                 },
                 "sink": {
                     "file": "crud-file-server.js",
-                    "lineno": 200,
-                    "code": "case 'POST': // create a directory or rename a file or directory"
+                    "lineno": 172,
+                    "code": "fs.readFile(relativePath, function(err, data) {"
                 }
             },
             {
                 "source": {
                     "file": "crud-file-server.js",
-                    "lineno": 6,
-                    "code": "while(url.indexOf('..').length > 0) { url = url.replace('..', ''); }"
+                    "lineno": 36,
+                    "code": "var parsedUrl = require('url').parse(req.url);"
                 },
                 "sink": {
                     "file": "crud-file-server.js",
-                    "lineno": 234,
-                    "code": "case 'DELETE': // delete a file or directory"
+                    "lineno": 187,
+                    "code": "var stream = fs.createWriteStream(relativePath);"
+                }
+            },
+            {
+                "source": {
+                    "file": "crud-file-server.js",
+                    "lineno": 36,
+                    "code": "var parsedUrl = require('url').parse(req.url);"
+                },
+                "sink": {
+                    "file": "crud-file-server.js",
+                    "lineno": 214,
+                    "code": "fs.rename(relativePath, path + query.rename, function(err) {"
+                }
+            },
+            {
+                "source": {
+                    "file": "crud-file-server.js",
+                    "lineno": 36,
+                    "code": "var parsedUrl = require('url').parse(req.url);"
+                },
+                "sink": {
+                    "file": "crud-file-server.js",
+                    "lineno": 223,
+                    "code": "fs.mkdir(relativePath, 0777, function(err) {"
+                }
+            },
+            {
+                "source": {
+                    "file": "crud-file-server.js",
+                    "lineno": 36,
+                    "code": "var parsedUrl = require('url').parse(req.url);"
+                },
+                "sink": {
+                    "file": "crud-file-server.js",
+                    "lineno": 240,
+                    "code": "fs.rmdir(relativePath, function(err) {"
+                }
+            },
+            {
+                "source": {
+                    "file": "crud-file-server.js",
+                    "lineno": 36,
+                    "code": "var parsedUrl = require('url').parse(req.url);"
+                },
+                "sink": {
+                    "file": "crud-file-server.js",
+                    "lineno": 248,
+                    "code": "fs.unlink(relativePath, function(err) {"
                 }
             }
         ]

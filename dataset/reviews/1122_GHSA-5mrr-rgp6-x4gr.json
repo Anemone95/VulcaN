@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "juice-shop/routes/trackOrder.js",
+                    "file": "dist/DocumentMatcher.js",
                     "lineno": 412,
                     "code": "$where: function $where(selectorValue, matcher) {"
                 },
                 "sink": {
-                    "file": "marsdb/lib/DocumentMatcher.js",
+                    "file": "dist/DocumentMatcher.js",
                     "lineno": 419,
-                    "code": "selectorValue = Function('obj', 'return ' + selectorValue);"
+                    "code": "selectorValue = Function('obj', 'return ' + selectorValue); //eslint-disable-line no-new-func"
                 }
             }
         ]

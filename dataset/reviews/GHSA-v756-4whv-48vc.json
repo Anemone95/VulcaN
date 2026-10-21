@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "messenger-node.js",
+                    "file": "src/messenger-node.js",
                     "lineno": 68,
                     "code": "line: color => {"
                 },
                 "sink": {
-                    "file": "messenger-node.js",
+                    "file": "src/messenger-node.js",
                     "lineno": 71,
                     "code": "eval(`cl.${color}()`); // eslint-disable-line"
                 }

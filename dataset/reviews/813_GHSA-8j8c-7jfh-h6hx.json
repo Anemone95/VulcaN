@@ -12,13 +12,25 @@
             {
                 "source": {
                     "file": "lib/js-yaml/loader.js",
-                    "lineno": 285,
-                    "code": "function storeMappingPair(state, _result, overridableKeys, keyTag, keyNode, valueNode, startLine, startPos) {"
+                    "lineno": 1580,
+                    "code": "function load(input, options) {"
                 },
                 "sink": {
+                    "file": "lib/js-yaml/type/js/function.js",
+                    "lineno": 70,
+                    "code": "return new Function(params, source.slice(body[0] + 1, body[1] - 1));"
+                }
+            },
+            {
+                "source": {
                     "file": "lib/js-yaml/loader.js",
-                    "lineno": 322,
-                    "code": "_result[keyNode] = valueNode;"
+                    "lineno": 1580,
+                    "code": "function load(input, options) {"
+                },
+                "sink": {
+                    "file": "lib/js-yaml/type/js/function.js",
+                    "lineno": 75,
+                    "code": "return new Function(params, 'return ' + source.slice(body[0], body[1]));"
                 }
             }
         ]

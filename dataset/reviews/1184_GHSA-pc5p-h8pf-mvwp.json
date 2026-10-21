@@ -14,7 +14,7 @@
                     "file": "index.js",
                     "start_lineno": 159,
                     "end_lineno": 171,
-                    "code": "else {// some other status code that's not 200... need to re-play the HTTP header // \"data\" events onto the socket once the HTTP machinery is attached so that// the user can parse and handle the error status codecleanup();// save a reference to the concat'd Buffer for the `onsocket` callbackbuffers = buffered;// need to wait for the \"socket\" event to re-play the \"data\" eventsreq.once('socket', onsocket);fn(null, socket);}"
+                    "code": "} else {"
                 }
             }
         ]

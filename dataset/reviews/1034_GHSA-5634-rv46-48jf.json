@@ -11,13 +11,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "/lib/bleach.js",
-                    "lineno": 63,
+                    "file": "lib/bleach.js",
+                    "lineno": 62,
                     "code": "sanitize: function(html, options) {"
                 },
                 "sink": {
-                    "file": "/lib/bleach.js",
-                    "lineno": 101,
+                    "file": "lib/bleach.js",
+                    "lineno": 98,
                     "code": "return html;"
                 }
             }

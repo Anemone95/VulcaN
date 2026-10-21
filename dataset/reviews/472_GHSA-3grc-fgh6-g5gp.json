@@ -12,12 +12,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "package/http_static_simple.js",
-                    "lineno": 4,
+                    "file": "http_static_simple.js",
+                    "lineno": 5,
                     "code": "http.createServer(function (req, res) {"
                 },
                 "sink": {
-                    "file": "package/http_static_simple.js",
+                    "file": "http_static_simple.js",
                     "lineno": 33,
                     "code": "fs.readFile(ROOT_DIR + urlObj.pathname, function (err,data) {"
                 }

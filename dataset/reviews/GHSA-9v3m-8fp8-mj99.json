@@ -12,13 +12,13 @@
             {
                 "source": {
                     "file": "js/src/tooltip.js",
-                    "lineno": 433,
-                    "code": "$element[html ? 'html' : 'text'](content)"
+                    "lineno": 641,
+                    "code": "...$(this.element).data(),"
                 },
                 "sink": {
                     "file": "js/src/tooltip.js",
-                    "lineno": 324,
-                    "code": "$(this.element).trigger(this.constructor.Event.SHOWN)"
+                    "lineno": 433,
+                    "code": "$element[html ? 'html' : 'text'](content)"
                 }
             },
             {
@@ -29,8 +29,8 @@
                 },
                 "sink": {
                     "file": "js/src/tooltip.js",
-                    "lineno": 324,
-                    "code": "$(this.element).trigger(this.constructor.Event.SHOWN)"
+                    "lineno": 411,
+                    "code": "this.tip = this.tip || $(this.config.template)[0]"
                 }
             }
         ]

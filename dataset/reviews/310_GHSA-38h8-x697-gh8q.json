@@ -15,7 +15,7 @@
                     "file": "js/lib/create-pipes.js",
                     "start_lineno": 9,
                     "end_lineno": 29,
-                    "code": "\nmodule.exports = function() {  \nvar created, dir, i, len, name, ref, t_limit, tmp_dir;   \nt_limit = Date.now() + 1000; \ntmp_dir = '/tmp';   \nref = ['TMPDIR', 'TMP', 'TEMP']; \nfor (i = 0, len = ref.length; i < len; i++) {   \nname = ref[i];   \nif ((dir = process.env[name]) != null) {   \n  tmp_dir = dir.replace(//$/, '');   \n}   \n}   \nwhile (!created) {  \ntry {   \ndir = tmp_dir + '/sync-exec-' + Math.floor(Math.random() * 1000000000);  \nfs.mkdir(dir);  \ncreated = true;  \n} catch (_error) {}  \ntimeout(t_limit, 'Can not create sync-exec directory');  \n}  \nreturn dir; \n};"
+                    "code": "module.exports = function() {"
                 }
             }
         ]

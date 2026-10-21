@@ -14,7 +14,7 @@
                     "file": "dist/react-draft-wysiwyg.js",
                     "start_lineno": 7,
                     "end_lineno": 7,
-                    "code": "Code is too large"
+                    "code": "S.a.createElement(\"a\",{href:r,target:i},t)"
                 }
             }
         ]

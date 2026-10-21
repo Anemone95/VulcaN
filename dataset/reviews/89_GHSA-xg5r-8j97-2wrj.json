@@ -13,13 +13,157 @@
             {
                 "source": {
                     "file": "lib/restafary.js",
-                    "lineno": 119,
-                    "code": "function onFS(params, callback) {"
+                    "lineno": 39,
+                    "code": "name    = ponse.getPathName(req);"
+                },
+                "sink": {
+                    "file": "lib/fs/put.js",
+                    "lineno": 19,
+                    "code": "files.pipe(readStream, name, callback);"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/restafary.js",
+                    "lineno": 39,
+                    "code": "name    = ponse.getPathName(req);"
+                },
+                "sink": {
+                    "file": "lib/fs/put.js",
+                    "lineno": 23,
+                    "code": "flop.create(name, callback);"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/restafary.js",
+                    "lineno": 39,
+                    "code": "name    = ponse.getPathName(req);"
+                },
+                "sink": {
+                    "file": "lib/fs/put.js",
+                    "lineno": 27,
+                    "code": "files.pipe(readStream, name, {gunzip: true}, callback);"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/restafary.js",
+                    "lineno": 39,
+                    "code": "name    = ponse.getPathName(req);"
+                },
+                "sink": {
+                    "file": "lib/fs/patch.js",
+                    "lineno": 21,
+                    "code": "patch(name, data, options, callback);"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/restafary.js",
+                    "lineno": 39,
+                    "code": "name    = ponse.getPathName(req);"
+                },
+                "sink": {
+                    "file": "lib/fs/get.js",
+                    "lineno": 21,
+                    "code": "flop.read(name, callback);"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/restafary.js",
+                    "lineno": 39,
+                    "code": "name    = ponse.getPathName(req);"
+                },
+                "sink": {
+                    "file": "lib/fs/get.js",
+                    "lineno": 25,
+                    "code": "flop.read(name, 'size', callback);"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/restafary.js",
+                    "lineno": 39,
+                    "code": "name    = ponse.getPathName(req);"
+                },
+                "sink": {
+                    "file": "lib/fs/get.js",
+                    "lineno": 29,
+                    "code": "flop.read(name, 'time raw', callback);"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/restafary.js",
+                    "lineno": 39,
+                    "code": "name    = ponse.getPathName(req);"
+                },
+                "sink": {
+                    "file": "lib/fs/get.js",
+                    "lineno": 33,
+                    "code": "beautify(name, callback);"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/restafary.js",
+                    "lineno": 39,
+                    "code": "name    = ponse.getPathName(req);"
+                },
+                "sink": {
+                    "file": "lib/fs/get.js",
+                    "lineno": 37,
+                    "code": "minify(name, callback);"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/restafary.js",
+                    "lineno": 39,
+                    "code": "name    = ponse.getPathName(req);"
+                },
+                "sink": {
+                    "file": "lib/fs/get.js",
+                    "lineno": 41,
+                    "code": "ashify(readStream(name), {algorithm: 'sha1', encoding:'hex'}, callback);"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/restafary.js",
+                    "lineno": 39,
+                    "code": "name    = ponse.getPathName(req);"
                 },
                 "sink": {
                     "file": "lib/restafary.js",
-                    "lineno": 135,
-                    "code": "path = mellow.pathToWin(name, root);"
+                    "lineno": 193,
+                    "code": "ponse.sendFile(params);"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/restafary.js",
+                    "lineno": 39,
+                    "code": "name    = ponse.getPathName(req);"
+                },
+                "sink": {
+                    "file": "lib/fs/delete.js",
+                    "lineno": 21,
+                    "code": "flop.delete(name, callback);"
+                }
+            },
+            {
+                "source": {
+                    "file": "lib/restafary.js",
+                    "lineno": 39,
+                    "code": "name    = ponse.getPathName(req);"
+                },
+                "sink": {
+                    "file": "lib/fs/delete.js",
+                    "lineno": 25,
+                    "code": "flop.delete(name, files, callback);"
                 }
             }
         ]

@@ -12,7 +12,7 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "/index.js",
+                    "file": "index.js",
                     "start_lineno": 50,
                     "end_lineno": 50,
                     "code": "result[key] = clone(array[key]);"
@@ -20,23 +20,23 @@
             },
             {
                 "block": {
-                    "file": "/index.js",
+                    "file": "index.js",
                     "start_lineno": 60,
                     "end_lineno": 60,
-                    "code": "result[key] = clone(array[key]);"
+                    "code": "result[key] = clone(obj[key]);"
                 }
             },
             {
                 "block": {
-                    "file": "/index.js",
+                    "file": "index.js",
                     "start_lineno": 72,
                     "end_lineno": 75,
-                    "code": "if(key in merged){merged[key]=merge(merged[key],source[key],mergeOpts);}else{merged[key]=clone(source[key]);"
+                    "code": "if (key in merged) {"
                 }
             },
             {
                 "block": {
-                    "file": "/index.js",
+                    "file": "index.js",
                     "start_lineno": 105,
                     "end_lineno": 105,
                     "code": "result[resultIndex++] = array[k];"
@@ -44,7 +44,7 @@
             },
             {
                 "block": {
-                    "file": "/index.js",
+                    "file": "index.js",
                     "start_lineno": 107,
                     "end_lineno": 107,
                     "code": "result[resultIndex++] = clone(array[k]);"

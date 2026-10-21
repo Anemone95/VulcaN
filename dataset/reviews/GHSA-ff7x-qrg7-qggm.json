@@ -13,12 +13,12 @@
                 "source": {
                     "file": "index.js",
                     "lineno": 69,
-                    "code": "set(object, path, value) {"
+                    "code": "set(obj, path, value) {"
                 },
                 "sink": {
                     "file": "index.js",
                     "lineno": 88,
-                    "code": "object[p] = value;"
+                    "code": "obj[p] = value;"
                 }
             }
         ]

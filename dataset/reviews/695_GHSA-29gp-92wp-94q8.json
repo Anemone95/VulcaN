@@ -12,14 +12,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "package/launchEditor.js",
+                    "file": "launchEditor.js",
                     "lineno": 266,
                     "code": "function launchEditor(fileName, lineNumber, colNumber) {"
                 },
                 "sink": {
-                    "file": "package/openBrowser.js",
-                    "lineno": 142,
-                    "code": "return addWorkspaceToArgumentsIfExists( \n ['-g', fileName + ':' + lineNumber + ':' + colNumber], \n workspace);"
+                    "file": "launchEditor.js",
+                    "lineno": 334,
+                    "code": "_childProcess = child_process.spawn("
                 }
             }
         ]

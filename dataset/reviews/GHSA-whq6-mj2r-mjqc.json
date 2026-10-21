@@ -11,24 +11,24 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "lsof.js",
+                    "file": "lib/lsof.js",
                     "lineno": 3,
                     "code": "var raw = exports.raw = function(pid, fn) {"
                 },
                 "sink": {
-                    "file": "lsof.js",
+                    "file": "lib/lsof.js",
                     "lineno": 9,
                     "code": "cp.exec('lsof -p ' + pid, function(err, d) {"
                 }
             },
             {
                 "source": {
-                    "file": "lsof.js",
+                    "file": "lib/lsof.js",
                     "lineno": 36,
                     "code": "var rawTcpPort = exports.rawTcpPort = function(port, fn) {"
                 },
                 "sink": {
-                    "file": "lsof.js",
+                    "file": "lib/lsof.js",
                     "lineno": 37,
                     "code": "cp.exec('lsof -i tcp:' + port, function(err, d) {"
                 }

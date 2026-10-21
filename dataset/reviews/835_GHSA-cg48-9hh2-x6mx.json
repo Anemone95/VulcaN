@@ -5,20 +5,20 @@
         "cwe": "CWE-94",
         "github_link": "https://github.com/advisories/GHSA-cg48-9hh2-x6mx"
     },
-    "correct_cwe": "CWE-94",
+    "correct_cwe": "CWE-79",
     "correct_package_link": "https://registry.npmjs.org/preact/-/preact-10.0.0-beta.0.tgz",
     "vulnerability": {
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "src/diff/index.js",
-                    "lineno": 246,
-                    "code": "dom = newVNode.type===null ? document.createTextNode(newVNode.text) : isSvg ? document.createElementNS('http://www.w3.org/2000/svg', newVNode.type) : document.createElement(newVNode.type);"
+                    "file": "src/render.js",
+                    "lineno": 13,
+                    "code": "export function render(vnode, parentDom) {"
                 },
                 "sink": {
-                    "file": "src/create-element.js",
-                    "lineno": 68,
-                    "code": "return vnode;"
+                    "file": "src/diff/index.js",
+                    "lineno": 282,
+                    "code": "dom.innerHTML = newHtml && newHtml.__html || '';"
                 }
             }
         ]

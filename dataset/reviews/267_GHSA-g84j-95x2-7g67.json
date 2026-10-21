@@ -13,9 +13,9 @@
             {
                 "block": {
                     "file": "gulpfile.js",
-                    "start_lineno": 13,
-                    "end_lineno": 15,
-                    "code": "var dist = {\"darwin\": \"http://download.cdn.yandex.net/tomita/tomita-mac.bz2\", \"freebsd\": \"http://download.cdn.yandex.net/tomita/tomita-win32.zip\", \"linux-ia32\": \"http://download.cdn.yandex.net/tomita/tomita-linux32.bz2\", \"linux-x64\": \"http://download.cdn.yandex.net/tomita/tomita-linux64.bz2\", \"win32\": \"http://download.cdn.yandex.net/tomita/tomita-freebsd64.bz2\", }"
+                    "start_lineno": 6,
+                    "end_lineno": 12,
+                    "code": "var dist = {"
                 }
             }
         ]

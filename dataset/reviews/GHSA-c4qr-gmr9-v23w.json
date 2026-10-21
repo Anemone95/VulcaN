@@ -29,7 +29,7 @@
                 },
                 "sink": {
                     "file": "index.js",
-                    "lineno": 78,
+                    "lineno": 70,
                     "code": "const server = new WebSocket.Server({"
                 }
             }

@@ -12,24 +12,24 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "src/helper/route",
+                    "file": "src/helper/route.js",
                     "lineno": 22,
                     "code": "const filePath = path.join(root, req.url);"
                 },
                 "sink": {
-                    "file": "src/helper/route",
+                    "file": "src/helper/route.js",
                     "lineno": 46,
                     "code": "rs = fs.createReadStream(filePath);"
                 }
             },
             {
                 "source": {
-                    "file": "src/helper/route",
+                    "file": "src/helper/route.js",
                     "lineno": 22,
                     "code": "const filePath = path.join(root, req.url);"
                 },
                 "sink": {
-                    "file": "src/helper/route",
+                    "file": "src/helper/route.js",
                     "lineno": 49,
                     "code": "rs = fs.createReadStream(filePath, { start, end });// \u8fd4\u56de\u90e8\u5206\u5185\u5bb9"
                 }

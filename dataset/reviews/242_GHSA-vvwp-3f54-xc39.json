@@ -12,10 +12,10 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "scripts/install.js",
+                    "file": "scripts/update-closure.js",
                     "start_lineno": 32,
                     "end_lineno": 36,
-                    "code": "var req = http.request({\nmethod: 'GET',\npath: '/closure-compiler/compiler-latest.tar.gz',\nhostname: 'dl.google.com',\nheaders: etag ? {'If-None-Match': etag} : {}"
+                    "code": "var req = http.request({"
                 }
             }
         ]

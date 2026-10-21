@@ -17,8 +17,8 @@
                 },
                 "sink": {
                     "file": "dist/md-data-table.js",
-                    "lineno": 718,
-                    "code": "data: rowArray"
+                    "lineno": 1380,
+                    "code": "element.append(val);"
                 }
             }
         ]

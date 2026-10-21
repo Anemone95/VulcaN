@@ -30,8 +30,8 @@
                 },
                 "sink": {
                     "file": "src/plugins/irc-events/topic.js",
-                    "lineno": 32,
-                    "code": "topic: topic"
+                    "lineno": 30,
+                    "code": "client.emit(\"topic\", {"
                 }
             }
         ]

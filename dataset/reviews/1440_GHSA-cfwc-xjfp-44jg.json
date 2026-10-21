@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "/gnuplot.js",
+                    "file": "gnuplot.js",
                     "lineno": 6,
-                    "code": " plot.print = function (data, options) "
+                    "code": "plot.print = function (data, options) {"
                 },
                 "sink": {
-                    "file": "/gnuplot.js",
+                    "file": "gnuplot.js",
                     "lineno": 7,
-                    "code": " plot.write(data);"
+                    "code": "plot.write(data);"
                 }
             }
         ]

@@ -13,13 +13,13 @@
             {
                 "source": {
                     "file": "simplehttpserver.js",
-                    "lineno": 79,
-                    "code": "module.exports = function findLocalDevices (address) {"
+                    "lineno": 117,
+                    "code": "fs.readdir(pathname, function(err, list) {"
                 },
                 "sink": {
                     "file": "simplehttpserver.js",
-                    "lineno": 165,
-                    "code": "fs.stat(path.join(pathname, item), function(err, stat) {"
+                    "lineno": 146,
+                    "code": "res.send('<!DOCTYPE html>' +"
                 }
             }
         ]

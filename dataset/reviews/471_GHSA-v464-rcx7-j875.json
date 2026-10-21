@@ -12,36 +12,36 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "infra.data.js",
+                    "file": "Infra.data.js",
                     "lineno": 32,
                     "code": "var server = http.createServer(function (req, res) {"
                 },
                 "sink": {
-                    "file": "infra.data.js",
+                    "file": "Infra.data.js",
                     "lineno": 137,
-                    "code": "fs.readFile(realPath, options, function(err, file){ ... })"
+                    "code": "fs.readFile(realPath,options, function(err, file){"
                 }
             },
             {
                 "source": {
-                    "file": "infra.data.js",
+                    "file": "Infra.data.js",
                     "lineno": 32,
                     "code": "var server = http.createServer(function (req, res) {"
                 },
                 "sink": {
-                    "file": "infra.data.js",
+                    "file": "Infra.data.js",
                     "lineno": 71,
                     "code": "fs.writeFile(filename,yaml.safeDump(body),function(err){"
                 }
             },
             {
                 "source": {
-                    "file": "infra.data.js",
+                    "file": "Infra.data.js",
                     "lineno": 32,
                     "code": "var server = http.createServer(function (req, res) {"
                 },
                 "sink": {
-                    "file": "infra.data.js",
+                    "file": "Infra.data.js",
                     "lineno": 115,
                     "code": "fs.writeFile(\"put/\" + filename,yaml.safeDump(body),function(err){"
                 }

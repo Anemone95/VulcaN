@@ -12,13 +12,13 @@
             {
                 "source": {
                     "file": "lib/docsify.js",
-                    "lineno": 8211,
-                    "code": "function isExternal(url) {"
+                    "lineno": 7957,
+                    "code": "var href = location.href;"
                 },
                 "sink": {
                     "file": "lib/docsify.js",
-                    "lineno": 8212,
-                    "code": "var match = url.match( /^([^:/?#]+:)?(?://([^/?#]*))?([^?#]+)?(\\?[^#]*)?(#.*)?/"
+                    "lineno": 7627,
+                    "code": "node[replace ? 'outerHTML' : 'innerHTML'] = content;"
                 }
             }
         ]

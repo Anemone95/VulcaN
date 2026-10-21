@@ -13,9 +13,9 @@
             {
                 "block": {
                     "file": "jsrender.js",
-                    "start_lineno": 16,
-                    "end_lineno": 17,
-                    "code": "var global = (0, eval)('this')$ = global.jQuery;"
+                    "start_lineno": 1789,
+                    "end_lineno": 1789,
+                    "code": "code = new Function(\"data,view,j,u\", code);"
                 }
             }
         ]

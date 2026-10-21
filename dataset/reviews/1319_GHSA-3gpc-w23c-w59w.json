@@ -11,13 +11,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "/lib/pitboss-ng.js",
+                    "file": "lib/pitboss-ng.js",
                     "lineno": 13,
                     "code": "constructor(code, options) {"
                 },
                 "sink": {
-                    "file": "/lib/forkable.js",
-                    "lineno": 76,
+                    "file": "lib/forkable.js",
+                    "lineno": 73,
                     "code": "result: script.runInNewContext(context || {}, {"
                 }
             }

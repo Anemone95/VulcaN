@@ -17,7 +17,7 @@
                     "code": "log('Cloning ' + repo + ' into ' + options.clone);"
                 },
                 "sink": {
-                    "file": "src/index.js",
+                    "file": "tasks/gh-pages.js",
                     "lineno": 124,
                     "code": "return git.clone(repo, options.clone, options.branch, options);"
                 }

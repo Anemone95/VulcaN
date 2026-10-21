@@ -17,8 +17,8 @@
                 },
                 "sink": {
                     "file": "dist/swagger-ui.js",
-                    "lineno": 6360,
-                    "code": "swagger.info.description = info.description;"
+                    "lineno": 22351,
+                    "code": "$(this.el).html(Handlebars.templates.main(this.model));"
                 }
             }
         ]

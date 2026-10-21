@@ -12,38 +12,38 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "package/index.js",
-                    "lineno": 9,
-                    "code": "var cmdString = 'npm install ' + packages.join(' ') + ' '"
+                    "file": "index.js",
+                    "lineno": 5,
+                    "code": "install: function(packages, opts){"
                 },
                 "sink": {
-                    "file": "package/index.js",
+                    "file": "index.js",
                     "lineno": 18,
-                    "code": "var cmd = exec(cmdString, {cwd: opts.cwd?opts.cwd:'/'', maxBuffer: opts.maxBuffer?opts.maxBuffer:200 * 1024},(error, stdout, stderr) => {"
+                    "code": "var cmd = exec(cmdString, {cwd: opts.cwd?opts.cwd:\"/\", maxBuffer: opts.maxBuffer?opts.maxBuffer:200 * 1024},(error, stdout, stderr) => {"
                 }
             },
             {
                 "source": {
-                    "file": "package/index.js",
-                    "lineno": 41,
-                    "code": "var cmdString = 'npm uninstall ' + packages.join(' ') + ' '"
+                    "file": "index.js",
+                    "lineno": 37,
+                    "code": "uninstall: function(packages, opts){"
                 },
                 "sink": {
-                    "file": "package/index.js",
+                    "file": "index.js",
                     "lineno": 47,
-                    "code": "var cmd = exec(cmdString, {cwd: opts.cwd?opts.cwd:'/'},(error, stdout, stderr) => {"
+                    "code": "var cmd = exec(cmdString, {cwd: opts.cwd?opts.cwd:\"/\"},(error, stdout, stderr) => {"
                 }
             },
             {
                 "source": {
-                    "file": "package/index.js",
+                    "file": "index.js",
                     "lineno": 66,
-                    "code": "   list:function(path){"
+                    "code": "list:function(path){"
                 },
                 "sink": {
-                    "file": "package/index.js",
+                    "file": "index.js",
                     "lineno": 71,
-                    "code": "exec(cmdString, {cwd: path?path:'/'},(error, stdout, stderr) => {"
+                    "code": "exec(cmdString, {cwd: path?path:\"/\"},(error, stdout, stderr) => {"
                 }
             }
         ]

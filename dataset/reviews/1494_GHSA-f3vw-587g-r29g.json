@@ -17,8 +17,20 @@
                 },
                 "sink": {
                     "file": "runtime/server.mjs",
-                    "lineno": 2639,
-                    "code": "const data = read(file);"
+                    "lineno": 2630,
+                    "code": "? (file) => fs.readFileSync(path.resolve(build_dir, file))"
+                }
+            },
+            {
+                "source": {
+                    "file": "runtime/server.mjs",
+                    "lineno": 2633,
+                    "code": "return (req, res, next) => {"
+                },
+                "sink": {
+                    "file": "runtime/server.mjs",
+                    "lineno": 2631,
+                    "code": ": (file) => (cache.has(file) ? cache : cache.set(file, fs.readFileSync(path.resolve(build_dir, file)))).get(file);"
                 }
             }
         ]

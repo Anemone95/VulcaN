@@ -13,8 +13,8 @@
             {
                 "source": {
                     "file": "index.js",
-                    "lineno": 378,
-                    "code": "var fmt = format.replace(/\\\"/g, '\\\"')"
+                    "lineno": 373,
+                    "code": "function compile (format) {"
                 },
                 "sink": {
                     "file": "index.js",

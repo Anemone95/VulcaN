@@ -16,21 +16,21 @@
                     "code": "hrefAttribute = parseAttribute(span, 'href');"
                 },
                 "sink": {
-                    "file": "js/parts/SvgRenderer.js",
+                    "file": "es-modules/parts/SvgRenderer.js",
                     "lineno": 1006,
-                    "code": "attr(tspan, 'onclick', 'location.href=\"' + hrefAttribute + '\"');"
+                    "code": "attr(tspan, 'onclick', 'location.href=\\\"' + hrefAttribute + '\\\"');"
                 }
             },
             {
                 "source": {
-                    "file": "ts/parts/SvgRenderer.js",
-                    "lineno": 1574,
+                    "file": "highcharts.src.js",
+                    "lineno": 6440,
                     "code": "hrefAttribute = parseAttribute(span, 'href');"
                 },
                 "sink": {
-                    "file": "es-modules/parts/SvgRenderer.js",
-                    "lineno": 1576,
-                    "code": "attr(tspan, 'onclick', 'location.href=\"' + hrefAttribute + '\"');"
+                    "file": "highcharts.src.js",
+                    "lineno": 6442,
+                    "code": "attr(tspan, 'onclick', 'location.href=\\\"' + hrefAttribute + '\\\"');"
                 }
             }
         ]

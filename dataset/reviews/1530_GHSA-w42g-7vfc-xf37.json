@@ -12,9 +12,9 @@
             {
                 "block": {
                     "file": "src/ApolloServer.ts",
-                    "start_lineno": "8",
-                    "end_lineno": "27",
-                    "code": "(too large)"
+                    "start_lineno": 8,
+                    "end_lineno": 27,
+                    "code": "export class ApolloServer extends ApolloServerBase {"
                 }
             }
         ]

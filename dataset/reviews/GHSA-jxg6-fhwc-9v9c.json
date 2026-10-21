@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "lib/crawler.js",
+                    "file": "src/lib/crawler.js",
                     "lineno": 104,
                     "code": "isCrawler(userAgent = undefined)"
                 },
                 "sink": {
-                    "file": "lib/crawler.js",
+                    "file": "src/lib/crawler.js",
                     "lineno": 116,
                     "code": "var matches = this.compiledRegexList.exec(agent.trim());"
                 }

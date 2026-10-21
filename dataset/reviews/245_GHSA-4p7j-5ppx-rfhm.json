@@ -13,13 +13,13 @@
             {
                 "source": {
                     "file": "install.js",
-                    "lineno": 47,
-                    "code": "attemptDownload(3);"
+                    "lineno": 23,
+                    "code": "var url = \"http://ocyo9x61y.bkt.clouddn.com/aapt-\" + platform + \".zip\";"
                 },
                 "sink": {
                     "file": "install.js",
-                    "lineno": 23,
-                    "code": "var url = http://ocyo9x61y.bkt.clouddn.com/aapt-' + platform +'.zip';"
+                    "lineno": 27,
+                    "code": "var request = http.get(url, function (response) {"
                 }
             }
         ]

@@ -14,7 +14,7 @@
                 "source": {
                     "file": "node.js",
                     "lineno": 5,
-                    "code": "var path='.'+url.parse(request.url).pathname;"
+                    "code": "var path=\".\"+url.parse(request.url).pathname;"
                 },
                 "sink": {
                     "file": "node.js",

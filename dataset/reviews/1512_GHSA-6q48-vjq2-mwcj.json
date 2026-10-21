@@ -12,14 +12,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "build/unmount.js",
+                    "file": "build/umount.js",
                     "lineno": 26,
                     "code": "exports.umount = function(device, callback) {"
                 },
                 "sink": {
-                    "file": "build/unmount.js",
+                    "file": "build/umount.js",
                     "lineno": 52,
-                    "code": "  return child_process.exec(unmountCommand + \" \" + device, callback);"
+                    "code": "return child_process.exec(unmountCommand + \" \" + device, callback);"
                 }
             }
         ]

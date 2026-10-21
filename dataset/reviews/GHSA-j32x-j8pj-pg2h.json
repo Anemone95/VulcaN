@@ -10,9 +10,8 @@
         "github_link": "https://github.com/advisories/GHSA-j32x-j8pj-pg2h"
     },
     "correct_cwe": [
-        "CWE-94",
-        "CWE-400",
-        "CWE-1321"
+        "CWE-1321",
+        "CWE-400"
     ],
     "correct_package_link": "https://registry.npmjs.org/decal/-/decal-2.1.3.tgz",
     "vulnerability": {
@@ -25,8 +24,8 @@
                 },
                 "sink": {
                     "file": "src/utils/extend.js",
-                    "lineno": 49,
-                    "code": "target[name] = extend(clone, deep, copy)"
+                    "lineno": 50,
+                    "code": "} else if (typeof copy !== 'undefined') target[name] = copy"
                 }
             }
         ]

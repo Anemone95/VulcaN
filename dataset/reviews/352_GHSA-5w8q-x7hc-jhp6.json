@@ -42,8 +42,8 @@
                 },
                 "sink": {
                     "file": "lib/router.js",
-                    "lineno": 752,
-                    "code": "return dispatch.directory(full_path, pathname, res);"
+                    "lineno": 1110,
+                    "code": "fs.readdir(fpath, function(err, files) {"
                 }
             }
         ]

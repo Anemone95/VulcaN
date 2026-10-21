@@ -17,8 +17,8 @@
                 },
                 "sink": {
                     "file": "src/index.js",
-                    "lineno": 38,
-                    "code": "execSync(`git fetch origin pull/${id}/head:${branch} && git checkout ${branch}`);"
+                    "lineno": 37,
+                    "code": "execSync("
                 }
             }
         ]

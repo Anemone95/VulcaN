@@ -9,7 +9,7 @@
         "github_link": "https://github.com/advisories/GHSA-rwxp-hwwf-653v"
     },
     "correct_cwe": [
-        "CWE-94",
+        "CWE-22",
         "CWE-200"
     ],
     "correct_package_link": "https://registry.npmjs.org/express-hbs/-/express-hbs-2.1.2.tgz",
@@ -18,13 +18,13 @@
             {
                 "source": {
                     "file": "lib/hbs.js",
-                    "lineno": 507,
-                    "code": "function render(template, locals, layoutTemplates, cb) {"
+                    "lineno": 442,
+                    "code": "ExpressHbs.prototype.___express = function ___express(filename, source, options, cb) {"
                 },
                 "sink": {
                     "file": "lib/hbs.js",
-                    "lineno": 490,
-                    "code": "res = template(localsClone, _.merge({}, self._options.templateOptions, localTemplateOptions));"
+                    "lineno": 109,
+                    "code": "fs.readFile(layoutFile, 'utf8', function(err, str) {"
                 }
             }
         ]

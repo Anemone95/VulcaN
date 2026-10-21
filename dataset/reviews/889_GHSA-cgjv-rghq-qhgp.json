@@ -12,25 +12,13 @@
             {
                 "source": {
                     "file": "httpserv.js",
-                    "lineno": 116,
-                    "code": "module.exports.setServePath = function(newPath){"
+                    "lineno": 75,
+                    "code": "module.exports.serve = function(request, response){"
                 },
                 "sink": {
                     "file": "httpserv.js",
-                    "lineno": 111,
-                    "code": "doStream(request, response, filePath, stats, MIME);"
-                }
-            },
-            {
-                "source": {
-                    "file": "httpserv.js",
-                    "lineno": 116,
-                    "code": "module.exports.setServePath = function(newPath){"
-                },
-                "sink": {
-                    "file": "httpserv.js",
-                    "lineno": 106,
-                    "code": "doStream(request, response, filePath, stats, MIMES[\".html\"]);"
+                    "lineno": 57,
+                    "code": "fs.createReadStream(filePath, streamOptions).pipe(response);"
                 }
             }
         ]

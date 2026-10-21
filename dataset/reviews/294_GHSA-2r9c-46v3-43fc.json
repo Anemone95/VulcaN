@@ -12,12 +12,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "install.js",
+                    "file": "bin/install.js",
                     "lineno": 21,
                     "code": "remoteFile = 'http://haxe.org/website-content/downloads/'+haxeVersion+'/downloads/haxe-'+haxeVersion+'-linux64.tar.gz';"
                 },
                 "sink": {
-                    "file": "install.js",
+                    "file": "bin/install.js",
                     "lineno": 63,
                     "code": ".get( remoteFile )"
                 }

@@ -18,8 +18,8 @@
                 },
                 "sink": {
                     "file": "caolili.js",
-                    "lineno": 6,
-                    "code": "var path= \"./ \"+request.url;"
+                    "lineno": 7,
+                    "code": "fs.readFile(path,function (error,data) {"
                 }
             }
         ]

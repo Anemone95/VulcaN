@@ -18,8 +18,8 @@
                 },
                 "sink": {
                     "file": "index.js",
-                    "lineno": 96,
-                    "code": " this.query('DELETE FROM ' + this.quotedTable() + ' WHERE expire < to_timestamp($1)', [currentTimestamp()], function (err) {"
+                    "lineno": 97,
+                    "code": "this.query('DELETE FROM ' + this.quotedTable() + ' WHERE expire < to_timestamp($1)', [currentTimestamp()], function (err) {"
                 }
             },
             {
@@ -31,18 +31,30 @@
                 "sink": {
                     "file": "index.js",
                     "lineno": 166,
-                    "code": " .then(function (res) { fn && fn(null, res && res[0] ? res[0] : false); })"
+                    "code": "this.pgPromise.query(query, params || [])"
                 }
             },
             {
                 "source": {
                     "file": "index.js",
                     "lineno": 13,
-                    "code": " const PGStore = function (options) {"
+                    "code": "const PGStore = function (options) {"
                 },
                 "sink": {
                     "file": "index.js",
-                    "lineno": 184,
+                    "lineno": 170,
+                    "code": "this.pool.query(query, params || [], function (err, res) {"
+                }
+            },
+            {
+                "source": {
+                    "file": "index.js",
+                    "lineno": 13,
+                    "code": "const PGStore = function (options) {"
+                },
+                "sink": {
+                    "file": "index.js",
+                    "lineno": 185,
                     "code": "this.query('SELECT sess FROM ' + this.quotedTable() + ' WHERE sid = $1 AND expire >= to_timestamp($2)', [sid, currentTimestamp()], function (err, data) {"
                 }
             },
@@ -54,8 +66,8 @@
                 },
                 "sink": {
                     "file": "index.js",
-                    "lineno": 208,
-                    "code": " this.query(query, [sess, expireTime, sid], function (err) { if (fn) { fn.apply(this, err); }"
+                    "lineno": 209,
+                    "code": "this.query(query, [sess, expireTime, sid], function (err) {"
                 }
             },
             {
@@ -66,7 +78,7 @@
                 },
                 "sink": {
                     "file": "index.js",
-                    "lineno": 221,
+                    "lineno": 222,
                     "code": "this.query('DELETE FROM ' + this.quotedTable() + ' WHERE sid = $1', [sid], function (err) {"
                 }
             }

@@ -12,13 +12,13 @@
             {
                 "source": {
                     "file": "lib/lactate.js",
-                    "lineno": 291,
+                    "lineno": 286,
                     "code": "Lactate.prototype.serveFile = function(request) {"
                 },
                 "sink": {
                     "file": "lib/lactate.js",
-                    "lineno": 636,
-                    "code": " this.cache.get(filePath, fn);"
+                    "lineno": 579,
+                    "code": "var rs = fs.createReadStream(fp);"
                 }
             }
         ]

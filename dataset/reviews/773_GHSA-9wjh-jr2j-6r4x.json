@@ -16,9 +16,21 @@
                     "code": "let filename = req.body.filename;"
                 },
                 "sink": {
-                    "file": "pi_video_recording.js.js",
-                    "lineno": 48,
-                    "code": "proc = childProcess.spawn('raspivid', ['-o', file + '.h264', '-t', '0', '-ih', '-pf', 'high', '-ISO', '800'"
+                    "file": "pi_video_recording.js",
+                    "lineno": 49,
+                    "code": "childProcess.spawn(\"raspivid\","
+                }
+            },
+            {
+                "source": {
+                    "file": "server.js",
+                    "lineno": 141,
+                    "code": "let filename = req.body.filename;"
+                },
+                "sink": {
+                    "file": "pi_video_recording.js",
+                    "lineno": 69,
+                    "code": "const process = childProcess.exec("
                 }
             }
         ]

@@ -12,26 +12,26 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "src/index.js",
-                    "lineno": 74,
-                    "code": "function saferEval (code, context) {"
+                    "file": "lib/index.js",
+                    "lineno": 90,
+                    "code": "function saferEval(code, context) {"
                 },
                 "sink": {
-                    "file": "src/index.js",
-                    "lineno": 47,
-                    "code": "'(function () {\"use strict\"; ' + src + '})()'"
+                    "file": "lib/index.js",
+                    "lineno": 62,
+                    "code": "return vm.runInContext('(function () {\"use strict\"; ' + src + '})()', this._context, this._options);"
                 }
             },
             {
                 "source": {
-                    "file": "src/browser.js",
-                    "lineno": 78,
-                    "code": "function saferEval (code, context, opts = {}) {"
+                    "file": "lib/browser.js",
+                    "lineno": 96,
+                    "code": "function saferEval(code, context) {"
                 },
                 "sink": {
-                    "file": "src/browser.js",
-                    "lineno": 49,
-                    "code": "return Function('__context', src).call(null, __context)"
+                    "file": "lib/browser.js",
+                    "lineno": 63,
+                    "code": "return Function('__context', src).call(null, __context); // eslint-disable-line"
                 }
             }
         ]

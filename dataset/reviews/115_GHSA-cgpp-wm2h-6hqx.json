@@ -12,10 +12,10 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "sequel/lib/criteriaProcessos.js",
+                    "file": "sequel/lib/criteriaProcessor.js",
                     "start_lineno": 729,
                     "end_lineno": 811,
-                    "code": "(too big)"
+                    "code": "str = comparator + ' ' + utils.escapeName(value, '\"');"
                 }
             }
         ]

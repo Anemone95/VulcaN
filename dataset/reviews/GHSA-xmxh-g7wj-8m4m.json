@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "curl-transport.js",
+                    "file": "lib/curl-transport.js",
                     "lineno": 56,
                     "code": "exports.run = function (command, cb) {"
                 },
                 "sink": {
-                    "file": "curl-transport.js",
+                    "file": "lib/curl-transport.js",
                     "lineno": 57,
                     "code": "exec(\"curl \" + command, {"
                 }

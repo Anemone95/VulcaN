@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "lib/mongdb.js",
+                    "file": "lib/mongodb.js",
                     "lineno": 842,
                     "code": "MongoDB.prototype.buildWhere = function(model, where) {"
                 },
                 "sink": {
-                    "file": "lib/mongdb.js",
+                    "file": "lib/mongodb.js",
                     "lineno": 854,
                     "code": "return self.buildWhere(model, c);"
                 }

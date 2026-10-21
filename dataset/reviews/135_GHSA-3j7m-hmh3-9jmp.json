@@ -18,8 +18,8 @@
                 },
                 "sink": {
                     "file": "index.js",
-                    "lineno": 199,
-                    "code": "parser.write(html);"
+                    "lineno": 159,
+                    "code": "result += text;"
                 }
             }
         ]

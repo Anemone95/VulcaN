@@ -19,7 +19,7 @@
                 "sink": {
                     "file": "validator.js",
                     "lineno": 917,
-                    "code": "this.modify(xss.clean(this.str, is_image));"
+                    "code": "this.modify(exports.xssClean(this.str, is_image));"
                 }
             }
         ]

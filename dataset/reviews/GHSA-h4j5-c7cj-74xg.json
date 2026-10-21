@@ -12,9 +12,9 @@
             {
                 "block": {
                     "file": "lib/XMLHttpRequest.js",
-                    "start_lineno": 480,
-                    "end_lineno": 480,
-                    "code": ", + (data ? \"req.write('\" + data.replace(/'/g, \"\\\\'\") + \"');\":\"\")"
+                    "start_lineno": 534,
+                    "end_lineno": 534,
+                    "code": "var syncProc = spawn(process.argv[0], [\"-e\", execString]);"
                 }
             }
         ]

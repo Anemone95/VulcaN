@@ -15,7 +15,7 @@
                     "file": "formats.js",
                     "start_lineno": 4,
                     "end_lineno": 4,
-                    "code": "// the code has too many special characters, which makes it very difficult to escape the code snippet"
+                    "code": "exports['email'] = /^\\S+@\\S+$/"
                 }
             }
         ]

@@ -11,26 +11,26 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "lib/extractor.js",
+                    "file": "lib/extractors.js",
                     "start_lineno": 63,
                     "end_lineno": 65,
-                    "code": "var input = new stream.Readable();\ninput.wrap(fs.createReadStream(zip.filename, {start: file._offset, end: file._offset + file.uncompressedSize - 1}));\nwriter = pipePromise.bind(null, input, destination, { mode: file.mode });"
+                    "code": "var input = new stream.Readable();"
                 }
             },
             {
                 "block": {
-                    "file": "lib/extractor.js",
+                    "file": "lib/extractors.js",
                     "start_lineno": 91,
                     "end_lineno": 95,
-                    "code": "var input = new stream.Readable();\ninput.wrap(fs.createReadStream(zip.filename, {start: file._offset}));\nvar inflater = input.pipe(zlib.createInflateRaw({highWaterMark: 32 * 1024}));\nreturn pipePromise(inflater, destination, { mode: file.mode });"
+                    "code": "var input = new stream.Readable();"
                 }
             },
             {
                 "block": {
-                    "file": "lib/extractor.js",
+                    "file": "lib/extractors.js",
                     "start_lineno": 130,
                     "end_lineno": 132,
-                    "code": "var input = new stream.Readable();\ninput.wrap(fs.createReadStream(path.resolve(parent, linkTo)));\nreturn pipePromise(input, destination);"
+                    "code": "var input = new stream.Readable();"
                 }
             }
         ]

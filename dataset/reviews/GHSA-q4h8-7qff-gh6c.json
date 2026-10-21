@@ -12,13 +12,13 @@
             {
                 "source": {
                     "file": "core/server/api/canary/oembed.js",
-                    "lineno": 70,
-                    "code": "const getOembedUrlFromHTML = (html) => {"
+                    "lineno": 135,
+                    "code": "}).then((response) => {"
                 },
                 "sink": {
                     "file": "core/server/api/canary/oembed.js",
-                    "lineno": 71,
-                    "code": "return cheerio('link[type=\"application/json+oembed\"]', html).attr('href');"
+                    "lineno": 159,
+                    "code": "return externalRequest(oembedUrl, {"
                 }
             }
         ]

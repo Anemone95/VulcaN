@@ -12,14 +12,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "robot-js-2.0.0/package/scripts/install.js",
+                    "file": "scripts/install.js",
                     "lineno": 158,
                     "code": "request (SOURCE, function (source)"
                 },
                 "sink": {
-                    "file": "robot-js-2.0.0/package/scripts/install.js",
-                    "lineno": 178,
-                    "code": "sigs.on (\"data\", function (data)"
+                    "file": "scripts/install.js",
+                    "lineno": 123,
+                    "code": "var req = mHTTP.get (url);"
                 }
             }
         ]

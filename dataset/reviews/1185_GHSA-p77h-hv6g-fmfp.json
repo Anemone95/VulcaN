@@ -11,10 +11,10 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "lib/configure.js",
+                    "file": "lib/odbc.js",
                     "start_lineno": 2011,
                     "end_lineno": 2014,
-                    "code": "if(exports.debug) { \nconsole.log(\"%s odbc.js : pool[%s] : pool.close() - processing pools %s - connections: %s\", \ngetElapsedTime(), self.index, key, connections.length); \n}"
+                    "code": "if(exports.debug) {"
                 }
             }
         ]

@@ -12,18 +12,18 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "/package/fields/types/markdown/MarkdownField.js",
+                    "file": "fields/types/markdown/MarkdownField.js",
                     "start_lineno": 129,
                     "end_lineno": 129,
-                    "code": "<textarea name={this.props.paths.md} style={styles} defaultValue={this.props.value.md} ref='markdownTextarea' className='form-control markdown code'></textarea>"
+                    "code": "<textarea name={this.props.paths.md} style={styles} defaultValue={this.props.value.md} ref=\"markdownTextarea\" className=\"form-control markdown code\"></textarea>"
                 }
             },
             {
                 "block": {
-                    "file": "/package/fields/types/Field.js",
+                    "file": "fields/types/Field.js",
                     "start_lineno": 56,
                     "end_lineno": 56,
-                    "code": "return <input type='text' ref='focusTarget' name={this.props.path} placeholder={this.props.placeholder} value={this.props.value} onChange={this.valueChanged} autoComplete='off' className='form-control' />;"
+                    "code": "return <input type=\"text\" ref=\"focusTarget\" name={this.props.path} placeholder={this.props.placeholder} value={this.props.value} onChange={this.valueChanged} autoComplete=\"off\" className=\"form-control\" />;"
                 }
             }
         ]

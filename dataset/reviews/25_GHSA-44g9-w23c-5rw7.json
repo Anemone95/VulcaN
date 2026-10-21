@@ -18,8 +18,8 @@
                 },
                 "sink": {
                     "file": "lib/server.js",
-                    "lineno": 356,
-                    "code": "readContents(absolute, req, res)"
+                    "lineno": 157,
+                    "code": "var dir = fs.readdirSync(location)"
                 }
             },
             {
@@ -30,8 +30,8 @@
                 },
                 "sink": {
                     "file": "lib/server.js",
-                    "lineno": 358,
-                    "code": "pipeStream(absolute, req, res);"
+                    "lineno": 245,
+                    "code": "var stream = fs.createReadStream(dir);"
                 }
             }
         ]

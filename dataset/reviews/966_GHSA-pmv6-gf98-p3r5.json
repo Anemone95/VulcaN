@@ -18,8 +18,8 @@
                 },
                 "sink": {
                     "file": "index.js",
-                    "lineno": 12,
-                    "code": "`Stop-Process -Id (Get-NetTCPConnection -LocalPort ${port}).OwningProcess -Force`"
+                    "lineno": 11,
+                    "code": "return sh("
                 }
             },
             {
@@ -30,8 +30,8 @@
                 },
                 "sink": {
                     "file": "index.js",
-                    "lineno": 17,
-                    "code": "`lsof -i tcp:${port} | grep LISTEN | awk '{print $2}' | xargs kill -9`"
+                    "lineno": 16,
+                    "code": "return sh("
                 }
             }
         ]

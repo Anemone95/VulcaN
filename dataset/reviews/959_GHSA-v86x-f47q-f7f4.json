@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "src/index.js",
+                    "file": "___fs++.js",
                     "lineno": 52,
-                    "code": "function(dir,callback) "
+                    "code": "function(dir,callback)"
                 },
                 "sink": {
                     "file": "___fs++.js",
                     "lineno": 57,
-                    "code": "_cp.exec('dir /s /b \" '+dir+''\"',"
+                    "code": "_cp.exec('dir /s /b \"'+dir+'\"',"
                 }
             }
         ]

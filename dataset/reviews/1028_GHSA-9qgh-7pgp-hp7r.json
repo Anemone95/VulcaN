@@ -14,12 +14,12 @@
                     "file": "src/components/common/TypeAheadInput.jsx",
                     "start_lineno": 60,
                     "end_lineno": 62,
-                    "code": "return `<div><strong>${props.suggestionText}</strong> ${value[props.displayKey]}</div>`;} return `<div>${value.value}</div>`;"
+                    "code": "return `<div><strong>${props.suggestionText}</strong> ${value[props.displayKey]}</div>`;"
                 }
             },
             {
                 "block": {
-                    "file": "src/components/search/QueryInput.jsx",
+                    "file": "src/components/search/QueryInput.ts",
                     "start_lineno": 51,
                     "end_lineno": 51,
                     "code": "return '<p><strong>' + previousTerms + '</strong>' + matchPrefix + '<strong>' + currentMatch + '</strong>' + matchSuffix + '</p>';"

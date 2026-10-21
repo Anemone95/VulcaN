@@ -16,9 +16,21 @@
                     "code": "let fullRequestPath = path.join(directory, requestPath);"
                 },
                 "sink": {
+                    "file": "lib/read-file.js",
+                    "lineno": 11,
+                    "code": "return fs.readFile(file, done);"
+                }
+            },
+            {
+                "source": {
                     "file": "middleware/file-explorer.js",
-                    "lineno": 32,
-                    "code": "let stat = yield getFileStat(fullRequestPath);"
+                    "lineno": 31,
+                    "code": "let fullRequestPath = path.join(directory, requestPath);"
+                },
+                "sink": {
+                    "file": "lib/read-folder.js",
+                    "lineno": 11,
+                    "code": "return fs.readdir(file, done);"
                 }
             }
         ]

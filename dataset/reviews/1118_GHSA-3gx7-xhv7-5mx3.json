@@ -42,8 +42,8 @@
                 },
                 "sink": {
                     "file": "index.js",
-                    "lineno": 509,
-                    "code": "            return { value: object.value[property.value] }"
+                    "lineno": 520,
+                    "code": "return { value: new Func(...args) }"
                 }
             }
         ]

@@ -25,8 +25,8 @@
             {
                 "source": {
                     "file": "src/drag_and_drop_handler.coffee",
-                    "lineno": 466,
-                    "code": "constructor: (node, offset_x, offset_y, $tree) "
+                    "lineno": 462,
+                    "code": "constructor: (node, offset_x, offset_y, $tree) ->"
                 },
                 "sink": {
                     "file": "src/drag_and_drop_handler.coffee",

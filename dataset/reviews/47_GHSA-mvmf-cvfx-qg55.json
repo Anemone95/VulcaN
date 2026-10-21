@@ -12,12 +12,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "package/lib/bleach.js",
-                    "lineno": 12,
-                    "code": "matcher: /</?([a-zA-Z0-9]+)*(.*?)/?>/igm,"
+                    "file": "lib/bleach.js",
+                    "lineno": 22,
+                    "code": "analyze: function(html) {"
                 },
                 "sink": {
-                    "file": "package/lib/bleach.js",
+                    "file": "lib/bleach.js",
                     "lineno": 29,
                     "code": "while ((match = bleach.matcher.exec(html)) != null) {"
                 }

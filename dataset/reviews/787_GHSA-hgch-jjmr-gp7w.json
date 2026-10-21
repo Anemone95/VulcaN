@@ -19,7 +19,7 @@
                 "sink": {
                     "file": "src/index.js",
                     "lineno": 43,
-                    "code": "      '(function () {\"use strict\"; return ' + code + '})()',"
+                    "code": "return vm.runInContext("
                 }
             }
         ]

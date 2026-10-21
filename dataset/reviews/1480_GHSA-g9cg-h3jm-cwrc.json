@@ -12,7 +12,7 @@
             {
                 "source": {
                     "file": "lib/index.js",
-                    "lineno": 278,
+                    "lineno": 280,
                     "code": "const onPart = (part) => {"
                 },
                 "sink": {

@@ -17,7 +17,7 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "manager.js",
+                    "file": "linux/manager.js",
                     "lineno": 1,
                     "code": "var cli = process.env.NM_CLI || 'nmcli'"
                 },

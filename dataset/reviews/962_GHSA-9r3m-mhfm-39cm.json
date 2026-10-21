@@ -14,7 +14,7 @@
                     "file": "dist/util.js",
                     "start_lineno": 92,
                     "end_lineno": 107,
-                    "code": "const wholePart = (value / PRECISION_M);  const negative = value < 0;  let remainder = (value % PRECISION_M);  if (precision > PRECISION) {    // More precision was requested than we have, so we multiply    // to add more 0's    remainder *= 10n ** (BigInt(precision) - PRECISION);  } else {    // Less precision was requested, so we round    remainder = divide(remainder, 10n ** (PRECISION - BigInt(precision)), round);  }  if (remainder < 0) { remainder *= -1n; }  const remainderStr = remainder.toString().padStart(precision, '0');"
+                    "code": "const wholePart = (value / exports.PRECISION_M);"
                 }
             }
         ]

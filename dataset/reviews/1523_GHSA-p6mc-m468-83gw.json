@@ -13,13 +13,13 @@
             {
                 "source": {
                     "file": "lodash.js",
-                    "lineno": 3965,
+                    "lineno": 3978,
                     "code": "function baseSet(object, path, value, customizer) {"
                 },
                 "sink": {
                     "file": "lodash.js",
-                    "lineno": 3990,
-                    "code": "nested = nested[key];"
+                    "lineno": 2559,
+                    "code": "object[key] = value;"
                 }
             }
         ]

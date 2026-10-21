@@ -12,13 +12,13 @@
             {
                 "source": {
                     "file": "lib/joplin-renderer/htmlUtils.js",
-                    "lineno": 39,
-                    "code": "const disallowedTags = ['script', 'iframe', 'frameset', 'frame', 'object', 'base', 'embed'];"
+                    "lineno": 72,
+                    "code": "sanitizeHtml(html, options = null) {"
                 },
                 "sink": {
                     "file": "lib/joplin-renderer/htmlUtils.js",
-                    "lineno": 160,
-                    "code": "parser.write(html);"
+                    "lineno": 131,
+                    "code": "output.push(`<${name}${attrHtml}${closingSign}`);"
                 }
             }
         ]

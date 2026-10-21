@@ -12,18 +12,18 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "src/strategy.js",
-                    "start_lineno": "95",
-                    "end_lineno": "97",
-                    "code": " accessToken = session.getAccessToken().getJwtToken();\nidToken = session.getIdToken().getJwtToken();\nrefreshToken = session.getRefreshToken().getToken();"
+                    "file": "lib/strategy.js",
+                    "start_lineno": 95,
+                    "end_lineno": 97,
+                    "code": "accessToken = session.getAccessToken().getJwtToken();"
                 }
             },
             {
                 "block": {
-                    "file": "src/test/strategy.test.js",
-                    "start_lineno": "87",
-                    "end_lineno": "88",
-                    "code": "req.body.username = 'username' \n req.body.password = 'password'"
+                    "file": "test/strategy.test.js",
+                    "start_lineno": 87,
+                    "end_lineno": 88,
+                    "code": "req.body.username = \"username\""
                 }
             }
         ]

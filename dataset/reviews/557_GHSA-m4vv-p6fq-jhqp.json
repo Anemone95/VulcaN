@@ -12,13 +12,25 @@
             {
                 "source": {
                     "file": "middleware/file-explorer.js",
-                    "lineno": 27,
-                    "code": "const directory = config.get(configKey.DIRECTORY);"
+                    "lineno": 30,
+                    "code": "let requestPath = decodeURIComponent(this.request.path);"
                 },
                 "sink": {
-                    "file": "middleware/file_explorer.js",
-                    "lineno": 32,
-                    "code": "let stat = yield getFileStat(fullRequestPath);"
+                    "file": "lib/read-file.js",
+                    "lineno": 11,
+                    "code": "return fs.readFile(file, done);"
+                }
+            },
+            {
+                "source": {
+                    "file": "middleware/file-explorer.js",
+                    "lineno": 30,
+                    "code": "let requestPath = decodeURIComponent(this.request.path);"
+                },
+                "sink": {
+                    "file": "lib/read-folder.js",
+                    "lineno": 11,
+                    "code": "return fs.readdir(file, done);"
                 }
             }
         ]

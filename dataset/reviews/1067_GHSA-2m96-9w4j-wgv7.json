@@ -12,8 +12,8 @@
             {
                 "source": {
                     "file": "index.js",
-                    "lineno": 2207,
-                    "code": "module.exports = merge;"
+                    "lineno": 2164,
+                    "code": "var merge = createAssigner(function(object, source, srcIndex) {"
                 },
                 "sink": {
                     "file": "index.js",

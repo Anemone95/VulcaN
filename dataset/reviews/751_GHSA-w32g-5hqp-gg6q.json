@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "/dist/mermaid.js",
+                    "file": "dist/mermaid.js",
                     "lineno": 50748,
                     "code": "const setLink = function (ids, linkStr, tooltip) {"
                 },
                 "sink": {
-                    "file": "/dist/mermaid.js",
-                    "lineno": 50752,
-                    "code": "vertices[id].link = linkStr.replace(/javascript:.*/g, '');"
+                    "file": "dist/mermaid.js",
+                    "lineno": 51119,
+                    "code": "link.setAttributeNS('http://www.w3.org/2000/svg', 'href', vertex.link);"
                 }
             }
         ]

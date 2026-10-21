@@ -12,25 +12,25 @@
             {
                 "block": {
                     "file": "lib/marked.esm.js",
-                    "start_lineno": 1129,
-                    "end_lineno": 1140,
-                    "code": "Code is too large"
+                    "start_lineno": 1202,
+                    "end_lineno": 1213,
+                    "code": "strong: {"
                 }
             },
             {
                 "block": {
                     "file": "lib/marked.esm.js",
-                    "start_lineno": 1144,
-                    "end_lineno": 1145,
-                    "code": "text: /^(`+|[^`])(?:[\\s\\S]*?(?:(?=[\\<!\\[`*]|\b_|$)|[^ ](?= {2,}\n))|(?= {2,}\n))/, punctuation: /^([\\s*punctuation])/"
+                    "start_lineno": 1217,
+                    "end_lineno": 1218,
+                    "code": "text: /^(`+|[^`])(?:(?= {2,}\\n)|[\\s\\S]*?(?:(?=[\\\\<!\\[`*]|\\b_|$)|[^ ](?= {2,}\\n)))/,"
                 }
             },
             {
                 "block": {
                     "file": "lib/marked.esm.js",
-                    "start_lineno": 1154,
-                    "end_lineno": 1155,
-                    "code": "inline._blockSkip = '\\[[^\\]]*?\\]\\([^\\)]*?\\)|`[^`]*?`|<[^>]*?>'; inline._overlapSkip = '__[^_]*?__|\\*\\*\\[^\\*\\]*?\\*\\*';"
+                    "start_lineno": 1227,
+                    "end_lineno": 1228,
+                    "code": "inline._blockSkip = '\\\\[[^\\\\]]*?\\\\]\\\\([^\\\\)]*?\\\\)|`[^`]*?`|<[^>]*?>';"
                 }
             }
         ]

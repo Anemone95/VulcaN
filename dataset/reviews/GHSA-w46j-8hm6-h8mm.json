@@ -12,13 +12,13 @@
             {
                 "source": {
                     "file": "src/modules/legend/Legend.js",
-                    "lineno": 192,
-                    "code": "elLegendText.innerHTML = Array.isArray(text) ? text.join(' ') : text"
+                    "lineno": 96,
+                    "code": "let text = legendFormatter(legendNames[i], { seriesIndex: i, w })"
                 },
                 "sink": {
                     "file": "src/modules/legend/Legend.js",
-                    "lineno": 208,
-                    "code": "Graphics.setAttrs(elLegendText, {"
+                    "lineno": 192,
+                    "code": "elLegendText.innerHTML = Array.isArray(text) ? text.join(' ') : text"
                 }
             },
             {
@@ -26,7 +26,7 @@
                     "file": "src/modules/tooltip/Labels.js",
                     "start_lineno": 228,
                     "end_lineno": 228,
-                    "code": "Graphics.setAttrs(elLegendText, {"
+                    "code": "ttYLabel.innerHTML = seriesName ? seriesName : ''"
                 }
             }
         ]

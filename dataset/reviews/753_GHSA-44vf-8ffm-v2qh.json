@@ -14,7 +14,7 @@
                     "file": "index.js",
                     "start_lineno": 45,
                     "end_lineno": 77,
-                    "code": "Too big, problem is not verifying the MAC of the cookie"
+                    "code": "RailsSessionDecoder.prototype.decodeCookieFn = function (cookie, isSignedCookie, next) {"
                 }
             }
         ]

@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "jwt.js",
+                    "file": "lib/jwt.js",
                     "lineno": 58,
                     "code": "jwt.decode = function jwt_decode(token, key, noVerify, algorithm) {"
                 },
                 "sink": {
-                    "file": "jwt.js",
+                    "file": "lib/jwt.js",
                     "lineno": 87,
                     "code": "if (!verify(signingInput, key, signingMethod, signingType, signatureSeg)) {"
                 }

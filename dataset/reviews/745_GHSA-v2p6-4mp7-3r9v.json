@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "underscapeHTML.js",
+                    "file": "unescapeHTML.js",
                     "lineno": 4,
                     "code": "module.exports = function unescapeHTML(str) {"
                 },
                 "sink": {
-                    "file": "underscapeHTML.js",
+                    "file": "unescapeHTML.js",
                     "lineno": 5,
                     "code": "return makeString(str).replace(/\\&([^;]+);/g, function(entity, entityCode) {"
                 }

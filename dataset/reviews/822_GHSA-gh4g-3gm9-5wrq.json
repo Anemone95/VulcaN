@@ -12,50 +12,50 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "/dist/jquery.shave.js",
+                    "file": "dist/jquery.shave.js",
                     "lineno": 7,
-                    "code": "  function shave(target, maxHeight) {"
+                    "code": "function shave(target, maxHeight) {"
                 },
                 "sink": {
-                    "file": "/dist/jquery.shave.js",
+                    "file": "dist/jquery.shave.js",
                     "lineno": 68,
                     "code": "el.insertAdjacentHTML('beforeend', '<span class=\"' + classname + '\" style=\"display:none;\">' + diff + '</span>');"
                 }
             },
             {
                 "source": {
-                    "file": "/dist/shave.es.js",
+                    "file": "dist/shave.es.js",
                     "lineno": 8,
                     "code": "function shave(target, maxHeight) {"
                 },
                 "sink": {
-                    "file": "/dist/shave.es.js",
+                    "file": "dist/shave.es.js",
                     "lineno": 64,
-                    "code": "el.insertAdjacentHTML('beforeend', \"<span class=\"\".concat(classname, \"\" style=\"display:none;\">\").concat(diff,\"</span>\"));"
+                    "code": "el.insertAdjacentHTML('beforeend', \"<span class=\\\"\".concat(classname, \"\\\" style=\\\"display:none;\\\">\").concat(diff, \"</span>\"));"
                 }
             },
             {
                 "source": {
-                    "file": "/dist/shave.js",
+                    "file": "dist/shave.js",
                     "lineno": 14,
                     "code": "function shave(target, maxHeight) {"
                 },
                 "sink": {
-                    "file": "/dist/shave.js",
+                    "file": "dist/shave.js",
                     "lineno": 70,
-                    "code": "el.insertAdjacentHTML('beforeend', \"<span class=\"\".concat(classname, \"\" style=\"display:none;\">\").concat(diff, \"</span>\"));"
+                    "code": "el.insertAdjacentHTML('beforeend', \"<span class=\\\"\".concat(classname, \"\\\" style=\\\"display:none;\\\">\").concat(diff, \"</span>\"));"
                 }
             },
             {
                 "source": {
-                    "file": "/src/shave.js",
+                    "file": "src/shave.js",
                     "lineno": 1,
                     "code": "export default function shave (target, maxHeight, opts = {}) {"
                 },
                 "sink": {
-                    "file": "/src/shave.js",
-                    "lineno": 62,
-                    "code": "`<span class=\"${classname}\" style=\"display:none;\">${diff}</span>`,"
+                    "file": "src/shave.js",
+                    "lineno": 60,
+                    "code": "el.insertAdjacentHTML("
                 }
             }
         ]

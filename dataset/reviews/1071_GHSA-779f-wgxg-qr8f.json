@@ -14,7 +14,7 @@
                     "file": "index.js",
                     "start_lineno": 808,
                     "end_lineno": 819,
-                    "code": "(baseAssignValue function)"
+                    "code": "function baseAssignValue(object, key, value) {"
                 }
             }
         ]

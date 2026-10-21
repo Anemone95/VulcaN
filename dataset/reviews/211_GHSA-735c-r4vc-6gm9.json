@@ -12,7 +12,7 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "test/bionode-era.js",
+                    "file": "test/bionode-sra.js",
                     "lineno": 9,
                     "code": "var sraURL = 'http://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR150/SRR1509835/SRR1509835.sra'"
                 },

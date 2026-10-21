@@ -14,7 +14,7 @@
                 "source": {
                     "file": "i18next.js",
                     "lineno": 1177,
-                    "code": "var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0>"
+                    "code": "var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];"
                 },
                 "sink": {
                     "file": "i18next.js",
@@ -38,10 +38,10 @@
                 "source": {
                     "file": "dist/es/Interpolator.js",
                     "lineno": 18,
-                    "code": "var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0>"
+                    "code": "var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];"
                 },
                 "sink": {
-                    "file": "dist/commonjs/Interpolator.js",
+                    "file": "dist/es/Interpolator.js",
                     "lineno": 31,
                     "code": "this.escapeValue = iOpts.escapeValue;"
                 }
@@ -50,7 +50,7 @@
                 "source": {
                     "file": "dist/umd/i18next.js",
                     "lineno": 1177,
-                    "code": "var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0>"
+                    "code": "var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];"
                 },
                 "sink": {
                     "file": "dist/umd/i18next.js",

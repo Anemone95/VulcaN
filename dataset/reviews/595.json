@@ -10,14 +10,26 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "index.js",
-                    "lineno": 30,
-                    "code": "publicPath = pathUtil.resolve(publicPath || '.')"
+                    "file": "node_modules/connect/lib/middleware/directory.js",
+                    "lineno": 79,
+                    "code": "var url = parse(req.url)"
                 },
                 "sink": {
-                    "file": "index.js",
-                    "lineno": 39,
-                    "code": "var server = http.createServer(app).listen(port);"
+                    "file": "node_modules/connect/lib/middleware/directory.js",
+                    "lineno": 135,
+                    "code": "res.end(str);"
+                }
+            },
+            {
+                "source": {
+                    "file": "node_modules/connect/lib/middleware/directory.js",
+                    "lineno": 101,
+                    "code": "fs.readdir(path, function(err, files){"
+                },
+                "sink": {
+                    "file": "node_modules/connect/lib/middleware/directory.js",
+                    "lineno": 135,
+                    "code": "res.end(str);"
                 }
             }
         ]

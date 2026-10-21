@@ -13,7 +13,7 @@
             {
                 "source": {
                     "file": "lib/quickserver.js",
-                    "lineno": 27,
+                    "lineno": 25,
                     "code": "var serverLogic = function(request, response) {"
                 },
                 "sink": {

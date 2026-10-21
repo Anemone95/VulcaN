@@ -18,20 +18,8 @@
                 },
                 "sink": {
                     "file": "lib/stats.js",
-                    "lineno": 27,
-                    "code": "return self.proc_calc(pid, options, done)"
-                }
-            },
-            {
-                "source": {
-                    "file": "lib/stats.js",
-                    "lineno": 12,
-                    "code": "  proc: function(pid, options, done) {"
-                },
-                "sink": {
-                    "file": "lib/stats.js",
-                    "lineno": 35,
-                    "code": "return self.proc_calc(pid, options, done)"
+                    "lineno": 45,
+                    "code": "fs.readFile(p.join('/proc', ''+pid, 'stat'), 'utf8', function(err, infos) {"
                 }
             },
             {

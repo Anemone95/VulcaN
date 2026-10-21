@@ -12,13 +12,13 @@
             {
                 "source": {
                     "file": "js/jquery.terminal.js",
-                    "lineno": 4267,
-                    "code": "anyLinks: false,"
+                    "lineno": 3586,
+                    "code": "format: function format(str, options) {"
                 },
                 "sink": {
                     "file": "js/jquery.terminal.js",
-                    "lineno": 3676,
-                    "code": "if (!settings.anyLinks &&"
+                    "lineno": 3680,
+                    "code": "result = '<a target=\"_blank\" href=\"' + data + '\"';"
                 }
             }
         ]

@@ -19,7 +19,7 @@
                 "sink": {
                     "file": "minimatch.js",
                     "lineno": 521,
-                    "code": "tail = tail.replace(/((?:\\{2})*)(\\?)\\|/g, function (_, $1, $2) {"
+                    "code": "tail = tail.replace(/((?:\\\\{2})*)(\\\\?)\\|/g, function (_, $1, $2) {"
                 }
             }
         ]

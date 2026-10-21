@@ -12,60 +12,60 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "lib/deep-extend",
+                    "file": "lib/deep-extend.js",
                     "lineno": 82,
                     "code": "var deepExtend = module.exports = function (/*obj_1, [obj_2], [obj_N]*/) {"
                 },
                 "sink": {
-                    "file": "lib/deep-extend",
+                    "file": "lib/deep-extend.js",
                     "lineno": 117,
                     "code": "target[key] = val;"
                 }
             },
             {
                 "source": {
-                    "file": "lib/deep-extend",
+                    "file": "lib/deep-extend.js",
                     "lineno": 82,
                     "code": "var deepExtend = module.exports = function (/*obj_1, [obj_2], [obj_N]*/) {"
                 },
                 "sink": {
-                    "file": "lib/deep-extend",
+                    "file": "lib/deep-extend.js",
                     "lineno": 122,
                     "code": "target[key] = deepCloneArray(val);"
                 }
             },
             {
                 "source": {
-                    "file": "lib/deep-extend",
+                    "file": "lib/deep-extend.js",
                     "lineno": 82,
                     "code": "var deepExtend = module.exports = function (/*obj_1, [obj_2], [obj_N]*/) {"
                 },
                 "sink": {
-                    "file": "lib/deep-extend",
+                    "file": "lib/deep-extend.js",
                     "lineno": 127,
                     "code": "target[key] = cloneSpecificValue(val);"
                 }
             },
             {
                 "source": {
-                    "file": "lib/deep-extend",
+                    "file": "lib/deep-extend.js",
                     "lineno": 82,
                     "code": "var deepExtend = module.exports = function (/*obj_1, [obj_2], [obj_N]*/) {"
                 },
                 "sink": {
-                    "file": "lib/deep-extend",
+                    "file": "lib/deep-extend.js",
                     "lineno": 132,
                     "code": "target[key] = deepExtend({}, val);"
                 }
             },
             {
                 "source": {
-                    "file": "lib/deep-extend",
+                    "file": "lib/deep-extend.js",
                     "lineno": 82,
                     "code": "var deepExtend = module.exports = function (/*obj_1, [obj_2], [obj_N]*/) {"
                 },
                 "sink": {
-                    "file": "lib/deep-extend",
+                    "file": "lib/deep-extend.js",
                     "lineno": 137,
                     "code": "target[key] = deepExtend(src, val);"
                 }

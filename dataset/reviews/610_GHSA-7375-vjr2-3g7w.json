@@ -13,13 +13,13 @@
             {
                 "source": {
                     "file": "index.js",
-                    "lineno": 8,
-                    "code": "var htmlls = require('html-ls')"
+                    "lineno": 142,
+                    "code": "var listing = htmlls(listPath, {"
                 },
                 "sink": {
                     "file": "index.js",
-                    "lineno": 142,
-                    "code": "var listing = htmlls(listPath, {hideDot: self.nodot}) "
+                    "lineno": 191,
+                    "code": ".pipe(res)"
                 }
             }
         ]

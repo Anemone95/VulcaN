@@ -17,8 +17,8 @@
                 },
                 "sink": {
                     "file": "lib/ReactDOMComponent.js",
-                    "lineno": 281,
-                    "code": "return prefix + innerHTML.__html"
+                    "lineno": 280,
+                    "code": "return prefix + innerHTML.__html;"
                 }
             }
         ]

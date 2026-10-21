@@ -17,8 +17,8 @@
                 },
                 "sink": {
                     "file": "index.js",
-                    "lineno": 2207,
-                    "code": "baseMergeDeep(object, source, key, srcIndex, baseMerge, customizer, stack);"
+                    "lineno": 856,
+                    "code": "object[key] = value;"
                 }
             }
         ]

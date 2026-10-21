@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "widgets/blocker/blocker.js",
+                    "file": "widgets/blockers/blockers.js",
                     "lineno": 30,
                     "code": "data.blockers.forEach(function(blocker) {"
                 },
                 "sink": {
-                    "file": "widgets/blocker/blocker.js",
+                    "file": "widgets/blockers/blockers.js",
                     "lineno": 44,
                     "code": "var $summary = $(\"<div/>\").addClass(\"issue-summary\").append(blocker.summary).appendTo(listItem);"
                 }

@@ -12,38 +12,38 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "package/src/gmail.js",
+                    "file": "src/gmail.js",
                     "lineno": 872,
                     "code": "api.tools.parse_response = function(response) {"
                 },
                 "sink": {
-                    "file": "package/src/gmail.js",
+                    "file": "src/gmail.js",
                     "lineno": 894,
-                    "code": "var get_data = new Function(\"use strict\"; return \" + data);"
+                    "code": "var get_data = new Function(\"\\\"use strict\\\"; return \" + data);"
                 }
             },
             {
                 "source": {
-                    "file": "package/src/gmail.js",
+                    "file": "src/gmail.js",
                     "lineno": 1680,
                     "code": "api.helper.get.visible_emails_post = function(get_data) {"
                 },
                 "sink": {
-                    "file": "package/src/gmail.js",
+                    "file": "src/gmail.js",
                     "lineno": 1689,
                     "code": "get_data = new Function(get_data);"
                 }
             },
             {
                 "source": {
-                    "file": "package/src/gmail.js",
+                    "file": "src/gmail.js",
                     "lineno": 1933,
                     "code": "api.helper.get.email_data_post = function(get_data) {"
                 },
                 "sink": {
-                    "file": "package/src/gmail.js",
+                    "file": "src/gmail.js",
                     "lineno": 1939,
-                    "code": "var get_data = new Function(\"use strict\"; return \" + data);"
+                    "code": "get_data = new Function(get_data);"
                 }
             }
         ]

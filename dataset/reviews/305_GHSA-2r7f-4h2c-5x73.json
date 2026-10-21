@@ -12,7 +12,7 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "src/parser.js",
+                    "file": "lib/parser.js",
                     "lineno": 124,
                     "code": "loaded = _lodash2['default'].isString(this.source) ? _jsYaml2['default'].safeLoad(this.source) : this.source;"
                 },

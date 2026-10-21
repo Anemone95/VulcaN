@@ -16,9 +16,9 @@
                     "code": "handleChangeContent: function (text) {"
                 },
                 "sink": {
-                    "file": "client/post.js",
-                    "lineno": 87,
-                    "code": "this._post({_content: text})"
+                    "file": "client/rendered.js",
+                    "lineno": 11,
+                    "code": "dangerouslySetInnerHTML={{"
                 }
             }
         ]

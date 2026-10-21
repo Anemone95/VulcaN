@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "index.js",
+                    "file": "lib/index.js",
                     "lineno": 115,
                     "code": "const contentEncoding = source.headers['content-encoding'];"
                 },
                 "sink": {
-                    "file": "index.js",
+                    "file": "lib/index.js",
                     "lineno": 116,
                     "code": "const decoder = (options.decoders || internals.decoders)[contentEncoding];"
                 }

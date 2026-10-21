@@ -17,9 +17,9 @@
                     "code": "var lastParam = request._paramsArray[request._paramsArray.length - 1];"
                 },
                 "sink": {
-                    "file": "lib/directory.js",
-                    "lineno": 112,
-                    "code": "File.load(path, request, { lookupCompressed: settings.lookupCompressed }, function (response) {"
+                    "file": "lib/file.js",
+                    "lineno": 155,
+                    "code": "var fileStream = Fs.createReadStream(path);"
                 }
             }
         ]

@@ -17,7 +17,7 @@
                 },
                 "sink": {
                     "file": "index.js",
-                    "lineno": 198,
+                    "lineno": 196,
                     "code": "return \"new RegExp(\" + serialize(regexps[valueIndex].source) + \", \\\"\" + regexps[valueIndex].flags + \"\\\")\";"
                 }
             }

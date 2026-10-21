@@ -13,13 +13,13 @@
             {
                 "source": {
                     "file": "build/api/web/index.js",
-                    "lineno": 36,
-                    "code": "module.exports = function (config, auth, storage) {"
+                    "lineno": 64,
+                    "code": "const base = Utils.combineBaseUrl(Utils.getWebProtocol(req), req.get('host'), config.url_prefix);"
                 },
                 "sink": {
                     "file": "build/api/web/index.js",
-                    "lineno": 64,
-                    "code": "const base = Utils.combineBaseUrl(Utils.getWebProtocol(req), req.get('host'), config.url_prefix);"
+                    "lineno": 69,
+                    "code": "res.send(webPage);"
                 }
             }
         ]

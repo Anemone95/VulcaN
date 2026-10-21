@@ -13,13 +13,13 @@
             {
                 "source": {
                     "file": "lib/expression/parse.js",
-                    "lineno": 579,
-                    "code": "var node = parseConditional();"
+                    "lineno": 55,
+                    "code": "function parse (expr, options) {"
                 },
                 "sink": {
-                    "file": "lib/expression/parse.js",
-                    "lineno": 595,
-                    "code": "else if (type.isFunctionNode(node)) {"
+                    "file": "node_modules/typed-function/typed-function.js",
+                    "lineno": 1115,
+                    "code": "var factory = (new Function(refs.name, 'createError', body));"
                 }
             }
         ]

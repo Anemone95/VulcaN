@@ -17,9 +17,9 @@
                     "code": "var pathname = url.parse(request.url).pathname;"
                 },
                 "sink": {
-                    "file": "controller.js",
-                    "lineno": 190,
-                    "code": "response.write(file, 'binary');"
+                    "file": "lib/util/util4HTML.js",
+                    "lineno": 7,
+                    "code": "fs.readFile(path, 'binary', callback);"
                 }
             }
         ]

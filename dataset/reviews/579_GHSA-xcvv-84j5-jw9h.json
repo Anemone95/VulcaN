@@ -12,36 +12,36 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "package/index.js",
+                    "file": "index.js",
                     "lineno": 14,
                     "code": "function assign(target/*, objects*/) {"
                 },
                 "sink": {
-                    "file": "package/index.js",
-                    "lineno": 43,
+                    "file": "index.js",
+                    "lineno": 44,
                     "code": "target[key] = val;"
                 }
             },
             {
                 "source": {
-                    "file": "package/index.js",
+                    "file": "index.js",
                     "lineno": 14,
-                    "code": "function assign(target/*, objects*/) {{"
+                    "code": "function assign(target/*, objects*/) {"
                 },
                 "sink": {
-                    "file": "package/index.js",
-                    "lineno": 45,
+                    "file": "index.js",
+                    "lineno": 46,
                     "code": "target[key] = assign(target[key] || {}, val);"
                 }
             },
             {
                 "source": {
-                    "file": "package/index.js",
+                    "file": "index.js",
                     "lineno": 14,
-                    "code": "function assign(target/*, objects*/) {{"
+                    "code": "function assign(target/*, objects*/) {"
                 },
                 "sink": {
-                    "file": "package/index.js",
+                    "file": "index.js",
                     "lineno": 48,
                     "code": "target[key] = val;"
                 }

@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "lib/sanitize.js",
-                    "lineno": 19,
-                    "code": "function getSanitizerConfig (options) {"
+                    "file": "index.js",
+                    "lineno": 21,
+                    "code": "var marky = module.exports = function (markdown, options) {"
                 },
                 "sink": {
-                    "file": "bin/sanitize.js",
-                    "lineno": 97,
-                    "code": "return !String(frame.attribs.src).match(/^(https?:)?//(www\\.)?youtube\\.com/)"
+                    "file": "lib/sanitize.js",
+                    "lineno": 16,
+                    "code": "return sanitizeHtml(html, config)"
                 }
             }
         ]

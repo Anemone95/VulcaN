@@ -12,14 +12,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "package/lib/server.js",
+                    "file": "lib/server.js",
                     "lineno": 19,
                     "code": "module.exports = coroutine(function * (req, res, flags, current, fu) {"
                 },
                 "sink": {
-                    "file": "package/lib/server.js",
-                    "lineno": 191,
-                    "code": "return httpRequest.stream({"
+                    "file": "lib/http-request.js",
+                    "lineno": 96,
+                    "code": "sendServer(opts.req, opts.path, opts.streamOptions)"
                 }
             }
         ]

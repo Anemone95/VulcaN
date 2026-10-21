@@ -18,7 +18,7 @@
                 "sink": {
                     "file": "dist/klona.js",
                     "lineno": 9,
-                    "code": "tmp[k] = index(x[k]);"
+                    "code": "tmp[k] = klona(x[k]);"
                 }
             }
         ]

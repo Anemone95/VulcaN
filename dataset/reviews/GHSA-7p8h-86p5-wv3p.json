@@ -12,13 +12,13 @@
             {
                 "source": {
                     "file": "lib/scripts/collection.js",
-                    "lineno": 143,
-                    "code": "$.get(`${makeCollectionUrl()}${encodeURIComponent(_id)}/${prop}`, function (input) {"
+                    "lineno": 188,
+                    "code": "$.get(`${makeCollectionUrl()}${encodeURIComponent(_id)}/${prop}`, function (prop) {"
                 },
                 "sink": {
                     "file": "lib/scripts/collection.js",
-                    "lineno": 188,
-                    "code": "target.parent().html(input);"
+                    "lineno": 191,
+                    "code": "target.parent().html(prop);"
                 }
             }
         ]

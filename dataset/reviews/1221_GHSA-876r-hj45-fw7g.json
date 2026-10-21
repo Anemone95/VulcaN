@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "index.js",
-                    "lineno": 36,
-                    "code": "function saferEval (code, context) {"
+                    "file": "lib/index.js",
+                    "lineno": 92,
+                    "code": "function saferEval(code, context) {"
                 },
                 "sink": {
-                    "file": "index.js",
+                    "file": "lib/index.js",
                     "lineno": 64,
                     "code": "return vm.runInContext(src, this._context, this._options);"
                 }

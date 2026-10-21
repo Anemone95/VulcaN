@@ -12,14 +12,26 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "bin/iter-http.js",
+                    "file": "bin/iter-http",
                     "lineno": 216,
                     "code": "route:function( pathName, req, res ){/* \u8def\u7531\u5230\u6307\u5b9a\u7684\u6587\u4ef6\u5e76\u54cd\u5e94\u8f93\u51fa */"
                 },
                 "sink": {
-                    "file": "bin/iter-http.js",
-                    "lineno": 240,
-                    "code": "self.responseFile.bind(self)(pathName,req, res, ext, params, stats);"
+                    "file": "bin/iter-http",
+                    "lineno": 196,
+                    "code": "raw = fs.createReadStream(pathName, {\"start\": range.start, \"end\": range.end});"
+                }
+            },
+            {
+                "source": {
+                    "file": "bin/iter-http",
+                    "lineno": 216,
+                    "code": "route:function( pathName, req, res ){/* \u8def\u7531\u5230\u6307\u5b9a\u7684\u6587\u4ef6\u5e76\u54cd\u5e94\u8f93\u51fa */"
+                },
+                "sink": {
+                    "file": "bin/iter-http",
+                    "lineno": 204,
+                    "code": "raw = fs.createReadStream(pathName);"
                 }
             }
         ]

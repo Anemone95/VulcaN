@@ -14,7 +14,7 @@
                     "file": "components/prism-asciidoc.js",
                     "start_lineno": 4,
                     "end_lineno": 4,
-                    "code": "Code is too large."
+                    "code": "pattern: /(^[ \\t]*)\\[(?!\\[)(?:([\"'$`])(?:(?!\\2)[^\\\\]|\\\\.)*\\2|\\[(?:[^\\]\\\\]|\\\\.)*\\]|[^\\]\\\\]|\\\\.)*\\]/m,"
                 }
             },
             {
@@ -22,7 +22,7 @@
                     "file": "components/prism-asciidoc.js",
                     "start_lineno": 35,
                     "end_lineno": 35,
-                    "code": "Code is too large."
+                    "code": "pattern: /^\\|={3,}(?:(?:\\r?\\n|\\r).*)*?(?:\\r?\\n|\\r)\\|={3,}$/m,"
                 }
             },
             {
@@ -30,7 +30,7 @@
                     "file": "components/prism-asciidoc.js",
                     "start_lineno": 127,
                     "end_lineno": 127,
-                    "code": "Code is too large."
+                    "code": "pattern: /\\b[a-z\\d][a-z\\d-]*::?(?:(?:\\S+)??\\[(?:[^\\]\\\\\"]|([\"'])(?:(?!\\1)[^\\\\]|\\\\.)*\\1|\\\\.)*\\])/,"
                 }
             },
             {
@@ -38,7 +38,7 @@
                     "file": "components/prism-bash.js",
                     "start_lineno": 136,
                     "end_lineno": 136,
-                    "code": "Code is too large."
+                    "code": "pattern: /(^|[^\\\\](?:\\\\\\\\)*)([\"'])(?:\\\\[\\s\\S]|\\$\\([^)]+\\)|`[^`]+`|(?!\\2)[^\\\\])*\\2/,"
                 }
             },
             {
@@ -46,7 +46,7 @@
                     "file": "components/prism-batch.js",
                     "start_lineno": 28,
                     "end_lineno": 28,
-                    "code": "Code is too large."
+                    "code": "pattern: /((?:^|[&(])[ \\t]*)for(?: ?\\/[a-z?](?:[ :](?:\"[^\"]*\"|\\S+))?)* \\S+ in \\([^)]+\\) do/im,"
                 }
             },
             {
@@ -54,7 +54,7 @@
                     "file": "components/prism-batch.js",
                     "start_lineno": 41,
                     "end_lineno": 41,
-                    "code": "Code is too large."
+                    "code": "pattern: /((?:^|[&(])[ \\t]*)if(?: ?\\/[a-z?](?:[ :](?:\"[^\"]*\"|\\S+))?)* (?:not )?(?:cmdextversion \\d+|defined \\w+|errorlevel \\d+|exist \\S+|(?:\"[^\"]*\"|\\S+)?(?:==| (?:equ|neq|lss|leq|gtr|geq) )(?:\"[^\"]*\"|\\S+))/im,"
                 }
             },
             {
@@ -62,7 +62,7 @@
                     "file": "components/prism-batch.js",
                     "start_lineno": 62,
                     "end_lineno": 62,
-                    "code": "Code is too large."
+                    "code": "pattern: /((?:^|[&(])[ \\t]*)set(?: ?\\/[a-z](?:[ :](?:\"[^\"]*\"|\\S+))?)* (?:[^^&)\\r\\n]|\\^(?:\\r\\n|[\\s\\S]))*/im,"
                 }
             },
             {
@@ -70,7 +70,7 @@
                     "file": "components/prism-eiffel.js",
                     "start_lineno": 16,
                     "end_lineno": 16,
-                    "code": "Code is too large."
+                    "code": "pattern: /\"(?:%\\s*\\n\\s*%|%.|[^%\"\\r\\n])*\"/,"
                 }
             },
             {
@@ -78,7 +78,7 @@
                     "file": "components/prism-elm.js",
                     "start_lineno": 14,
                     "end_lineno": 14,
-                    "code": "Code is too large."
+                    "code": "pattern: /\"(?:[^\\\\\"\\r\\n]|\\\\(?:[abfnrtv\\\\\"]|\\d+|x[0-9a-fA-F]+))*\"/,"
                 }
             },
             {
@@ -86,7 +86,7 @@
                     "file": "components/prism-fortran.js",
                     "start_lineno": 7,
                     "end_lineno": 7,
-                    "code": "Code is too large."
+                    "code": "pattern: /(?:\\w+_)?(['\"])(?:\\1\\1|&(?:\\r\\n?|\\n)(?:\\s*!.+(?:\\r\\n?|\\n))?|(?!\\1).)*(?:\\1|&)/,"
                 }
             },
             {
@@ -94,7 +94,7 @@
                     "file": "components/prism-ftl.js",
                     "start_lineno": 21,
                     "end_lineno": 21,
-                    "code": "Code is too large."
+                    "code": "pattern: RegExp(/(\"|')(?:(?!\\1|\\$\\{)[^\\\\]|\\\\.|\\$\\{(?:<expr>)*?\\})*\\1/.source.replace(/<expr>/g, function () { return FTL_EXPR; })),"
                 }
             },
             {
@@ -102,7 +102,7 @@
                     "file": "components/prism-ftl.js",
                     "start_lineno": 25,
                     "end_lineno": 25,
-                    "code": "Code is too large."
+                    "code": "pattern: RegExp(/((?:^|[^\\\\])(?:\\\\\\\\)*)\\$\\{(?:<expr>)*?\\}/.source.replace(/<expr>/g, function () { return FTL_EXPR; })),"
                 }
             },
             {
@@ -110,7 +110,7 @@
                     "file": "components/prism-gherkin.js",
                     "start_lineno": 19,
                     "end_lineno": 19,
-                    "code": "Code is too large."
+                    "code": "pattern: /((?:^|\\r?\\n|\\r)[ \\t]*)(?:Ability|Ahoy matey!|Arwedd|Aspekt|Besigheid Behoefte|Business Need|Caracteristica|Caracter\u00edstica|Egenskab|Egenskap|Eiginleiki|Feature|F\u012b\u010da|Fitur|Fonctionnalit\u00e9|Fonksyonalite|Funcionalidade|Funcionalitat|Functionalitate|Func\u0163ionalitate|Func\u021bionalitate|Functionaliteit|Fungsi|Funkcia|Funkcija|Funkcionalit\u0101te|Funkcionalnost|Funkcja|Funksie|Funktionalit\u00e4t|Funktionalit\u00e9it|Funzionalit\u00e0|Hwaet|Hw\u00e6t|Jellemz\u0151|Karakteristik|laH|Lastnost|Mak|Mogucnost|Mogu\u0107nost|Moznosti|Mo\u017enosti|OH HAI|Omadus|Ominaisuus|Osobina|\u00d6zellik|perbogh|poQbogh malja'|Potrzeba biznesowa|Po\u017eadavek|Po\u017eiadavka|Pretty much|Qap|Qu'meH 'ut|Savyb\u0117|T\u00ednh n\u0103ng|Trajto|Vermo\u00eb|Vlastnos\u0165|W\u0142a\u015bciwo\u015b\u0107|Zna\u010dilnost|\u0394\u03c5\u03bd\u03b1\u03c4\u03cc\u03c4\u03b7\u03c4\u03b1|\u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03af\u03b1|\u041c\u043e\u0433\u0443\u045b\u043d\u043e\u0441\u0442|\u041c\u04e9\u043c\u043a\u0438\u043d\u043b\u0435\u043a|\u041e\u0441\u043e\u0431\u0438\u043d\u0430|\u0421\u0432\u043e\u0439\u0441\u0442\u0432\u043e|\u04ae\u0437\u0435\u043d\u0447\u04d9\u043b\u0435\u043a\u043b\u0435\u043b\u0435\u043a|\u0424\u0443\u043d\u043a\u0446\u0438\u043e\u043d\u0430\u043b|\u0424\u0443\u043d\u043a\u0446\u0438\u043e\u043d\u0430\u043b\u043d\u043e\u0441\u0442|\u0424\u0443\u043d\u043a\u0446\u0438\u044f|\u0424\u0443\u043d\u043a\u0446\u0456\u043e\u043d\u0430\u043b|\u05ea\u05db\u05d5\u05e0\u05d4|\u062e\u0627\u0635\u064a\u0629|\u062e\u0635\u0648\u0635\u06cc\u062a|\u0635\u0644\u0627\u062d\u06cc\u062a|\u06a9\u0627\u0631\u0648\u0628\u0627\u0631 \u06a9\u06cc \u0636\u0631\u0648\u0631\u062a|\u0648\u0650\u06cc\u0698\u06af\u06cc|\u0930\u0942\u092a \u0932\u0947\u0916|\u0a16\u0a3e\u0a38\u0a40\u0a05\u0a24|\u0a28\u0a15\u0a36 \u0a28\u0a41\u0a39\u0a3e\u0a30|\u0a2e\u0a41\u0a39\u0a3e\u0a02\u0a26\u0a30\u0a3e|\u0c17\u0c41\u0c23\u0c2e\u0c41|\u0cb9\u0cc6\u0c9a\u0ccd\u0c9a\u0cb3|\u0e04\u0e27\u0e32\u0e21\u0e15\u0e49\u0e2d\u0e07\u0e01\u0e32\u0e23\u0e17\u0e32\u0e07\u0e18\u0e38\u0e23\u0e01\u0e34\u0e08|\u0e04\u0e27\u0e32\u0e21\u0e2a\u0e32\u0e21\u0e32\u0e23\u0e16|\u0e42\u0e04\u0e23\u0e07\u0e2b\u0e25\u0e31\u0e01|\uae30\ub2a5|\u30d5\u30a3\u30fc\u30c1\u30e3|\u529f\u80fd|\u6a5f\u80fd):(?:[^:]+(?:\\r?\\n|\\r|$))*/,"
                 }
             },
             {
@@ -118,7 +118,7 @@
                     "file": "components/prism-haml.js",
                     "start_lineno": 55,
                     "end_lineno": 55,
-                    "code": "Code is too large."
+                    "code": "pattern: /((?:^|\\r?\\n|\\r)[\\t ]*)[%.#][\\w\\-#.]*[\\w\\-](?:\\([^)]+\\)|\\{(?:\\{[^}]+\\}|[^}])+\\}|\\[[^\\]]+\\])*[\\/<>]*/,"
                 }
             },
             {
@@ -126,7 +126,7 @@
                     "file": "components/prism-haml.js",
                     "start_lineno": 62,
                     "end_lineno": 62,
-                    "code": "Code is too large."
+                    "code": "pattern: /(^|[^#])\\{(?:\\{[^}]+\\}|[^}])+\\}/,"
                 }
             },
             {
@@ -134,7 +134,7 @@
                     "file": "components/prism-hcl.js",
                     "start_lineno": 36,
                     "end_lineno": 36,
-                    "code": "Code is too large."
+                    "code": "pattern: /\"(?:[^\\\\$\"]|\\\\[\\s\\S]|\\$(?:(?=\")|\\$+|[^\"${])|\\$\\{(?:[^{}\"]|\"(?:[^\\\\\"]|\\\\[\\s\\S])*\")*\\})*\"/,"
                 }
             },
             {
@@ -142,7 +142,7 @@
                     "file": "components/prism-lisp.js",
                     "start_lineno": 117,
                     "end_lineno": 117,
-                    "code": "Code is too large."
+                    "code": "pattern: RegExp(par + 'lambda\\\\s+\\\\((?:&?' + symbol + '\\\\s*)*\\\\)'),"
                 }
             },
             {
@@ -150,7 +150,7 @@
                     "file": "components/prism-lua.js",
                     "start_lineno": 5,
                     "end_lineno": 5,
-                    "code": "Code is too large."
+                    "code": "pattern: /([\"'])(?:(?!\\1)[^\\\\\\r\\n]|\\\\z(?:\\r\\n|\\s)|\\\\(?:\\r\\n|[\\s\\S]))*\\1|\\[(=*)\\[[\\s\\S]*?\\]\\2\\]/,"
                 }
             },
             {
@@ -158,7 +158,7 @@
                     "file": "components/prism-neon.js",
                     "start_lineno": 35,
                     "end_lineno": 35,
-                    "code": "Code is too large."
+                    "code": "pattern: /(^|[[{(=:,\\s])(?:[^#\"\\',:=[\\]{}()\\s`-]|[:-][^\"\\',=[\\]{}()\\s])(?:[^,:=\\]})(\\s]+|:(?![\\s,\\]})]|$)|[ \\t]+[^#,:=\\]})(\\s])*/,"
                 }
             },
             {
@@ -166,15 +166,7 @@
                     "file": "components/prism-nix.js",
                     "start_lineno": 9,
                     "end_lineno": 9,
-                    "code": "Code is too large."
-                }
-            },
-            {
-                "block": {
-                    "file": "components/prism-php.js",
-                    "start_lineno": 18,
-                    "end_lineno": 18,
-                    "code": "Code is too large."
+                    "code": "pattern: /(^|(?:^|(?!'').)[^\\\\])\\$\\{(?:[^}]|\\{[^}]*\\})*}/,"
                 }
             },
             {
@@ -182,7 +174,7 @@
                     "file": "components/prism-puppet.js",
                     "start_lineno": 6,
                     "end_lineno": 6,
-                    "code": "Code is too large."
+                    "code": "pattern: /(@\\(\"([^\"\\r\\n\\/):]+)\"(?:\\/[nrts$uL]*)?\\).*(?:\\r?\\n|\\r))(?:.*(?:\\r?\\n|\\r))*?[ \\t]*\\|?[ \\t]*-?[ \\t]*\\2/,"
                 }
             },
             {
@@ -190,7 +182,7 @@
                     "file": "components/prism-puppet.js",
                     "start_lineno": 17,
                     "end_lineno": 17,
-                    "code": "Code is too large."
+                    "code": "pattern: /(@\\(([^\"\\r\\n\\/):]+)(?:\\/[nrts$uL]*)?\\).*(?:\\r?\\n|\\r))(?:.*(?:\\r?\\n|\\r))*?[ \\t]*\\|?[ \\t]*-?[ \\t]*\\2/,"
                 }
             },
             {
@@ -198,7 +190,7 @@
                     "file": "components/prism-puppet.js",
                     "start_lineno": 66,
                     "end_lineno": 66,
-                    "code": "Code is too large."
+                    "code": "pattern: /([\"'])(?:\\$\\{(?:[^'\"}]|([\"'])(?:(?!\\2)[^\\\\]|\\\\[\\s\\S])*\\2)+\\}|(?!\\1)[^\\\\]|\\\\[\\s\\S])*\\1/,"
                 }
             },
             {
@@ -206,7 +198,7 @@
                     "file": "components/prism-q.js",
                     "start_lineno": 18,
                     "end_lineno": 18,
-                    "code": "Code is too large."
+                    "code": "pattern: /(^|\\r?\\n|\\r)\\/[\\t ]*(?:(?:\\r?\\n|\\r)(?:.*(?:\\r?\\n|\\r))*?(?:\\\\(?=[\\t ]*(?:\\r?\\n|\\r))|$)|\\S.*)/,"
                 }
             },
             {
@@ -214,7 +206,7 @@
                     "file": "components/prism-rest.js",
                     "start_lineno": 4,
                     "end_lineno": 4,
-                    "code": "Code is too large."
+                    "code": "pattern: /(\\s*)(?:\\+[=-]+)+\\+(?:\\r?\\n|\\r)(?:\\1(?:[+|].+)+[+|](?:\\r?\\n|\\r))+\\1(?:\\+[=-]+)+\\+/,"
                 }
             },
             {
@@ -222,7 +214,7 @@
                     "file": "components/prism-rest.js",
                     "start_lineno": 11,
                     "end_lineno": 11,
-                    "code": "Code is too large."
+                    "code": "pattern: /(\\s*)(?:=+ +)+=+(?:(?:\\r?\\n|\\r)\\1.+)+(?:\\r?\\n|\\r)\\1(?:=+ +)+=+(?=(?:\\r?\\n|\\r){2}|\\s*$)/,"
                 }
             },
             {
@@ -230,7 +222,7 @@
                     "file": "components/prism-ruby.js",
                     "start_lineno": 97,
                     "end_lineno": 97,
-                    "code": "Code is too large."
+                    "code": "pattern: /(\"|')(?:#\\{[^}]+\\}|\\\\(?:\\r\\n|[\\s\\S])|(?!\\1)[^\\\\\\r\\n])*\\1/,"
                 }
             },
             {
@@ -238,7 +230,7 @@
                     "file": "components/prism-sass.js",
                     "start_lineno": 67,
                     "end_lineno": 67,
-                    "code": "Code is too large."
+                    "code": "pattern: /([ \\t]*)\\S(?:,?[^,\\r\\n]+)*(?:,(?:\\r?\\n|\\r)\\1[ \\t]+\\S(?:,?[^,\\r\\n]+)*)*/,"
                 }
             },
             {
@@ -246,7 +238,7 @@
                     "file": "components/prism-scss.js",
                     "start_lineno": 35,
                     "end_lineno": 35,
-                    "code": "Code is too large."
+                    "code": "pattern: /(?:[\\w-]|\\$[-\\w]+|#\\{\\$[-\\w]+\\})+(?=\\s*:)/,"
                 }
             },
             {
@@ -254,7 +246,7 @@
                     "file": "components/prism-shell-session.js",
                     "start_lineno": 9,
                     "end_lineno": 9,
-                    "code": "Code is too large."
+                    "code": "/([\"'])(?:\\\\[\\s\\S]|\\$\\([^)]+\\)|`[^`]+`|(?!\\1)[^\\\\])*\\1/.source,"
                 }
             },
             {
@@ -262,7 +254,7 @@
                     "file": "components/prism-stylus.js",
                     "start_lineno": 125,
                     "end_lineno": 125,
-                    "code": "Code is too large."
+                    "code": "pattern: /(^[ \\t]*)(?:(?=\\S)(?:[^{}\\r\\n:()]|::?[\\w-]+(?:\\([^)\\r\\n]*\\))?|\\{[^}\\r\\n]+\\})+)(?:(?:\\r?\\n|\\r)(?:\\1(?:(?=\\S)(?:[^{}\\r\\n:()]|::?[\\w-]+(?:\\([^)\\r\\n]*\\))?|\\{[^}\\r\\n]+\\})+)))*(?:,$|\\{|(?=(?:\\r?\\n|\\r)(?:\\{|\\1[ \\t]+)))/m,"
                 }
             },
             {
@@ -270,7 +262,7 @@
                     "file": "components/prism-swift.js",
                     "start_lineno": 4,
                     "end_lineno": 4,
-                    "code": "Code is too large."
+                    "code": "pattern: /(\"|')(?:\\\\(?:\\((?:[^()]|\\([^)]+\\))+\\)|\\r\\n|[\\s\\S])|(?!\\1)[^\\\\\\r\\n])*\\1/,"
                 }
             },
             {
@@ -278,7 +270,7 @@
                     "file": "components/prism-tap.js",
                     "start_lineno": 15,
                     "end_lineno": 15,
-                    "code": "Code is too large."
+                    "code": "pattern: /(^[^\\S\\r\\n]*)---(?:\\r\\n?|\\n)(?:.*(?:\\r\\n?|\\n))*?[^\\S\\r\\n]*\\.\\.\\.$/m,"
                 }
             },
             {
@@ -286,7 +278,7 @@
                     "file": "components/prism-textile.js",
                     "start_lineno": 80,
                     "end_lineno": 80,
-                    "code": "Code is too large."
+                    "code": "pattern: withModifier(/^(?:(?:<MOD>|<PAR>|[<>=^~])+\\.\\s*)?(?:\\|(?:(?:<MOD>|<PAR>|[<>=^~_]|[\\\\/]\\d+)+\\.)?[^|]*)+\\|/.source, 'm'),"
                 }
             },
             {
@@ -294,7 +286,7 @@
                     "file": "components/prism-xeora.js",
                     "start_lineno": 23,
                     "end_lineno": 23,
-                    "code": "Code is too large."
+                    "code": "pattern: /\\$F:[-\\w.]+\\?[-\\w.]+(?:,(?:\\|?(?:[-#.^+*~]*(?:[\\w+][^$]*)|=(?:[\\S+][^$]*)|@[-#]*(?:\\w+.)[\\w+.]+)?)*)?\\$/,"
                 }
             },
             {
@@ -302,7 +294,7 @@
                     "file": "components/prism-xeora.js",
                     "start_lineno": 43,
                     "end_lineno": 43,
-                    "code": "Code is too large."
+                    "code": "pattern: /\\$XF:{[-\\w.]+\\?[-\\w.]+(?:,(?:\\|?(?:[-#.^+*~]*(?:[\\w+][^$]*)|=(?:[\\S+][^$]*)|@[-#]*(?:\\w+.)[\\w+.]+)?)*)?}:XF\\$/,"
                 }
             },
             {
@@ -310,7 +302,7 @@
                     "file": "components/prism-xeora.js",
                     "start_lineno": 43,
                     "end_lineno": 43,
-                    "code": "Code is too large."
+                    "code": "pattern: /\\$XF:{[-\\w.]+\\?[-\\w.]+(?:,(?:\\|?(?:[-#.^+*~]*(?:[\\w+][^$]*)|=(?:[\\S+][^$]*)|@[-#]*(?:\\w+.)[\\w+.]+)?)*)?}:XF\\$/,"
                 }
             }
         ]

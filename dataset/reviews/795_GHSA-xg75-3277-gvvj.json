@@ -12,12 +12,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "src/index.js",
+                    "file": "node_modules/serve-handler/src/index.js",
                     "lineno": 392,
                     "code": "module.exports = async (request, response, config = {}, methods = {}) => {"
                 },
                 "sink": {
-                    "file": "src/index.js",
+                    "file": "node_modules/serve-handler/src/index.js",
                     "lineno": 524,
                     "code": "const stream = await handlers.createReadStream(absolutePath);"
                 }

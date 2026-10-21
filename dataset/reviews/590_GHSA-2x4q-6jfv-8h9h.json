@@ -18,8 +18,8 @@
                 },
                 "sink": {
                     "file": "index.js",
-                    "lineno": 89,
-                    "code": "self.emit('read', request)"
+                    "lineno": 91,
+                    "code": "return filed(request.fullPath).pipe(res)"
                 }
             }
         ]

@@ -11,10 +11,10 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "index.js",
+                    "file": "lib/index.js",
                     "start_lineno": 219,
                     "end_lineno": 300,
-                    "code": "pendingFiles.push(internals.writeFile(req, options, part));"
+                    "code": "internals.multipart = function (req, options, source, contentType) {"
                 }
             }
         ]

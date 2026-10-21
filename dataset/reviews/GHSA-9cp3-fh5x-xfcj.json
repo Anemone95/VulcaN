@@ -12,8 +12,8 @@
             {
                 "source": {
                     "file": "lib/charset.js",
-                    "lineno": 106,
-                    "code": "var CHARTSET_RE = /(?:charset|encoding)\\s*=\\s*['\"\\? *([\\w\\-]+)/i;"
+                    "lineno": 35,
+                    "code": "module.exports = function charset(obj, data) {"
                 },
                 "sink": {
                     "file": "lib/charset.js",

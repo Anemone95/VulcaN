@@ -12,12 +12,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "/lib/model.js",
+                    "file": "lib/model.js",
                     "lineno": 1336,
-                    "code": "createFunction: function(functionName, params, returnType, language, body, options) {"
+                    "code": "Model.prototype.findAll = function(options) {"
                 },
                 "sink": {
-                    "file": "/lib/model.js",
+                    "file": "lib/model.js",
                     "lineno": 1398,
                     "code": "return this.QueryInterface.select(this, this.getTableName(options), options);"
                 }

@@ -64,9 +64,9 @@
                     "code": "function services(srv, callback) {"
                 },
                 "sink": {
-                    "file": "lib/processes.js",
-                    "lineno": 171,
-                    "code": "util.execSafe('ps', args).then((stdout) => {"
+                    "file": "lib/util.js",
+                    "lineno": 399,
+                    "code": "const child = spawn(cmd, args, options);"
                 }
             },
             {
@@ -79,18 +79,6 @@
                     "file": "lib/processes.js",
                     "lineno": 216,
                     "code": "exec(cmd, { maxBuffer: 1024 * 20000 }, function (error, stdout) {"
-                }
-            },
-            {
-                "source": {
-                    "file": "lib/processes.js",
-                    "lineno": 90,
-                    "code": "function services(srv, callback) {"
-                },
-                "sink": {
-                    "file": "lib/processes.js",
-                    "lineno": 269,
-                    "code": "util.execSafe('ps', args).then((stdout) => {"
                 }
             }
         ]

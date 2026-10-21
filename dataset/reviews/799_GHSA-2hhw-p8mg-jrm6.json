@@ -18,8 +18,8 @@
                 },
                 "sink": {
                     "file": "bin/http-live",
-                    "lineno": 97,
-                    "code": "res.write(data);"
+                    "lineno": 93,
+                    "code": "fs.readFile(abspath, function(err, data) {"
                 }
             }
         ]

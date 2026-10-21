@@ -17,12 +17,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "lodhash.js",
+                    "file": "lodash.js",
                     "lineno": 14796,
                     "code": "function template(string, options, guard) {"
                 },
                 "sink": {
-                    "file": "lodhash.js",
+                    "file": "lodash.js",
                     "lineno": 14894,
                     "code": "return Function(importsKeys, sourceURL + 'return ' + source)"
                 }

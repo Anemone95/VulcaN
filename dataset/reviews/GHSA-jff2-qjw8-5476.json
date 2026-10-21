@@ -64,9 +64,9 @@
                     "code": "function services(srv, callback) {"
                 },
                 "sink": {
-                    "file": "lib/processes.js",
-                    "lineno": 171,
-                    "code": "util.execSafe('ps', args).then((stdout) => {"
+                    "file": "lib/util.js",
+                    "lineno": 399,
+                    "code": "const child = spawn(cmd, args, options);"
                 }
             },
             {
@@ -88,9 +88,9 @@
                     "code": "function services(srv, callback) {"
                 },
                 "sink": {
-                    "file": "lib/processes.js",
-                    "lineno": 269,
-                    "code": "util.execSafe('ps', args).then((stdout) => {"
+                    "file": "lib/util.js",
+                    "lineno": 399,
+                    "code": "const child = spawn(cmd, args, options);"
                 }
             }
         ]

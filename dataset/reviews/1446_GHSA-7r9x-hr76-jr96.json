@@ -36,7 +36,7 @@
             {
                 "source": {
                     "file": "lib/git.js",
-                    "lineno": 173,
+                    "lineno": 217,
                     "code": "Git.prototype.pull = function(repo, cb) {"
                 },
                 "sink": {

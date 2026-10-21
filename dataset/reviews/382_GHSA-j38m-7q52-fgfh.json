@@ -14,7 +14,7 @@
                 "source": {
                     "file": "node-server.js",
                     "lineno": 19,
-                    "code": "function start(conf){"
+                    "code": "var server = http.createServer(function(req,resp){"
                 },
                 "sink": {
                     "file": "node-server.js",

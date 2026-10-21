@@ -21,7 +21,7 @@
                 "source": {
                     "file": "index.js",
                     "lineno": 31,
-                    "code": "getfile(path, destination, workingdir) {"
+                    "code": "getFile(path, destination, workingDir) {"
                 },
                 "sink": {
                     "file": "index.js",

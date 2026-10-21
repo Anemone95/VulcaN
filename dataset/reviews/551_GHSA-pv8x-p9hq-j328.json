@@ -12,14 +12,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "lib/expression/node/compile.js",
-                    "lineno": 43,
-                    "code": "return compileFunction(node, defs, args);"
+                    "file": "lib/expression/parse.js",
+                    "lineno": 55,
+                    "code": "function parse (expr, options) {"
                 },
                 "sink": {
-                    "file": "lib/expression/node/ObjectNode.js",
-                    "lineno": 67,
-                    "code": "entries.push(stringify(key) + ': ' + compile(node.properties[key], defs, args));"
+                    "file": "lib/expression/node/Node.js",
+                    "lineno": 73,
+                    "code": "var factory = new Function('defs', factoryCode);"
                 }
             }
         ]

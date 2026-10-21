@@ -16,7 +16,7 @@
                     "code": "exec: function (command) {"
                 },
                 "sink": {
-                    "file": "lib/openfiles.js",
+                    "file": "lib/bucket.js",
                     "lineno": 18,
                     "code": "cp.exec(command, { shell: true }, function (err, stdout, stderr) {"
                 }

@@ -12,12 +12,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "package/node_modules/pacote/lib/fetchers/directory.js",
-                    "lineno": 34,
+                    "file": "node_modules/pacote/lib/fetchers/directory.js",
+                    "lineno": 35,
                     "code": "const pkgPath = path.join(spec.fetchSpec, 'package.json')"
                 },
                 "sink": {
-                    "file": "package/node_modules/pacote/lib/fetchers/directory.js",
+                    "file": "node_modules/pacote/lib/fetchers/directory.js",
                     "lineno": 59,
                     "code": "pkg.bin[path.basename(relative)] = relative"
                 }

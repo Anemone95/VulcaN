@@ -18,8 +18,8 @@
                 },
                 "sink": {
                     "file": "st.js",
-                    "lineno": 257,
-                    "code": " return this.file(p, fd, stat, etag, req, res, end)"
+                    "lineno": 347,
+                    "code": "var stream = fs.createReadStream(p, streamOpt)"
                 }
             }
         ]

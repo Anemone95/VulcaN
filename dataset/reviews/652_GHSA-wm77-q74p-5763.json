@@ -12,13 +12,13 @@
             {
                 "source": {
                     "file": "lib/providers/fs.js",
-                    "lineno": 29,
-                    "code": "module.exports = function(options)"
+                    "lineno": 68,
+                    "code": "return function(req, pathname) {"
                 },
                 "sink": {
                     "file": "lib/providers/fs.js",
-                    "lineno": 71,
-                    "code": "if (pathname.indexOf('../') >= 0)"
+                    "lineno": 88,
+                    "code": "result.stream = fs.createReadStream(foundPath);"
                 }
             }
         ]

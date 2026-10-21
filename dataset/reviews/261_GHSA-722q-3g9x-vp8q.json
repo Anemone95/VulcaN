@@ -15,7 +15,7 @@
                     "file": "gulpfile.js",
                     "start_lineno": 15,
                     "end_lineno": 16,
-                    "code": "return require('gulp-download')(url).pipe(gulp.dest(BIN));"
+                    "code": "return require(\"gulp-download\")(url)"
                 }
             }
         ]

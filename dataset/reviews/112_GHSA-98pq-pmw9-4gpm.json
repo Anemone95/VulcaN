@@ -14,7 +14,7 @@
                 "source": {
                     "file": "lib/dialects/abstract/query-generator.js",
                     "lineno": 1765,
-                    "code": "addLimitAndOffset: function(options, model) "
+                    "code": "addLimitAndOffset: function(options, model) {"
                 },
                 "sink": {
                     "file": "lib/dialects/abstract/query-generator.js",
@@ -26,11 +26,11 @@
                 "source": {
                     "file": "lib/dialects/abstract/query-generator.js",
                     "lineno": 1765,
-                    "code": "addLimitAndOffset: function(options, model) "
+                    "code": "addLimitAndOffset: function(options, model) {"
                 },
                 "sink": {
                     "file": "lib/dialects/abstract/query-generator.js",
-                    "lineno": 1770,
+                    "lineno": 1771,
                     "code": "fragment += ' LIMIT ' + options.offset + ', ' + options.limit;"
                 }
             },
@@ -38,11 +38,11 @@
                 "source": {
                     "file": "lib/dialects/abstract/query-generator.js",
                     "lineno": 1765,
-                    "code": "addLimitAndOffset: function(options, model) "
+                    "code": "addLimitAndOffset: function(options, model) {"
                 },
                 "sink": {
                     "file": "lib/dialects/abstract/query-generator.js",
-                    "lineno": 1772,
+                    "lineno": 1773,
                     "code": "fragment += ' LIMIT ' + options.limit;"
                 }
             },
@@ -74,7 +74,7 @@
                 "source": {
                     "file": "lib/dialects/postgres/query-generator.js",
                     "lineno": 424,
-                    "code": "addLimitAndOffset: function(options, model) {"
+                    "code": "addLimitAndOffset: function(options) {"
                 },
                 "sink": {
                     "file": "lib/dialects/postgres/query-generator.js",
@@ -86,7 +86,7 @@
                 "source": {
                     "file": "lib/dialects/postgres/query-generator.js",
                     "lineno": 424,
-                    "code": "addLimitAndOffset: function(options, model) {"
+                    "code": "addLimitAndOffset: function(options) {"
                 },
                 "sink": {
                     "file": "lib/dialects/postgres/query-generator.js",
@@ -98,7 +98,7 @@
                 "source": {
                     "file": "lib/dialects/sqlite/query-generator.js",
                     "lineno": 91,
-                    "code": "addLimitAndOffset: function(options, model) {"
+                    "code": "addLimitAndOffset: function(options){"
                 },
                 "sink": {
                     "file": "lib/dialects/sqlite/query-generator.js",
@@ -110,7 +110,7 @@
                 "source": {
                     "file": "lib/dialects/sqlite/query-generator.js",
                     "lineno": 91,
-                    "code": "addLimitAndOffset: function(options, model) {"
+                    "code": "addLimitAndOffset: function(options){"
                 },
                 "sink": {
                     "file": "lib/dialects/sqlite/query-generator.js",
@@ -122,7 +122,7 @@
                 "source": {
                     "file": "lib/dialects/sqlite/query-generator.js",
                     "lineno": 91,
-                    "code": "addLimitAndOffset: function(options, model) {"
+                    "code": "addLimitAndOffset: function(options){"
                 },
                 "sink": {
                     "file": "lib/dialects/sqlite/query-generator.js",

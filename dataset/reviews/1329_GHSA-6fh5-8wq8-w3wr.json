@@ -11,24 +11,24 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "a/lib/index.js",
-                    "lineno": 21,
+                    "file": "lib/index.js",
+                    "lineno": 22,
                     "code": "function unflatten (obj, opts) {"
                 },
                 "sink": {
-                    "file": "a/lib/index.js",
+                    "file": "lib/index.js",
                     "lineno": 38,
                     "code": "_setWith(newObj, dotSep ? path : path.replace(re, '.'), obj[path], Object)"
                 }
             },
             {
                 "source": {
-                    "file": "a/lib/index.js",
-                    "lineno": 21,
+                    "file": "lib/index.js",
+                    "lineno": 22,
                     "code": "function unflatten (obj, opts) {"
                 },
                 "sink": {
-                    "file": "a/lib/index.js",
+                    "file": "lib/index.js",
                     "lineno": 40,
                     "code": "_set(newObj, dotSep ? path : path.replace(re, '.'), obj[path])"
                 }

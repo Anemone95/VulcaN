@@ -14,7 +14,7 @@
                     "file": "lib/marked.js",
                     "start_lineno": 618,
                     "end_lineno": 622,
-                    "code": "text: edit(inline.text)\n.replace(']|', '~]|')\n.replace('|$', '|https?://|ftp://|www\\.|[a-zA-Z0-9.!#$%&\\'*+/=?^_`{\\|}~-]+@|$')\n.getRegex()\n});"
+                    "code": "text: edit(inline.text)"
                 }
             },
             {
@@ -22,7 +22,7 @@
                     "file": "lib/marked.js",
                     "start_lineno": 631,
                     "end_lineno": 633,
-                    "code": "inline.breaks = merge({}, inline.gfm, {\nbr: edit(inline.br).replace('{2,}', '*').getRegex(),\ntext: edit(inline.gfm.text).replace('{2,}', '*').getRegex()"
+                    "code": "inline.breaks = merge({}, inline.gfm, {"
                 }
             },
             {
@@ -30,7 +30,7 @@
                     "file": "lib/marked.js",
                     "start_lineno": 547,
                     "end_lineno": 549,
-                    "code": "br: /^( {2,}|\\)\n(?!\\s*$)/,\ndel: noop,\ntext: /^(`+|[^`])[\\s\\S]*?(?=[\\<!\\[`*]|\b_| {2,}\n|$)/"
+                    "code": "br: /^( {2,}|\\\\)\\n(?!\\s*$)/,"
                 }
             }
         ]
