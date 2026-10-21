@@ -404,6 +404,47 @@
     ],
     "note": "file.js does not exist (util/file.js is a file read, not XSS). XSS sink is the response write `ctx.body = _content` of the directory-listing HTML built in util/dir.js."
   },
+  "1118_GHSA-3gx7-xhv7-5mx3": {
+    "vulnerability_location": [
+      {
+        "source": {
+          "file": "index.js",
+          "lineno": 648,
+          "code": "function getStaticValue(node, initialScope = null) {"
+        },
+        "sink": {
+          "file": "index.js",
+          "lineno": 416,
+          "code": "                   return { value: receiver[methodName](...args) }"
+        }
+      },
+      {
+        "source": {
+          "file": "index.js",
+          "lineno": 648,
+          "code": "function getStaticValue(node, initialScope = null) {"
+        },
+        "sink": {
+          "file": "index.js",
+          "lineno": 422,
+          "code": "                   return { value: func(...args) }"
+        }
+      },
+      {
+        "source": {
+          "file": "index.js",
+          "lineno": 648,
+          "code": "function getStaticValue(node, initialScope = null) {"
+        },
+        "sink": {
+          "file": "index.js",
+          "lineno": 520,
+          "code": "return { value: new Func(...args) }"
+        }
+      }
+    ],
+    "note": "Sink 3 moved from the property read `object.value[property.value]` (line 509), which obtains Function but runs no code, to `new Func(...args)` (line 520) in NewExpression, the call the PoC `new {}.constructor.constructor(...)` reaches; lines 416 and 422 are the other calls of an evaluated callee."
+  },
   "1122_GHSA-5mrr-rgp6-x4gr": {
     "vulnerability_location": [
       {
@@ -3471,7 +3512,8 @@
         }
       }
     ],
-    "note": "A JSON-provided vnode (no constructor check) reaches render(); source set to render(vnode, parentDom), sink set to the dom.innerHTML write of dangerouslySetInnerHTML in diff (was 'return vnode;' in createVNode and a createElement line as source)."
+    "note": "A JSON-provided vnode (no constructor check) reaches render(); source set to render(vnode, parentDom), sink set to the dom.innerHTML write of dangerouslySetInnerHTML in diff (was 'return vnode;' in createVNode and a createElement line as source). Browser only: the sink is a DOM innerHTML write (XSS), so correct_cwe is CWE-79.",
+    "correct_cwe": "CWE-79"
   },
   "85_GHSA-rrj3-qmh8-72pf": {
     "vulnerability_location": [
@@ -4035,17 +4077,7 @@
     "note": "isExternal bypass lets a remote markdown page skip purify.sanitize; source set to the URL read 'var href = location.href;' in getCurrentPath (7957), sink to the innerHTML write in _renderTo (7627) (was the url.match line inside isExternal)."
   },
   "GHSA-34r7-q49f-h37c": {
-    "vulnerability_location": [
-      {
-        "block": {
-          "file": "lib/compress.js",
-          "start_lineno": 2158,
-          "end_lineno": 2158,
-          "code": "if (compressor.option(\"comparisons\")) {"
-        }
-      }
-    ],
-    "note": "Code set to actual text (double quotes)."
+    "exclude": "Logic error in the compressor (CVE-2015-8857: boolean expressions are rewritten without accounting for non-boolean values, the 'comparisons' option at lib/compress.js:2158); no attacker data flows to a sink."
   },
   "GHSA-35jh-r3h4-6jhm": {
     "vulnerability_location": [
@@ -4757,7 +4789,11 @@
         }
       }
     ],
-    "note": "Sink moved from the recursive assignment (line 49) to `target[name] = copy` (line 50), the write that pollutes Object.prototype after recursion through __proto__."
+    "note": "Sink moved from the recursive assignment (line 49) to `target[name] = copy` (line 50), the write that pollutes Object.prototype after recursion through __proto__. correct_cwe without CWE-94: extend() is a prototype pollution (the deep merge writes Object.prototype through __proto__) and executes no code.",
+    "correct_cwe": [
+      "CWE-1321",
+      "CWE-400"
+    ]
   },
   "GHSA-jff2-qjw8-5476": {
     "vulnerability_location": [
@@ -5056,6 +5092,27 @@
     ],
     "note": "File path corrected to src/oled-exp.js."
   },
+  "GHSA-rwxp-hwwf-653v": {
+    "vulnerability_location": [
+      {
+        "source": {
+          "file": "lib/hbs.js",
+          "lineno": 442,
+          "code": "ExpressHbs.prototype.___express = function ___express(filename, source, options, cb) {"
+        },
+        "sink": {
+          "file": "lib/hbs.js",
+          "lineno": 109,
+          "code": "fs.readFile(layoutFile, 'utf8', function(err, str) {"
+        }
+      }
+    ],
+    "correct_cwe": [
+      "CWE-22",
+      "CWE-200"
+    ],
+    "note": "Express passes the render locals and the engine options in one object (GHSL-2021-019); options.layout (line 601) goes through layoutPath and cacheLayout to fs.readFile(layoutFile) (line 109), which discloses any file. Was source render() (line 507) and sink template(localsClone, ...) (line 490), the call of the compiled template, which is not a sink; correct_cwe CWE-22 for the file read."
+  },
   "GHSA-v756-4whv-48vc": {
     "vulnerability_location": [
       {
@@ -5074,21 +5131,7 @@
     "note": "File path corrected to src/messenger-node.js."
   },
   "GHSA-vc9j-fhvv-8vrf": {
-    "vulnerability_location": [
-      {
-        "source": {
-          "file": "src/serialization/sb3.js",
-          "lineno": 280,
-          "code": "const getExtensionIdForOpcode = function (opcode) {"
-        },
-        "sink": {
-          "file": "src/extension-support/extension-worker.js",
-          "lineno": 20,
-          "code": "importScripts(extension);"
-        }
-      }
-    ],
-    "note": "Source moved to the exported getExtensionIdForOpcode(opcode) parameter list (line 280); the extension ID taken from the opcode is loaded as an extension URL (loadExtensionURL -> worker), so the sink is `importScripts(extension);` in src/extension-support/extension-worker.js:20."
+    "exclude": "Browser only: the extension URL taken from a project's opcode (src/serialization/sb3.js:280) reaches importScripts(extension) in a Web Worker (src/extension-support/extension-worker.js:20) through webpack's worker-loader and the postMessage dispatch; it has no Node.js sink."
   },
   "GHSA-vh6r-g38f-q3w8": {
     "vulnerability_location": [
