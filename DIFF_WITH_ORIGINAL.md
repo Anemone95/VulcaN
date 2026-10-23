@@ -3,9 +3,9 @@
 This repository holds the VulcaN dataset of reviewed npm advisories, prepared for taint analysis with
 jelly-taint (jelly-benchmarks, `misc/taint/vulcan/`). The original dataset is the state of commit `e72589b4a`
 (2023-04-04, the last commit of the VulcaN authors): 957 advisory reviews. This repository differs from it in four
-ways: the packages are extracted with their dependencies installed, 12 advisories are removed, the
-vulnerability locations of 199 reviews are corrected, and the reviews no longer hold the scores of the
-vulnerability detection tools. It holds 945 advisory reviews.
+ways: the packages are extracted with their dependencies installed, 14 advisories are removed, the
+vulnerability locations of 200 reviews are corrected, and the reviews no longer hold the scores of the
+vulnerability detection tools. It holds 943 advisory reviews.
 
 ## 1. Extracted packages
 
@@ -19,14 +19,15 @@ vulnerability detection tools. It holds 945 advisory reviews.
 
 ## 2. Removed advisories
 
-These 12 advisories are removed: their review `dataset/reviews/<id>.json`, their directory `dataset/packages/<id>/`,
+These 14 advisories are removed: their review `dataset/reviews/<id>.json`, their directory `dataset/packages/<id>/`,
 their line in `dataset/advisories-with-reviews.txt` and their entry in `install-summary.json` (and the PoC
-`dataset/reviews/pocs/1316_GHSA-2cf5-4w76-r9qv.*`).
+`dataset/reviews/pocs/1316_GHSA-2cf5-4w76-r9qv.*` and the patch `dataset/reviews/patches/117_GHSA-qg8p-v9q4-gh34.patch`).
 
 | advisory | extracted package | reason |
 | --- | --- | --- |
 | 1020_GHSA-w725-67p7-xv22 | — | The dataset has no package tarball for it: `dataset/packages/<id>/` holds only the outputs of the tools. |
 | 1029_GHSA-h97g-4mx7-5p2p | apostrophe-0.5.393 | Extracted package is apostrophe 0.5.393, but the vulnerable code (lib/modules/apostrophe-pages/lib/api.js, trailing-slash redirect in self.serve) is from apostrophe 2.x (review: 2.91.1); it is in neither the package nor its dependencies. |
+| 117_GHSA-qg8p-v9q4-gh34 | shell-quote-1.6.0 | Quoting library: quote() (index.js:18) leaves `;`, `{`, `}` and `>` unescaped, and the caller runs the quoted string; shell-quote itself runs no command, so no attacker data flows to a sink in the package. quote(["x;{echo,INJECTED}"]) returns the payload unchanged; only an execSync in the caller prints INJECTED. |
 | 123_GHSA-7f59-x49p-v8mq | swagger-ui-2.2.0 | swagger-ui 2.2.0 already contains the fix (commit 50c713a): the content_type / parameter_content_type / response_content_type option templates in dist/swagger-ui.js escape the value; the vulnerable code is not in the package. |
 | 1311_GHSA-6xc2-mj39-q599 | strapi-3.0.0-beta.17.4 | Vulnerable controllers (packages/strapi-admin, packages/strapi-plugin-users-permissions) are not in the strapi package nor in its installed dependencies. |
 | 1316_GHSA-2cf5-4w76-r9qv | handlebars-4.5.1 | Extracted handlebars 4.5.1 already escapes '=' in lib/handlebars/utils.js; the vulnerable escape map is from handlebars 3.0.3 (review correct_package_link), which is not in the dataset package. |
@@ -35,16 +36,18 @@ their line in `dataset/advisories-with-reviews.txt` and their entry in `install-
 | 827_GHSA-c35v-qwqg-87jc | express-basic-auth-1.1.7 | The shipped package is express-basic-auth 1.1.7 (patched; review's correct package is 1.1.6): the non-constant-time comparison 'username == i && password == users[i]' is replaced by timingSafeEqual-based safeCompare, so the vulnerable code is in neither the package nor its dependencies. |
 | 981_GHSA-7cv6-gvx3-m54m | keystone-0.3.22 | The annotated renderValue code (`innerHtml = value.md.replace(/\n/g, '<br />')`) belongs to later keystone (4.x, PR 4478); keystone 0.3.22's MarkdownField.js has 133 lines and no such code, and it is not in any dependency. |
 | GHSA-34r7-q49f-h37c | uglify-js-2.4.23 | Logic error in the compressor (CVE-2015-8857: boolean expressions are rewritten without accounting for non-boolean values, the 'comparisons' option at lib/compress.js:2158); no attacker data flows to a sink. |
+| GHSA-f2rp-38vg-j3gh | shescape-1.1.2 | Escaping library: escapeShellArg (src/unix.js:2, src/win.js:2) keeps null characters, and the caller gives the result to child_process (index.js:6-8: `cp.spawn("command", shescape.escapeAll(userInput), options)`); shescape itself runs no command, so no attacker data flows to a sink in the package. |
 | GHSA-r578-pj6f-r4ff | data-connector-rock-1.8.0 | The vulnerable single-step Person creation (POST /People with profile fields, triggering Rock auto-merge) does not exist in data-connector-rock 1.8.0: lib/index.js has no such code and createUserProfile (lib/auth/data-source.js:188) already posts only Gender/IsSystem and patches the profile afterwards, i.e. the patched behaviour. |
 | GHSA-vc9j-fhvv-8vrf | scratch-vm-0.2.0-prerelease.20200709173451 | Browser only: the extension URL taken from a project's opcode (src/serialization/sb3.js:280) reaches importScripts(extension) in a Web Worker (src/extension-support/extension-worker.js:20) through webpack's worker-loader and the postMessage dispatch; it has no Node.js sink. |
 
 ## 3. Corrected reviews
 
-The `vulnerability.vulnerability_location` of these 199 reviews is corrected to match the extracted packages:
+The `vulnerability.vulnerability_location` of these 200 reviews is corrected to match the extracted packages:
 the files the package ships instead of its source files, line numbers of the shipped version, and sinks on the
-line of the dangerous operation. The `correct_cwe` of three of them is corrected as well (decal
-GHSA-j32x-j8pj-pg2h, preact 835_GHSA-cg48-9hh2-x6mx, express-hbs GHSA-rwxp-hwwf-653v). The other fields of the
-reviews are unchanged.
+line of the dangerous operation. The `correct_cwe` of seven of them is corrected as well (decal
+GHSA-j32x-j8pj-pg2h, preact 835_GHSA-cg48-9hh2-x6mx, express-hbs GHSA-rwxp-hwwf-653v, lodash.merge
+1067_GHSA-2m96-9w4j-wgv7, subtext 1480_GHSA-g9cg-h3jm-cwrc, react-marked-markdown 668_GHSA-m7qm-r2r5-f77q,
+express-brute 823_GHSA-984p-xq9m-4rjw). The other fields of the reviews are unchanged.
 
 - 1003_GHSA-vfp9-gwrh-wq9g: Each `case` sink replaced by its file-system calls: GET readdir/readFile x2, PUT createWriteStream, POST rename/mkdir, DELETE rmdir/unlink. Source moved from the cleanUrl sanitizer (line 6) to the read of req.url (line 36).
 - 1017_GHSA-2598-2f59-rmhq: Removed leading '/' from file paths; source code text set to the actual line 1336 (Model.prototype.findAll).
@@ -52,7 +55,7 @@ reviews are unchanged.
 - 1025_GHSA-crf7-fvjx-863q: Sink was matchPath (route lookup); the static file is served by zero-static/serve-handler, so the sink is the package's call staticHandler(request, response). Source code text fixed.
 - 1028_GHSA-9qgh-7pgp-hp7r: QueryInput is shipped as src/components/search/QueryInput.ts (not .jsx); block code texts set to their first line.
 - 1034_GHSA-5634-rv46-48jf: Removed leading '/'; source sanitize() is at line 62, sink `return html;` at line 98.
-- 1067_GHSA-2m96-9w4j-wgv7: Sink object[key] = value (assignMergeValue) is the prototype-pollution assignment and is kept; source moved from `module.exports = merge;` to the parameter list of the exported merge function.
+- 1067_GHSA-2m96-9w4j-wgv7: Sink object[key] = value (assignMergeValue) is the prototype-pollution assignment and is kept; source moved from `module.exports = merge;` to the parameter list of the exported merge function. The advisory is "Prototype Pollution in lodash.merge" (CWE-1321): merge writes Object.prototype through `__proto__` and runs no command, so correct_cwe is CWE-1321 (was CWE-78). `correct_cwe`: "CWE-1321".
 - 1069_GHSA-5947-m4fg-xhqg: Sink line 2207 is module.exports; prototype-pollution sink is the assignment object[key] = value in assignMergeValue (line 856).
 - 1070_GHSA-46fh-8fc5-xcwx: Package ships index.js (not lodash.js); block is assignMergeValue at lines 853-858.
 - 1071_GHSA-779f-wgxg-qr8f: Block code text set to the first line of baseAssignValue (lines 808-819).
@@ -93,13 +96,13 @@ reviews are unchanged.
 - 1453_GHSA-r5fx-8r73-v86c: File 'src/angular.js' -> 'angular.js'. Sink was the sanitization condition (the patch adds xlinkHref to it); replaced by the attribute write this.$$element.attr(attrName, value) (line 7672) that puts the unsanitized a[xlink:href] value into the DOM.
 - 1470_GHSA-mg69-6j3m-jvgw: Sink 'bin/sanitize.js:97' (no such file; the flawed iframe-src regex is lib/sanitize.js:97, a filter, not an output) -> lib/sanitize.js:16, the call handing the HTML and the permissive config to the sanitize-html dependency that returns it. Source getSanitizerConfig(options) (config, not attacker input) -> the exported marky(markdown, options) in index.js:21.
 - 1478_GHSA-5854-jvxx-2cg9: File 'index.js' -> 'lib/index.js'; lines unchanged.
-- 1480_GHSA-g9cg-h3jm-cwrc: Source line 278 -> 280 (onPart). Sink kept: data[name] = value is the property assignment with the attacker field name.
+- 1480_GHSA-g9cg-h3jm-cwrc: Source line 278 -> 280 (onPart). Sink kept: data[name] = value is the property assignment with the attacker field name. The advisory is "Prototype Pollution in @hapi/subtext" (CWE-1321): a crafted multipart part becomes the prototype of the payload object, and subtext runs no command, so correct_cwe is CWE-1321 (was CWE-78; the advisory record has CWE-400). `correct_cwe`: "CWE-1321".
 - 1484_GHSA-36c4-4r89-6whg: Sink line 305 -> 100 (decoder lookup by the content-encoding header in Parser.prototype.parse, the function of the source).
 - 1492_GHSA-9px9-f7jw-fwhj: Files 'middleware.js'/'controller.js' -> 'src/...'. Source and sink were swapped: source is now the request body read (src/middleware.js:63) in the POST / handler, sink the spawn call (src/controller.js:140).
 - 1494_GHSA-f3vw-587g-r29g: Sink read(file) replaced by the two fs.readFileSync calls it dispatches to (dev at line 2630, production at line 2631), each with the same source.
 - 1499_GHSA-8whr-v3gm-w8h9: Sink code set to the actual eval lines (the package wraps the strings in parentheses); lines unchanged.
 - 14_GHSA-g4xp-36c3-f7mr: Sink File.load(path, ...) (lib/directory.js:112) -> the Fs.createReadStream(path) in lib/file.js:155 that File.load reaches through the response marshal.
-- 1507_GHSA-426h-24vj-qwxf: File 'package/index.js' -> 'index.js'; code set to the actual lines. Sources 1-2 (cmdString construction, code did not match) -> the exported install/uninstall parameter lists (lines 5, 37), like location 3.
+- 1507_GHSA-426h-24vj-qwxf: File 'package/index.js' -> 'index.js'; code set to the actual lines. Sources 1-2 (cmdString construction, code did not match) -> the exported install/uninstall parameter lists (lines 5, 37), like location 3. Location 3 (list, sink line 71) removed: its command is the constant "npm ls --depth=0 " + ("-g " or " "), and the parameter path only sets the cwd option, which the shell does not read; list("/tmp; echo INJECTED > marker") runs `npm ls --depth=0` and makes no marker file, while install and uninstall put the package names into the command.
 - 1512_GHSA-6q48-vjq2-mwcj: File 'build/unmount.js' -> 'build/umount.js'; lines unchanged.
 - 1517_GHSA-gm9x-q798-hmr4: Minified dist/index.js: source (exports.get) and sink (r.exec('git ls-remote --tags '+e, ...)) are both on line 1; code set to the actual line text (the annotated fragments used other quotes).
 - 1523_GHSA-p6mc-m468-83gw: Source line 3965 -> 3978. Sink 'nested = nested[key]' (the walk into the prototype) -> the property assignment object[key] = value in baseAssignValue (line 2559), reached from baseSet via assignValue(nested, key, newValue) at line 4006. The review's line numbers are from lodash 4.17.15; the shipped 4.17.18 already returns early on __proto__/constructor/prototype keys in baseSet (line 3993).
@@ -163,7 +166,7 @@ reviews are unchanged.
 - 648_GHSA-8xqr-4cpm-wx7g: File 'ReactSVG.js' is shipped as dist/ReactSVG.js; line 203 holds the evalScripts: 'once' default.
 - 652_GHSA-wm77-q74p-5763: Source moved to the returned provider function (req, pathname) at line 68, where the attacker path enters (the exported factory only takes options). Sink was the ../ check; now fs.createReadStream(foundPath) at line 88.
 - 665_GHSA-fm87-46vv-jqrr: Removed 'package/' prefix. Sink was the internal wrapper httpRequest.stream; now the call that hands req and the traversed path to the 'send' dependency (lib/http-request.js line 96).
-- 668_GHSA-m7qm-r2r5-f77q: Code text fixed (double quotes). Source moved to the renderer.link parameter list (line 97), where the unescaped href/title/text enter; sink stays at line 98.
+- 668_GHSA-m7qm-r2r5-f77q: Code text fixed (double quotes). Source moved to the renderer.link parameter list (line 97), where the unescaped href/title/text enter; sink stays at line 98. The advisory is "Cross-Site Scripting in react-marked-markdown" (CWE-79): the sink returns an HTML string with an unescaped href and runs no command, so correct_cwe is CWE-79 (was CWE-78). `correct_cwe`: "CWE-79".
 - 695_GHSA-29gp-92wp-94q8: Removed 'package/' prefix. Sink was in openBrowser.js and not a child_process call; now child_process.spawn of cmd.exe in launchEditor.js line 334, which receives the attacker file name on Windows.
 - 696_GHSA-m734-r4g6-34f9: Lines shifted by one: source at 1196, sinks at 1215 and 1217.
 - 717_GHSA-qw93-45r3-p66p: Removed leading '/' from file; block 1 code set to line 60 text (result[key] = clone(obj[key]);); block 2 code set to its first line.
@@ -185,7 +188,7 @@ reviews are unchanged.
 - 812_GHSA-xf5p-87ch-gxw2: Block 3 code was split at the regex's literal '\n'; code set to the actual first line of each block (line numbers unchanged).
 - 813_GHSA-8j8c-7jfh-h6hx: Sink '_result[keyNode] = valueNode' is a plain store; the code executed via String(keyNode)/toString is built by new Function in type/js/function.js (two branches, one location each). Source moved from internal storeMappingPair to the exported load(input, options).
 - 822_GHSA-gh4g-3gm9-5wrq: Removed leading '/' from paths; src/shave.js sink moved from the template-literal argument (62) to the el.insertAdjacentHTML( call (60); codes set to actual line text.
-- 823_GHSA-984p-xq9m-4rjw: Block code was a description; set to the actual first line (increment function).
+- 823_GHSA-984p-xq9m-4rjw: Block code was a description; set to the actual first line (increment function). The advisory is "Rate Limiting Bypass in express-brute": concurrent requests race between get and set in increment, and no command runs, so correct_cwe is CWE-362 (race condition; was CWE-77, which the advisory lists without a matching description). `correct_cwe`: "CWE-362".
 - 830_GHSA-9q64-mpxx-87fg: Location 0 sink (url: of the internal 404 re-dispatch, line 378) is not a redirect; the only redirect is res.setHeader('location', ...) at 395 (was annotated at 396). Both locations then coincide, so they are merged into one.
 - 831_GHSA-8v5f-hp78-jgxq: File path fixed: jwt.js -> lib/jwt.js (lines unchanged).
 - 833_GHSA-78j5-gcmf-vqc8: Source moved from module.exports = function(config, auth, storage) to the request read req.get('host') (64); sink moved from that line to res.send(webPage) (69), which writes the unescaped base URL into the HTML.
@@ -212,6 +215,7 @@ reviews are unchanged.
 - GHSA-35jh-r3h4-6jhm: File path typo fixed: lodhash.js -> lodash.js.
 - GHSA-39q4-p535-c852: File fixed: lib/index.js -> php/net-gopher/gopher_parsedir.js; block extended to include the line applying the regex (dirent.match(entryPattern)).
 - GHSA-3crj-w4f5-gwh4: Sink moved to new(Function)('return (' + expression + ')') in tree/javascript.js (20), which the JavaScript node's eval runs; location 1 (Variable eval for @{} interpolation, same source) reaches that same sink and was merged into it. The e() escape function (functions.js 215-216) and the parser for `...` JavaScript (parser.js 1001-1016) are not dangerous operations and are not locations.
+- GHSA-4gfq-6m28-m5mg: Location 2 (driveList, sink line 115) removed: driveListWindows runs the constant command "wmic logicaldisk get caption,providername,drivetype,volumename", and driveList has only the parameter callback. Location 1 (detail, sink line 46) puts the drive name into the wmic command and is kept.
 - GHSA-4r62-v4vq-hr96: Blocks shifted +73 lines to the shipped lib/marked.esm.js: strong/em regex objects (1202-1213), text/punctuation (1217-1218), _blockSkip/_overlapSkip (1227-1228); codes set to actual text.
 - GHSA-4wv4-mgfq-598v: File path fixed: index.js -> lib/index.js.
 - GHSA-6fw4-hr69-g3rv: Source line moved 11 -> 44 (setter: function(path)).

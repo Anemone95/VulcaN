@@ -5,7 +5,7 @@
         "cwe": "CWE-78",
         "github_link": "https://github.com/advisories/GHSA-2m96-9w4j-wgv7"
     },
-    "correct_cwe": "CWE-78",
+    "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.0.tgz",
     "vulnerability": {
         "vulnerability_location": [

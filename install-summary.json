@@ -1,7 +1,7 @@
 {
   "counts": {
     "ok": 0,
-    "skipped": 929,
+    "skipped": 927,
     "failed": 16
   },
   "failed": [
@@ -101,7 +101,6 @@
     "dataset/packages/1174_GHSA-549f-73hh-mj38/gitlabhook-0.0.17": "skipped",
     "dataset/packages/1176_GHSA-c3m8-x3cg-qm2c/helmet-csp-2.9.0": "skipped",
     "dataset/packages/1179_GHSA-vh95-rmgr-6w4m/minimist-1.2.2": "skipped",
-    "dataset/packages/117_GHSA-qg8p-v9q4-gh34/shell-quote-1.6.0": "skipped",
     "dataset/packages/1180_GHSA-6jg8-7333-554w/realms-shim-1.1.2": "skipped",
     "dataset/packages/1184_GHSA-pc5p-h8pf-mvwp/https-proxy-agent-2.2.2": "skipped",
     "dataset/packages/1185_GHSA-p77h-hv6g-fmfp/ibm_db-2.5.3": "skipped",
@@ -846,7 +845,6 @@
     "dataset/packages/GHSA-cwcx-rxgc-cmw3/101-1.6.3": "skipped",
     "dataset/packages/GHSA-cwg9-c9cr-p5fq/console-1.8.0": "failed",
     "dataset/packages/GHSA-cwx2-736x-mf6w/object-path-0.11.4": "skipped",
-    "dataset/packages/GHSA-f2rp-38vg-j3gh/shescape-1.1.2": "skipped",
     "dataset/packages/GHSA-f38p-c2gq-4pmr/schema-inspector-1.7.0": "skipped",
     "dataset/packages/GHSA-f4hq-453j-p95f/slashify-1.0.0": "skipped",
     "dataset/packages/GHSA-f5c9-x9j6-87qp/dotty-0.1.0": "skipped",

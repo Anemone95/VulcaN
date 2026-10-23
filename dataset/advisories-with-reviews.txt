@@ -76,7 +76,6 @@
 1174_GHSA-549f-73hh-mj38
 1176_GHSA-c3m8-x3cg-qm2c
 1179_GHSA-vh95-rmgr-6w4m
-117_GHSA-qg8p-v9q4-gh34
 1180_GHSA-6jg8-7333-554w
 1184_GHSA-pc5p-h8pf-mvwp
 1185_GHSA-p77h-hv6g-fmfp
@@ -821,7 +820,6 @@ GHSA-cgc7-mwp4-3ccx
 GHSA-cwcx-rxgc-cmw3
 GHSA-cwg9-c9cr-p5fq
 GHSA-cwx2-736x-mf6w
-GHSA-f2rp-38vg-j3gh
 GHSA-f38p-c2gq-4pmr
 GHSA-f4hq-453j-p95f
 GHSA-f5c9-x9j6-87qp

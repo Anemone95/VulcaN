@@ -20,7 +20,7 @@ The *packages/* directory contains one directory for each advisory. In each dire
 
 ## *reviews/*
 
-The *reviews/* directory contains the 945 advisory reviews (957 in the original dataset; [DIFF_WITH_ORIGINAL.md](../DIFF_WITH_ORIGINAL.md) lists the changes), the *patches/* directory and the *pocs/* directory.
+The *reviews/* directory contains the 943 advisory reviews (957 in the original dataset; [DIFF_WITH_ORIGINAL.md](../DIFF_WITH_ORIGINAL.md) lists the changes), the *patches/* directory and the *pocs/* directory.
 
 Each advisory review contains:
     

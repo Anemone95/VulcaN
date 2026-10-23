@@ -5,7 +5,7 @@
         "cwe": "CWE-77",
         "github_link": "https://github.com/advisories/GHSA-984p-xq9m-4rjw"
     },
-    "correct_cwe": "CWE-77",
+    "correct_cwe": "CWE-362",
     "correct_package_link": "https://registry.npmjs.org/express-brute/-/express-brute-1.0.1.tgz",
     "vulnerability": {
         "vulnerability_location": [

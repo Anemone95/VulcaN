@@ -33,18 +33,6 @@
                     "lineno": 47,
                     "code": "var cmd = exec(cmdString, {cwd: opts.cwd?opts.cwd:\"/\"},(error, stdout, stderr) => {"
                 }
-            },
-            {
-                "source": {
-                    "file": "index.js",
-                    "lineno": 66,
-                    "code": "list:function(path){"
-                },
-                "sink": {
-                    "file": "index.js",
-                    "lineno": 71,
-                    "code": "exec(cmdString, {cwd: path?path:\"/\"},(error, stdout, stderr) => {"
-                }
             }
         ]
     },
