@@ -6,7 +6,7 @@
         "cwe": "CWE-22",
         "github_link": "https://github.com/advisories/GHSA-cxwc-8pqp-2whw"
     },
-    "correct_cwe": "CWE-22 ",
+    "correct_cwe": "CWE-22",
     "correct_package_link": "https://registry.npmjs.org/qinserve/-/qinserve-1.0.0.tgz",
     "vulnerability": {
         "vulnerability_location": [

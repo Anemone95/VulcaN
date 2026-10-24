@@ -6,7 +6,7 @@
         "cwe": "CWE-22",
         "github_link": "https://github.com/advisories/GHSA-68cm-mgv7-vg5c"
     },
-    "correct_cwe": " CWE-23",
+    "correct_cwe": "CWE-23",
     "correct_package_link": "https://registry.npmjs.org/utahcityfinder/-/utahcityfinder-0.0.1.tgz",
     "vulnerability": {
         "vulnerability_location": [

@@ -5,7 +5,7 @@
         "cwe": "CWE-287 ",
         "github_link": "https://github.com/advisories/GHSA-rmmc-8cqj-hfp3"
     },
-    "correct_cwe": "CWE-287 ",
+    "correct_cwe": "CWE-287",
     "correct_package_link": "https://registry.npmjs.org/otpauth/-/otpauth-3.2.7.tgz",
     "vulnerability": {
         "vulnerability_location": [

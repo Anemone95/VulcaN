@@ -6,7 +6,7 @@
         "cwe": "CWE-730 ",
         "github_link": "https://github.com/advisories/GHSA-rc8h-3fv6-pxv8"
     },
-    "correct_cwe": "CWE-730 ",
+    "correct_cwe": "CWE-730",
     "correct_package_link": "https://registry.npmjs.org/hapi/-/hapi-9.5.1.tgz",
     "vulnerability": {
         "vulnerability_location": [

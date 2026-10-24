@@ -4,8 +4,8 @@ This repository holds the VulcaN dataset of reviewed npm advisories, prepared fo
 (jelly-benchmarks, `misc/taint/vulcan/`). The original dataset is the state of commit `e72589b4a` (2023-04-04, the
 last commit of the VulcaN authors): 957 advisory reviews. This repository differs from it in four ways: the
 packages are extracted with their dependencies installed, 14 advisories are removed, the vulnerability locations of
-203 reviews are corrected, and the reviews no longer hold the scores of the vulnerability detection tools. It holds
-943 advisory reviews.
+203 reviews and the `correct_cwe` text of 15 reviews are corrected, and the reviews no longer hold the scores of
+the vulnerability detection tools. It holds 943 advisory reviews.
 
 ## 1. Extracted packages
 
@@ -255,6 +255,12 @@ express-brute 823_GHSA-984p-xq9m-4rjw). The other fields of the reviews are unch
 - GHSA-w46j-8hm6-h8mm: Location 0: the innerHTML write (line 192) is the sink; source set to the legend text read `let text = legendFormatter(legendNames[i], ...)` (line 96). Location 1: code corrected to `ttYLabel.innerHTML = seriesName ? seriesName : ''`.
 - GHSA-whq6-mj2r-mjqc: File path corrected to lib/lsof.js.
 - GHSA-xmxh-g7wj-8m4m: File path corrected to lib/curl-transport.js.
+
+The `correct_cwe` of 15 reviews has a space before or after the CWE id (for example `"CWE-78 "`), and the space is
+removed: 1087_GHSA-rmmc-8cqj-hfp3, 1227_GHSA-gr4j-r575-g665, 1343_GHSA-89mq-4x47-5v83, 1517_GHSA-gm9x-q798-hmr4,
+156_GHSA-g3xp-v2ff-x5c3, 188_GHSA-5w4p-h4gm-3w26, 264_GHSA-cr8h-x88h-jwj2, 301_GHSA-j3wh-5m26-2pf7,
+3_GHSA-3fw8-66wf-pr7m, 434_GHSA-cxwc-8pqp-2whw, 467_GHSA-68cm-mgv7-vg5c, 578_GHSA-3mpr-hq3p-49h9,
+63_GHSA-rc8h-3fv6-pxv8, 65_GHSA-j3g2-m5jj-6336, 727_GHSA-9hqj-38j2-5jgm.
 
 ## 4. Removed tool scores
 

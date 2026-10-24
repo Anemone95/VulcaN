@@ -6,7 +6,7 @@
         "cwe": "CWE-471",
         "github_link": "https://github.com/advisories/GHSA-89mq-4x47-5v83"
     },
-    "correct_cwe": " CWE-471",
+    "correct_cwe": "CWE-471",
     "correct_package_link": "https://github.com/angular/angular.js/archive/v1.7.8.tar.gz",
     "vulnerability": {
         "vulnerability_location": [

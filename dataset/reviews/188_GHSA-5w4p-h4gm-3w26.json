@@ -6,7 +6,7 @@
         "cwe": "CWE-818",
         "github_link": "https://github.com/advisories/GHSA-5w4p-h4gm-3w26"
     },
-    "correct_cwe": " CWE-818",
+    "correct_cwe": "CWE-818",
     "correct_package_link": "https://registry.npmjs.org/jser-stat/-/jser-stat-4.0.3.tgz",
     "vulnerability": {
         "vulnerability_location": [

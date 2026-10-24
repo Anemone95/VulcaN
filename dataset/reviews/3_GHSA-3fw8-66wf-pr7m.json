@@ -6,7 +6,7 @@
         "cwe": "CWE-79",
         "github_link": "https://github.com/advisories/GHSA-3fw8-66wf-pr7m"
     },
-    "correct_cwe": " CWE-79",
+    "correct_cwe": "CWE-79",
     "correct_package_link": "https://registry.npmjs.org/connect/-/connect-2.8.0.tgz",
     "vulnerability": {
         "vulnerability_location": [

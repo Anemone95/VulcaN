@@ -6,7 +6,7 @@
         "cwe": "CWE-NVD-Other",
         "github_link": "https://github.com/advisories/GHSA-j3g2-m5jj-6336"
     },
-    "correct_cwe": "CWE-NVD-Other ",
+    "correct_cwe": "CWE-NVD-Other",
     "correct_package_link": "https://registry.npmjs.org/hapi/-/hapi-9.5.1.tgz",
     "vulnerability": {
         "vulnerability_location": [
