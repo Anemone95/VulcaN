@@ -11,10 +11,10 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "dist/react-draft-wysiwyg.js",
-                    "start_lineno": 7,
-                    "end_lineno": 7,
-                    "code": "S.a.createElement(\"a\",{href:r,target:i},t)"
+                    "file": "src/decorators/Link/index.js",
+                    "start_lineno": 59,
+                    "end_lineno": 59,
+                    "code": "<a href={url} target={targetOption}>{children}</a>"
                 }
             }
         ]

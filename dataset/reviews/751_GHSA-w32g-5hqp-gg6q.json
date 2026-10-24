@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/mermaid.js",
-                    "lineno": 50748,
-                    "code": "const setLink = function (ids, linkStr, tooltip) {"
+                    "file": "src/diagrams/flowchart/flowDb.js",
+                    "lineno": 214,
+                    "code": "export const setLink = function (ids, linkStr, tooltip) {"
                 },
                 "sink": {
-                    "file": "dist/mermaid.js",
-                    "lineno": 51119,
-                    "code": "link.setAttributeNS('http://www.w3.org/2000/svg', 'href', vertex.link);"
+                    "file": "src/diagrams/flowchart/flowRenderer.js",
+                    "lineno": 90,
+                    "code": "link.setAttributeNS('http://www.w3.org/2000/svg', 'href', vertex.link)"
                 }
             }
         ]

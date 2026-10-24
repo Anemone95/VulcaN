@@ -11,9 +11,9 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "dist/rules.js",
-                    "start_lineno": 129,
-                    "end_lineno": 131,
+                    "file": "src/rules.ts",
+                    "start_lineno": 163,
+                    "end_lineno": 165,
                     "code": "case 'no_cache': { return `${this.name}-${Math.random()}` }"
                 }
             }

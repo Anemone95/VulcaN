@@ -11,13 +11,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/lib/transform-directives-for-browser.js",
-                    "lineno": 32,
-                    "code": "module.exports = function transformDirectivesForBrowser(browser, directives) {"
+                    "file": "lib/transform-directives-for-browser.ts",
+                    "lineno": 46,
+                    "code": "export = function transformDirectivesForBrowser ("
                 },
                 "sink": {
-                    "file": "dist/lib/transform-directives-for-browser.js",
-                    "lineno": 52,
+                    "file": "lib/transform-directives-for-browser.ts",
+                    "lineno": 75,
                     "code": "delete directives.defaultSrc;"
                 }
             }

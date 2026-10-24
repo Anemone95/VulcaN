@@ -1,2 +1,44 @@
 $ corepack pnpm@9.15.9 install --prod --no-frozen-lockfile --reporter=append-only --config.node-linker=hoisted --ignore-workspace --ignore-scripts
- ERR_PNPM_INVALID_SELECTOR  Cannot parse the "graphql-yoga/graphql" selector
+Progress: resolved 1, reused 0, downloaded 0, added 0
+ WARN  deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+ WARN  deprecated apollo-server@2.8.2: The `apollo-server` package is part of Apollo Server v2 and v3, which are now end-of-life (as of October 22nd 2023 and October 22nd 2024, respectively). This package's functionality is now found in the `@apollo/server` package. See https://www.apollographql.com/docs/apollo-server/previous-versions/ for more details.
+ WARN  deprecated tslint-config-standard@8.0.1: TSLint is deprecated, please move to ESLint: https://github.com/blakeembrey/tslint-config-standard/issues/61
+ WARN  deprecated graphql-tools@4.0.5: This package has been deprecated and now it only exports makeExecutableSchema.
+And it will no longer receive updates.
+We recommend you to migrate to scoped packages such as @graphql-tools/schema, @graphql-tools/utils and etc.
+Check out https://www.graphql-tools.com to learn what package you should use instead
+ WARN  deprecated graphql@14.3.1: No longer supported; please update to a newer version. Details: https://github.com/graphql/graphql-js#version-support
+Progress: resolved 50, reused 0, downloaded 0, added 0
+Progress: resolved 230, reused 0, downloaded 0, added 0
+Progress: resolved 428, reused 0, downloaded 0, added 0
+Progress: resolved 738, reused 0, downloaded 0, added 0
+Progress: resolved 1030, reused 0, downloaded 0, added 0
+Progress: resolved 1396, reused 0, downloaded 0, added 0
+Progress: resolved 1852, reused 0, downloaded 0, added 0
+ WARN  deprecated aws-lambda@0.1.2: please upgrade to latest 1.x
+ WARN  73 deprecated subdependencies found: @babel/plugin-proposal-async-generator-functions@7.20.7, @babel/plugin-proposal-class-properties@7.2.3, @babel/plugin-proposal-json-strings@7.18.6, @babel/plugin-proposal-object-rest-spread@7.2.0, @babel/plugin-proposal-optional-catch-binding@7.18.6, @babel/plugin-proposal-unicode-property-regex@7.18.6, @babel/polyfill@7.2.5, @types/jest-diff@24.3.0, @types/minimatch@6.0.0, @types/vfile-message@2.0.0, abab@2.0.6, acorn-dynamic-import@4.0.0, apollo-cache-control@0.1.1, apollo-cache-control@0.8.1, apollo-datasource@0.6.1, apollo-server-caching@0.5.0, apollo-server-core@1.4.0, apollo-server-core@2.8.2, apollo-server-env@2.4.1, apollo-server-errors@2.3.1, apollo-server-express@1.4.0, apollo-server-express@2.8.2, apollo-server-lambda@1.3.6, apollo-server-plugin-base@0.6.1, apollo-server-types@0.2.1, apollo-tracing@0.1.4, apollo-tracing@0.8.1, apollo-upload-server@7.1.0, argv@0.0.2, aws-sdk@2.1693.0, babel-preset-docz@0.13.6, copy-concurrently@1.0.5, core-js@1.2.7, core-js@2.6.12, domexception@1.0.1, figgy-pudding@3.5.2, friendly-errors-webpack-plugin@1.7.0, fs-write-stream-atomic@1.0.10, fsevents@1.2.13, glob@7.2.3, graphql-extensions@0.0.10, graphql-extensions@0.8.1, graphql-extensions@0.9.1, graphql-extensions@0.9.2, graphql-import@0.7.1, har-validator@5.1.5, inflight@1.0.6, left-pad@1.3.0, lodash.get@4.4.2, move-concurrently@1.0.1, os-homedir@2.0.0, path-dirname@1.0.2, polished@2.3.3, q@1.5.1, querystring@0.2.0, request-promise-native@1.0.9, request@2.88.2, resolve-url@0.2.1, sane@4.1.0, source-map-resolve@0.5.3, source-map-url@0.4.1, sourcemap-codec@1.4.8, stable@0.1.8, subscriptions-transport-ws@0.9.19, svgo@1.3.2, trim@0.0.1, urix@0.1.0, uuid@3.4.0, uuid@8.0.0, uuid@8.3.2, w3c-hr-time@1.0.2, webpack-chain@5.2.4, whatwg-encoding@1.0.5
+Progress: resolved 1896, reused 0, downloaded 0, added 0
+
+devDependencies: skipped
+
+ WARN  Issues with peer dependencies found
+.
+└─┬ graphql-yoga 1.18.1
+  ├─┬ graphql-subscriptions 0.5.8
+  │ └── ✕ unmet peer graphql@"^0.10.5 || ^0.11.3 || ^0.12.0 || ^0.13.0": found 14.3.1
+  └─┬ apollo-server-express 1.4.0
+    └─┬ apollo-server-core 1.4.0
+      ├── ✕ unmet peer graphql@"^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0": found 14.3.1
+      ├─┬ apollo-tracing 0.1.4
+      │ ├── ✕ unmet peer graphql@"0.10.x - 0.13.x": found 14.3.1
+      │ └─┬ graphql-extensions 0.0.10
+      │   └── ✕ unmet peer graphql@"0.10.x - 0.13.x": found 14.3.1
+      └─┬ apollo-cache-control 0.1.1
+        └── ✕ unmet peer graphql@"0.10.x - 0.13.x": found 14.3.1
+
+Packages: +10
+++++++++++
+Progress: resolved 1896, reused 4, downloaded 6, added 10, done
+Done in 8.6s using pnpm v9.15.9
+
+(installed with the yarn-only "resolutions" field of package.json removed; package.json is restored)

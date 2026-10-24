@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/index.node.cjs.js",
-                    "lineno": 395,
-                    "code": "function deepCopy(value) {"
+                    "file": "src/deepCopy.ts",
+                    "lineno": 21,
+                    "code": "export function deepCopy<T>(value: T): T {"
                 },
                 "sink": {
-                    "file": "dist/index.node.cjs.js",
-                    "lineno": 437,
-                    "code": "target[prop] = deepExtend(target[prop], source[prop]);"
+                    "file": "src/deepCopy.ts",
+                    "lineno": 68,
+                    "code": "(target as { [key: string]: unknown })[prop] = deepExtend("
                 }
             }
         ]

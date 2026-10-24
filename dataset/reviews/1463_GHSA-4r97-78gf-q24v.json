@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "package/dist/klona.js",
+                    "file": "src/index.js",
                     "lineno": 4,
                     "code": "var k, tmp, str=Object.prototype.toString.call(x);"
                 },
                 "sink": {
-                    "file": "package/dist/klona.js",
+                    "file": "src/index.js",
                     "lineno": 9,
                     "code": "tmp[k] = klona(x[k]);"
                 }

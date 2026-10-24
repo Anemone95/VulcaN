@@ -10,48 +10,48 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/lib/DPoP.js",
-                    "lineno": 13,
-                    "code": "function isValidProof(accessToken, dpop, method, url, isDuplicateJTI) {"
+                    "file": "src/lib/DPoP.ts",
+                    "lineno": 14,
+                    "code": "function isValidProof("
                 },
                 "sink": {
-                    "file": "dist/lib/DPoP.js",
-                    "lineno": 17,
-                    "code": "ts_guards_1.asserts.isLiteral(dpop.header.jwk.kid, accessToken.payload.cnf.jkt);"
+                    "file": "src/lib/DPoP.ts",
+                    "lineno": 25,
+                    "code": "asserts.isLiteral(dpop.header.jwk.kid, accessToken.payload.cnf.jkt);"
                 }
             },
             {
                 "source": {
-                    "file": "dist/guards/DPoPJWKGuard.js",
+                    "file": "src/guards/DPoPJWKGuard.ts",
+                    "lineno": 41,
+                    "code": "export function isECPublicJWK(x: unknown): asserts x is ECPublicJWK {"
+                },
+                "sink": {
+                    "file": "src/guards/DPoPJWKGuard.ts",
                     "lineno": 42,
-                    "code": "function isECPublicJWK(x) {"
-                },
-                "sink": {
-                    "file": "dist/guards/DPoPJWKGuard.js",
-                    "lineno": 43,
-                    "code": "ts_guards_1.asserts.areObjectPropertiesOf(x, [\"kid\", \"kty\", \"crv\", \"x\", \"y\"]); ts_guards_1.asserts.isString(x.kid);"
+                    "code": "asserts.areObjectPropertiesOf(x, [\"kid\", \"kty\", \"crv\", \"x\", \"y\"]);"
                 }
             },
             {
                 "source": {
-                    "file": "dist/guards/DPoPJWKGuard.js",
+                    "file": "src/guards/DPoPJWKGuard.ts",
                     "lineno": 63,
-                    "code": "function isRSAPublicJWK(x) {"
+                    "code": "export function isRSAPublicJWK(x: unknown): asserts x is RSAPublicJWK {"
                 },
                 "sink": {
-                    "file": "dist/guards/DPoPJWKGuard.js",
+                    "file": "src/guards/DPoPJWKGuard.ts",
                     "lineno": 64,
-                    "code": "ts_guards_1.asserts.areObjectPropertiesOf(x, [\"alg\", \"kid\", \"kty\", \"n\", \"e\"]);"
+                    "code": "asserts.areObjectPropertiesOf(x, [\"alg\", \"kid\", \"kty\", \"n\", \"e\"]);"
                 }
             },
             {
                 "source": {
-                    "file": "dist/guards/DPoPJWKGuard.js",
+                    "file": "src/guards/DPoPJWKGuard.ts",
                     "lineno": 63,
-                    "code": "function isRSAPublicJWK(x) {"
+                    "code": "export function isRSAPublicJWK(x: unknown): asserts x is RSAPublicJWK {"
                 },
                 "sink": {
-                    "file": "dist/guards/DPoPJWKGuard.js",
+                    "file": "src/guards/DPoPJWKGuard.ts",
                     "lineno": 66,
                     "code": "asserts.isString(x.kid);"
                 }

@@ -12,13 +12,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/devalue.js",
-                    "lineno": 216,
-                    "code": "function safeKey(key) {"
+                    "file": "src/index.ts",
+                    "lineno": 249,
+                    "code": "function safeKey(key: string) {"
                 },
                 "sink": {
-                    "file": "dist/devalue.js",
-                    "lineno": 217,
+                    "file": "src/index.ts",
+                    "lineno": 250,
                     "code": "return /^[_$a-zA-Z][_$a-zA-Z0-9]*$/.test(key) ? key : JSON.stringify(key);"
                 }
             }

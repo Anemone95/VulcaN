@@ -14,26 +14,26 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "build/main/lib/index.js",
-                    "lineno": 38,
-                    "code": "exports.killProcessOnPort = async (port, askQuestion = true) => {"
+                    "file": "src/lib/index.ts",
+                    "lineno": 51,
+                    "code": "export const killProcessOnPort = async (port: number, askQuestion: boolean = true) => {"
                 },
                 "sink": {
-                    "file": "build/main/lib/index.js",
-                    "lineno": 9,
-                    "code": "const res = child_process_1.execSync(`netstat -a -n -o | grep '${port}' | grep 'LISTENING'`);"
+                    "file": "src/lib/index.ts",
+                    "lineno": 16,
+                    "code": "const res: Buffer = execSync(`netstat -a -n -o | grep '${port}' | grep 'LISTENING'`) as any;"
                 }
             },
             {
                 "source": {
-                    "file": "build/main/lib/index.js",
-                    "lineno": 38,
-                    "code": "exports.killProcessOnPort = async (port, askQuestion = true) => {"
+                    "file": "src/lib/index.ts",
+                    "lineno": 51,
+                    "code": "export const killProcessOnPort = async (port: number, askQuestion: boolean = true) => {"
                 },
                 "sink": {
-                    "file": "build/main/lib/index.js",
-                    "lineno": 15,
-                    "code": "const result = (await child_process_1.execSync(`fuser ${port}/tcp`)).toString();"
+                    "file": "src/lib/index.ts",
+                    "lineno": 23,
+                    "code": "const result = (await execSync(`fuser ${port}/tcp`) as Buffer).toString();"
                 }
             }
         ]

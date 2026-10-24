@@ -11,10 +11,10 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "dist/jspdf.es.js",
-                    "start_lineno": 10699,
-                    "end_lineno": 10699,
-                    "code": "var extractedInfo = /^data:(\\w*/\\w*);*(charset=[\\w=-]*)*;*$/.exec("
+                    "file": "src/modules/addimage.js",
+                    "start_lineno": 633,
+                    "end_lineno": 633,
+                    "code": "var extractedInfo = /^data:(\\w*\\/\\w*);*(charset=[\\w=-]*)*;*$/.exec("
                 }
             }
         ]

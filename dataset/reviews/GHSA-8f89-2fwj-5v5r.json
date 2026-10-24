@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/klona.js",
+                    "file": "src/index.js",
                     "lineno": 1,
-                    "code": "module.exports = function klona(x) {"
+                    "code": "export default function klona(x) {"
                 },
                 "sink": {
-                    "file": "dist/klona.js",
+                    "file": "src/index.js",
                     "lineno": 9,
                     "code": "tmp[k] = klona(x[k]);"
                 }

@@ -14,14 +14,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/index.js",
-                    "lineno": 44,
-                    "code": "function handler(type, name, fn) {"
+                    "file": "src/index.js",
+                    "lineno": 21,
+                    "code": "export function handler (type, name, fn) {"
                 },
                 "sink": {
-                    "file": "dist/index.js",
-                    "lineno": 46,
-                    "code": "handlers[type][name] = fn;"
+                    "file": "src/index.js",
+                    "lineno": 23,
+                    "code": "handlers[type][name] = fn"
                 }
             }
         ]

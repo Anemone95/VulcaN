@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/index.es.js",
-                    "lineno": 14,
-                    "code": "function serve (options) {"
+                    "file": "src/index.js",
+                    "lineno": 15,
+                    "code": "function serve (options = { contentBase: '' }) {"
                 },
                 "sink": {
-                    "file": "dist/index.es.js",
-                    "lineno": 108,
-                    "code": "readFile(filePath, function (error, content) {"
+                    "file": "src/index.js",
+                    "lineno": 107,
+                    "code": "readFile(filePath, (error, content) => {"
                 }
             }
         ]

@@ -11,10 +11,10 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "dist/realms-shim.cjs.js",
-                    "start_lineno": 1003,
-                    "end_lineno": 1013,
-                    "code": "const htmlCommentPattern = new RegExp(`(?:${'<'}!--|--${'>'})`); function rejectHtmlComments(s) { const index = s.search(htmlCommentPattern); if (index !== -1) { const linenum = s.slice(0, index).split('\n').length; // more or less throw new SyntaxError(`possible html comment syntax rejected around line ${linenum}`); } }"
+                    "file": "src/sourceParser.js",
+                    "start_lineno": 19,
+                    "end_lineno": 29,
+                    "code": "const htmlCommentPattern = new RegExp(`(?:${'<'}!--|--${'>'})`); function rejectHtmlComments(s) { const index = s.search(htmlCommentPattern); if (index !== -1) { const linenum = s.slice(0, index).split('\\n').length; // more or less throw new SyntaxError( `possible html comment syntax rejected around line ${linenum}` ); } }"
                 }
             }
         ]

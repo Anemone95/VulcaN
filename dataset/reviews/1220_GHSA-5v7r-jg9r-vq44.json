@@ -11,18 +11,18 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "src/build/SimpleCrypto.js",
-                    "start_lineno": 38,
-                    "end_lineno": 42,
-                    "code": "var encrypted = crypto_js_1.AES.encrypt(string, key, { iv: initialVector, padding: crypto_js_1.pad.Pkcs7, mode: crypto_js_1.mode.CBC });"
+                    "file": "src/SimpleCrypto.ts",
+                    "start_lineno": 47,
+                    "end_lineno": 51,
+                    "code": "const encrypted: WordArray = AES.encrypt(string, key, { iv: initialVector as string, padding: pad.Pkcs7, mode: mode.CBC });"
                 }
             },
             {
                 "block": {
-                    "file": "src/build/SimpleCrypto.js",
-                    "start_lineno": 58,
-                    "end_lineno": 62,
-                    "code": "var decrypted = crypto_js_1.AES.decrypt(encrypted, key, { iv: initialVector, padding: crypto_js_1.pad.Pkcs7, mode: crypto_js_1.mode.CBC });"
+                    "file": "src/SimpleCrypto.ts",
+                    "start_lineno": 70,
+                    "end_lineno": 74,
+                    "code": "const decrypted = AES.decrypt(encrypted, key, { iv: initialVector, padding: pad.Pkcs7, mode: mode.CBC });"
                 }
             }
         ]

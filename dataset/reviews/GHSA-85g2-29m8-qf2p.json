@@ -11,13 +11,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/src/utils/CollideUtil.js",
-                    "lineno": 26,
-                    "code": "function collideUnsafe(arg1, arg2, modifiers, startPath = '$') {"
+                    "file": "src/utils/CollideUtil.ts",
+                    "lineno": 28,
+                    "code": "export function collideUnsafe(arg1: any, arg2: any,  modifiers?: ICollideModifiers, startPath: string = '$'): any {"
                 },
                 "sink": {
-                    "file": "dist/src/utils/CollideUtil.js",
-                    "lineno": 79,
+                    "file": "src/utils/CollideUtil.ts",
+                    "lineno": 88,
                     "code": "obj1[key] = collideUnsafe(obj1[key], obj2[key], modifiers, subPath);"
                 }
             }

@@ -17,13 +17,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/utils/object/set.js",
-                    "lineno": 2,
-                    "code": "module.exports = (object, key, value) => {"
+                    "file": "lib/utils/object/set.ts",
+                    "lineno": 3,
+                    "code": "export = <T>(object: GeneralObject<T>, key: string, value: any): GeneralObject<T> => {"
                 },
                 "sink": {
-                    "file": "dist/utils/object/set.js",
-                    "lineno": 14,
+                    "file": "lib/utils/object/set.ts",
+                    "lineno": 18,
                     "code": "objectRef[keyParts[keyParts.length - 1]] = value;"
                 }
             }

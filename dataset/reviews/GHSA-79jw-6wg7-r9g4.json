@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/mixme.cjs.js",
-                    "lineno": 24,
-                    "code": "exports.merge = function merge() {"
+                    "file": "lib/index.js",
+                    "lineno": 4,
+                    "code": "merge = function() {"
                 },
                 "sink": {
-                    "file": "dist/mixme.cjs.js",
-                    "lineno": 53,
-                    "code": "target[name] = exports.mutate(target[name], source[name]);"
+                    "file": "lib/index.js",
+                    "lineno": 30,
+                    "code": "target[name] = mutate(target[name], source[name]);"
                 }
             }
         ]

@@ -11,13 +11,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/jquery.mobile.js",
-                    "lineno": 5319,
+                    "file": "js/widgets/pagecontainer.js",
+                    "lineno": 870,
                     "code": "change: function( to, options ) {"
                 },
                 "sink": {
-                    "file": "dist/jquery.mobile.js",
-                    "lineno": 1815,
+                    "file": "external/jquery/plugins/jquery.hashchange.js",
+                    "lineno": 330,
                     "code": ".insertAfter( 'body' )[0].contentWindow;"
                 }
             }

@@ -26,7 +26,7 @@
     "lint:staged": "lint-staged",
     "prepublishOnly": "npm ci && pinst --disable && npm run build",
     "postpublish": "pinst --enable",
-    "_postinstall": "[[ -n \"$CI\" ]] || husky install",
+    "postinstall": "[[ -n \"$CI\" ]] || husky install",
     "test": "jest"
   },
   "publishConfig": {

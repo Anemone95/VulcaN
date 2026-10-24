@@ -3,9 +3,10 @@
 This repository holds the VulcaN dataset of reviewed npm advisories, prepared for taint analysis with jelly-taint
 (jelly-benchmarks, `misc/taint/vulcan/`). The original dataset is the state of commit `e72589b4a` (2023-04-04, the
 last commit of the VulcaN authors): 957 advisory reviews. This repository differs from it in four ways: the
-packages are extracted with their dependencies installed, 14 advisories are removed, the vulnerability locations of
-204 reviews and the `correct_cwe` text of 15 reviews are corrected, and the reviews no longer hold the scores of
-the vulnerability detection tools. It holds 943 advisory reviews.
+packages are extracted with their dependencies installed (23 package directories hold their repository source
+instead of the compiled code), 14 advisories are removed, the vulnerability locations of 222 reviews and the
+`correct_cwe` text of 15 reviews are corrected, and the reviews no longer hold the scores of the vulnerability
+detection tools. It holds 943 advisory reviews.
 
 ## 1. Extracted packages
 
@@ -22,6 +23,42 @@ the vulnerability detection tools. It holds 943 advisory reviews.
 - ids-enterprise-4.18.1 (955_GHSA-crfx-5phg-hmw9) ships only `dist/`, and its repository is not public. `dist/` is
   renamed to `_dist/`, and the `main` of its package.json and the two locations of its review follow
   (`_dist/js/sohoxi.js`).
+- The 23 package directories of the table below (klona-1.1.0 is in two of them) ship their code only in compiled
+  directories (`dist/`, `build/`) or bundles. Each of these package directories is replaced by the repository tree
+  (for a monorepo, the directory of the package) at the commit whose package.json has the same name and version:
+  the `gitHead` of the npm registry, the version tag, or the version commit after the `gitHead`
+  (kill-process-on-port, react-draft-wysiwyg). The published files are not kept. graphql-shield uses
+  semantic-release, which keeps the version `0.0.0-semantic-release` in the repository and writes the version when
+  it publishes; its tree is the tag `v6.0.5` (the `gitHead`), and its package.json gets the version `6.0.5`.
+  `misc/taint/vulcan/use_sources.py` of jelly-benchmarks performs the replacement, and `install.py` installs the
+  production dependencies; graphql-shield is installed without its `resolutions` field (a yarn selector that pnpm
+  does not parse, for a development dependency), and its package.json is restored after the install.
+
+| Advisory | Package | Repository | Ref |
+|---|---|---|---|
+| 1121_GHSA-hx78-272p-mqqh | graphql-shield-6.0.5 | maticzav/graphql-shield | `v6.0.5` |
+| 1176_GHSA-c3m8-x3cg-qm2c | helmet-csp-2.9.0 | helmetjs/csp | `186abe4cd1c2` |
+| 1180_GHSA-6jg8-7333-554w | realms-shim-1.1.2 | Agoric/realms-shim | `357beba0387c` |
+| 1220_GHSA-5v7r-jg9r-vq44 | simple-crypto-js-2.2.0 | danang-id/simple-crypto-js | `dcf75e0217e8` |
+| 1463_GHSA-4r97-78gf-q24v | klona-1.1.0 | lukeed/klona | `c969b506c4ec` |
+| GHSA-8f89-2fwj-5v5r | klona-1.1.0 | lukeed/klona | `c969b506c4ec` |
+| 1517_GHSA-gm9x-q798-hmr4 | git-tags-remote-1.0.3 | sh0ji/git-tags-remote | `a21074841b25` |
+| 751_GHSA-w32g-5hqp-gg6q | mermaid-8.2.2 | knsv/mermaid | `c33533082c59` |
+| 814_GHSA-6677-83pp-f862 | devalue-1.2.2 | nuxt-community/devalue | `2f286c70034b` |
+| 883_GHSA-fj93-7wm4-8x2g | jquery-mobile-1.4.1 | jquery/jquery-mobile | `1.4.1` |
+| GHSA-2cf2-2383-h4jv | querymen-2.1.3 | diegohaz/querymen | `74a634c83d14` |
+| GHSA-4j46-mp85-mv8c | rollup-plugin-serve-1.0.1 | thgh/rollup-plugin-serve | `71cc20d4fed8` |
+| GHSA-57f3-gghm-9mhc | jspdf-2.3.0 | MrRio/jsPDF | `63f89d47d1cd` |
+| GHSA-5pm8-492c-92p5 | chartkick-3.1.3 | ankane/chartkick.js | `5334d282d9b8` |
+| GHSA-5wqj-f379-6jh4 | kill-process-on-port-1.0.2 | radarsu/kill-process-on-port | `4a7716e7cb30` |
+| GHSA-79jw-6wg7-r9g4 | mixme-0.5.0 | adaltas/node-mixme | `00ded06218a8` |
+| GHSA-85g2-29m8-qf2p | object-collider-1.0.3 | FireBlinkLTD/object-collider | `984260935333` |
+| GHSA-fpm5-vv97-jfwg | util-0.3.3 | firebase/firebase-js-sdk/packages/util | `@firebase/util@0.3.3` |
+| GHSA-jqh7-w5pr-cr56 | koa-shopify-auth-3.1.62 | Shopify/quilt/packages/koa-shopify-auth | `@shopify/koa-shopify-auth@3.1.62` |
+| GHSA-jxwx-85vp-gvwm | jquery-validation-1.19.2 | jquery-validation/jquery-validation | `203b1fa015c3` |
+| GHSA-qcg2-h349-vwm3 | react-draft-wysiwyg-1.14.5 | jpuri/react-draft-wysiwyg | `9f6f4d2d9e0d` |
+| GHSA-rrqm-p222-8ph2 | dynamoose-2.6.0 | dynamoose/dynamoose | `255485328e33` |
+| GHSA-xmh9-rg6f-j3mr | identity-token-verifier-0.5.1 | solid/identity-token-verifier | `0cbb50406717` |
 
 ## 2. Removed advisories
 
@@ -258,6 +295,35 @@ express-brute 823_GHSA-984p-xq9m-4rjw). The other fields of the reviews are unch
 - GHSA-w46j-8hm6-h8mm: Location 0: the innerHTML write (line 192) is the sink; source set to the legend text read `let text = legendFormatter(legendNames[i], ...)` (line 96). Location 1: code corrected to `ttYLabel.innerHTML = seriesName ? seriesName : ''`.
 - GHSA-whq6-mj2r-mjqc: File path corrected to lib/lsof.js.
 - GHSA-xmxh-g7wj-8m4m: File path corrected to lib/curl-transport.js.
+
+The locations of the 23 reviews of the packages that section 1 replaces by their repository source point to the
+source files (5 of these reviews are also in the list above). Each line is mapped with the source map that the
+published package ships or with the line of the same code, and is checked by hand; `code` is the text of the
+source line (for a block, its lines).
+
+- 1121_GHSA-hx78-272p-mqqh: block dist/rules.js:129–131 → src/rules.ts:163–165.
+- 1176_GHSA-c3m8-x3cg-qm2c: source dist/lib/transform-directives-for-browser.js:32 → lib/transform-directives-for-browser.ts:46; sink dist/lib/transform-directives-for-browser.js:52 → lib/transform-directives-for-browser.ts:75.
+- 1180_GHSA-6jg8-7333-554w: block dist/realms-shim.cjs.js:1003–1013 → src/sourceParser.js:19–29.
+- 1220_GHSA-5v7r-jg9r-vq44: block 1 src/build/SimpleCrypto.js:38–42 → src/SimpleCrypto.ts:47–51; block 2 src/build/SimpleCrypto.js:58–62 → src/SimpleCrypto.ts:70–74.
+- 1463_GHSA-4r97-78gf-q24v: source package/dist/klona.js:4 → src/index.js:4; sink package/dist/klona.js:9 → src/index.js:9.
+- 1517_GHSA-gm9x-q798-hmr4: source dist/index.js:1 → src/index.ts:28; sink dist/index.js:1 → src/index.ts:6.
+- 751_GHSA-w32g-5hqp-gg6q: source dist/mermaid.js:50748 → src/diagrams/flowchart/flowDb.js:214; sink dist/mermaid.js:51119 → src/diagrams/flowchart/flowRenderer.js:90.
+- 814_GHSA-6677-83pp-f862: source dist/devalue.js:216 → src/index.ts:249; sink dist/devalue.js:217 → src/index.ts:250.
+- 883_GHSA-fj93-7wm4-8x2g: source dist/jquery.mobile.js:5319 → js/widgets/pagecontainer.js:870; sink dist/jquery.mobile.js:1815 → external/jquery/plugins/jquery.hashchange.js:330.
+- GHSA-2cf2-2383-h4jv: source dist/index.js:44 → src/index.js:21; sink dist/index.js:46 → src/index.js:23.
+- GHSA-4j46-mp85-mv8c: source dist/index.es.js:14 → src/index.js:15; sink dist/index.es.js:108 → src/index.js:107.
+- GHSA-57f3-gghm-9mhc: block dist/jspdf.es.js:10699 → src/modules/addimage.js:633.
+- GHSA-5pm8-492c-92p5: source package/dist/chartkick.js:28 → src/helpers.js:14; sink package/dist/chartkick.js:40 → src/helpers.js:26.
+- GHSA-5wqj-f379-6jh4: source 1 build/main/lib/index.js:38 → src/lib/index.ts:51; sink 1 build/main/lib/index.js:9 → src/lib/index.ts:16; source 2 build/main/lib/index.js:38 → src/lib/index.ts:51; sink 2 build/main/lib/index.js:15 → src/lib/index.ts:23.
+- GHSA-79jw-6wg7-r9g4: source dist/mixme.cjs.js:24 → lib/index.js:4; sink dist/mixme.cjs.js:53 → lib/index.js:30.
+- GHSA-85g2-29m8-qf2p: source dist/src/utils/CollideUtil.js:26 → src/utils/CollideUtil.ts:28; sink dist/src/utils/CollideUtil.js:79 → src/utils/CollideUtil.ts:88.
+- GHSA-8f89-2fwj-5v5r: source dist/klona.js:1 → src/index.js:1; sink dist/klona.js:9 → src/index.js:9.
+- GHSA-fpm5-vv97-jfwg: source dist/index.node.cjs.js:395 → src/deepCopy.ts:21; sink dist/index.node.cjs.js:437 → src/deepCopy.ts:68.
+- GHSA-jqh7-w5pr-cr56: source dist/src/auth/create-enable-cookies.js:14 → src/auth/create-enable-cookies.ts:21; sink dist/src/auth/create-enable-cookies.js:21 → src/auth/create-enable-cookies.ts:30.
+- GHSA-jxwx-85vp-gvwm: source dist/jquery.validate.js:1427 → src/core.js:1409; sink dist/jquery.validate.js:1433 → src/core.js:1415.
+- GHSA-qcg2-h349-vwm3: block dist/react-draft-wysiwyg.js:7 → src/decorators/Link/index.js:59.
+- GHSA-rrqm-p222-8ph2: source dist/utils/object/set.js:2 → lib/utils/object/set.ts:3; sink dist/utils/object/set.js:14 → lib/utils/object/set.ts:18.
+- GHSA-xmh9-rg6f-j3mr: source 1 dist/lib/DPoP.js:13 → src/lib/DPoP.ts:14; sink 1 dist/lib/DPoP.js:17 → src/lib/DPoP.ts:25; source 2 dist/guards/DPoPJWKGuard.js:42 → src/guards/DPoPJWKGuard.ts:41; sink 2 dist/guards/DPoPJWKGuard.js:43 → src/guards/DPoPJWKGuard.ts:42; source 3 dist/guards/DPoPJWKGuard.js:63 → src/guards/DPoPJWKGuard.ts:63; sink 3 dist/guards/DPoPJWKGuard.js:64 → src/guards/DPoPJWKGuard.ts:64; source 4 dist/guards/DPoPJWKGuard.js:63 → src/guards/DPoPJWKGuard.ts:63; sink 4 dist/guards/DPoPJWKGuard.js:66 → src/guards/DPoPJWKGuard.ts:66.
 
 The `correct_cwe` of 15 reviews has a space before or after the CWE id (for example `"CWE-78 "`), and the space is
 removed: 1087_GHSA-rmmc-8cqj-hfp3, 1227_GHSA-gr4j-r575-g665, 1343_GHSA-89mq-4x47-5v83, 1517_GHSA-gm9x-q798-hmr4,

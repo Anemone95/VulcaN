@@ -11,13 +11,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "package/dist/chartkick.js",
-                    "lineno": 28,
+                    "file": "src/helpers.js",
+                    "lineno": 14,
                     "code": "function extend(target, source) {"
                 },
                 "sink": {
-                    "file": "package/dist/chartkick.js",
-                    "lineno": 40,
+                    "file": "src/helpers.js",
+                    "lineno": 26,
                     "code": "target[key] = source[key];"
                 }
             }
