@@ -2,7 +2,7 @@
   "name": "umount",
   "version": "1.1.6",
   "description": "Umount a device in UNIX based operating systems",
-  "main": "build/umount.js",
+  "main": "_build/umount.js",
   "homepage": "https://github.com/jviotti/node-umount",
   "repository": {
     "type": "git",

@@ -16,6 +16,9 @@ packages are extracted with their dependencies installed, 14 advisories are remo
   `pnpm-lock.yaml`, and `install-summary.json` lists the outcome per package.
 - `.gitignore` also leaves out the iOS binaries that react-native-baidu-voice-synthesizer marks for Git LFS.
 - `misc/taint/vulcan/install.py` of jelly-benchmarks performs these steps (commit `5199bcbce`).
+- umount-1.1.6 (1512_GHSA-6q48-vjq2-mwcj) ships its JavaScript only in `build/` (the source is CoffeeScript), and
+  jelly-taint does not expand directories named `build`. `build/` is renamed to `_build/`, and the `main` of its
+  package.json follows (`_build/umount.js`).
 
 ## 2. Removed advisories
 
@@ -104,7 +107,7 @@ express-brute 823_GHSA-984p-xq9m-4rjw). The other fields of the reviews are unch
 - 1499_GHSA-8whr-v3gm-w8h9: Sink code set to the actual eval lines (the package wraps the strings in parentheses); lines unchanged.
 - 14_GHSA-g4xp-36c3-f7mr: Sink File.load(path, ...) (lib/directory.js:112) -> the Fs.createReadStream(path) in lib/file.js:155 that File.load reaches through the response marshal.
 - 1507_GHSA-426h-24vj-qwxf: File 'package/index.js' -> 'index.js'; code set to the actual lines. Sources 1-2 (cmdString construction, code did not match) -> the exported install/uninstall parameter lists (lines 5, 37), like location 3. Location 3 (list, sink line 71) removed: its command is the constant "npm ls --depth=0 " + ("-g " or " "), and the parameter path only sets the cwd option, which the shell does not read; list("/tmp; echo INJECTED > marker") runs `npm ls --depth=0` and makes no marker file, while install and uninstall put the package names into the command.
-- 1512_GHSA-6q48-vjq2-mwcj: File 'build/unmount.js' -> 'build/umount.js'; lines unchanged.
+- 1512_GHSA-6q48-vjq2-mwcj: File 'build/unmount.js' -> '_build/umount.js' (the directory is renamed, section 1); lines unchanged.
 - 1517_GHSA-gm9x-q798-hmr4: Minified dist/index.js: source (exports.get) and sink (r.exec('git ls-remote --tags '+e, ...)) are both on line 1; code set to the actual line text (the annotated fragments used other quotes).
 - 1523_GHSA-p6mc-m468-83gw: Source line 3965 -> 3978. Sink 'nested = nested[key]' (the walk into the prototype) -> the property assignment object[key] = value in baseAssignValue (line 2559), reached from baseSet via assignValue(nested, key, newValue) at line 4006. The review's line numbers are from lodash 4.17.15; the shipped 4.17.18 already returns early on __proto__/constructor/prototype keys in baseSet (line 3993).
 - 1530_GHSA-w42g-7vfc-xf37: Code '(too large)' -> the block's actual first line; lines unchanged. The compiled class is dist/ApolloServer.js lines 17-37.
