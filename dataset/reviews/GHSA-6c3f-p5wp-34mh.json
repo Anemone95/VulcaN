@@ -16,21 +16,9 @@
                     "code": "module.exports = async function(destination, {hard = true} = {}) {"
                 },
                 "sink": {
-                    "file": "lib/reset/index.js",
-                    "lineno": 11,
-                    "code": "return await exec(`git reset ${destination} ${hard ? '--hard' : ''}`);"
-                }
-            },
-            {
-                "source": {
-                    "file": "lib/reset/index.js",
-                    "lineno": 9,
-                    "code": "module.exports = async function(destination, {hard = true} = {}) {"
-                },
-                "sink": {
-                    "file": "lib/reset/index.js",
-                    "lineno": 15,
-                    "code": "return await exec(`git reset HEAD~${Math.abs(destination)} ${hard ? '--hard' : ''}`);"
+                    "file": "node_modules/async-execute/index.js",
+                    "lineno": 10,
+                    "code": "const child = exec("
                 }
             }
         ]

@@ -16,9 +16,9 @@
                     "code": "const repoUrl = process.argv[2] === 'blank' ? process.argv[3] : process.argv[2];"
                 },
                 "sink": {
-                    "file": "bin/meta-git-clone",
-                    "lineno": 20,
-                    "code": "exec({ cmd: `git clone ${repoUrl} ${dirname}`, displayDir: dirname }, (err, result) => {"
+                    "file": "node_modules/meta-exec/index.js",
+                    "lineno": 61,
+                    "code": "const code = cp.execSync(options.cmd, {"
                 }
             }
         ]

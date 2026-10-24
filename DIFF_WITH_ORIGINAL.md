@@ -1,11 +1,11 @@
 # Differences from the original VulcaN dataset
 
-This repository holds the VulcaN dataset of reviewed npm advisories, prepared for taint analysis with
-jelly-taint (jelly-benchmarks, `misc/taint/vulcan/`). The original dataset is the state of commit `e72589b4a`
-(2023-04-04, the last commit of the VulcaN authors): 957 advisory reviews. This repository differs from it in four
-ways: the packages are extracted with their dependencies installed, 14 advisories are removed, the
-vulnerability locations of 200 reviews are corrected, and the reviews no longer hold the scores of the
-vulnerability detection tools. It holds 943 advisory reviews.
+This repository holds the VulcaN dataset of reviewed npm advisories, prepared for taint analysis with jelly-taint
+(jelly-benchmarks, `misc/taint/vulcan/`). The original dataset is the state of commit `e72589b4a` (2023-04-04, the
+last commit of the VulcaN authors): 957 advisory reviews. This repository differs from it in four ways: the
+packages are extracted with their dependencies installed, 14 advisories are removed, the vulnerability locations of
+203 reviews are corrected, and the reviews no longer hold the scores of the vulnerability detection tools. It holds
+943 advisory reviews.
 
 ## 1. Extracted packages
 
@@ -42,7 +42,7 @@ their line in `dataset/advisories-with-reviews.txt` and their entry in `install-
 
 ## 3. Corrected reviews
 
-The `vulnerability.vulnerability_location` of these 200 reviews is corrected to match the extracted packages:
+The `vulnerability.vulnerability_location` of these 203 reviews is corrected to match the extracted packages:
 the files the package ships instead of its source files, line numbers of the shipped version, and sinks on the
 line of the dangerous operation. The `correct_cwe` of seven of them is corrected as well (decal
 GHSA-j32x-j8pj-pg2h, preact 835_GHSA-cg48-9hh2-x6mx, express-hbs GHSA-rwxp-hwwf-653v, lodash.merge
@@ -94,6 +94,7 @@ express-brute 823_GHSA-984p-xq9m-4rjw). The other fields of the reviews are unch
 - 1446_GHSA-7r9x-hr76-jr96: Location 2 source: line 173 -> 217 (Git.prototype.pull).
 - 1449_GHSA-25v4-mcx4-hh35: File 'widgets/blocker/blocker.js' -> 'widgets/blockers/blockers.js'; lines unchanged.
 - 1453_GHSA-r5fx-8r73-v86c: File 'src/angular.js' -> 'angular.js'. Sink was the sanitization condition (the patch adds xlinkHref to it); replaced by the attribute write this.$$element.attr(attrName, value) (line 7672) that puts the unsanitized a[xlink:href] value into the DOM.
+- 1457_GHSA-qcff-ffx3-m25c: Sink moved from the meta-exec call (bin/meta-git-clone:20) to the call that runs the command: meta-exec without options.parallel runs cp.execSync(options.cmd, ...) (node_modules/meta-exec/index.js:61, Node.js stack trace).
 - 1470_GHSA-mg69-6j3m-jvgw: Sink 'bin/sanitize.js:97' (no such file; the flawed iframe-src regex is lib/sanitize.js:97, a filter, not an output) -> lib/sanitize.js:16, the call handing the HTML and the permissive config to the sanitize-html dependency that returns it. Source getSanitizerConfig(options) (config, not attacker input) -> the exported marky(markdown, options) in index.js:21.
 - 1478_GHSA-5854-jvxx-2cg9: File 'index.js' -> 'lib/index.js'; lines unchanged.
 - 1480_GHSA-g9cg-h3jm-cwrc: Source line 278 -> 280 (onPart). Sink kept: data[name] = value is the property assignment with the attacker field name. The advisory is "Prototype Pollution in @hapi/subtext" (CWE-1321): a crafted multipart part becomes the prototype of the payload object, and subtext runs no command, so correct_cwe is CWE-1321 (was CWE-78; the advisory record has CWE-400). `correct_cwe`: "CWE-1321".
@@ -204,7 +205,7 @@ express-brute 823_GHSA-984p-xq9m-4rjw). The other fields of the reviews are unch
 - 916_GHSA-6fcr-9h9g-23fq: Block shifted to start at 'const toCancel = blocks' (90) and end at the closing of each(...) (100).
 - 959_GHSA-v86x-f47q-f7f4: Source file path fixed: src/index.js -> ___fs++.js (findfiles, same line).
 - 962_GHSA-9r3m-mhfm-39cm: Block lines correct; code set to the shipped JS first line (annotation had the TypeScript text).
-- 966_GHSA-pmv6-gf98-p3r5: Sinks moved from the template-literal argument lines to the execa shell calls 'return sh(' (11, 16).
+- 966_GHSA-pmv6-gf98-p3r5: Sinks moved from the template-literal argument lines to the execa shell calls 'return sh(' (11, 16). Then moved to the call that runs the command: execa.shell reaches childProcess.spawn(parsed.cmd, parsed.args, parsed.opts) (node_modules/execa/index.js:204) in both branches (Node.js stack trace for POSIX and win32). The two locations then coincide (source index.js:5), so they are merged into one.
 - 967_GHSA-45j8-pm75-5v8x: File path fixed: src/helper/route -> src/helper/route.js.
 - 97_GHSA-r87w-47m8-22w3: Block moved from (0, eval)('this') (lines 16-17, a constant the patch also removed) to the template compilation new Function("data,view,j,u", code) (1789): CVE-2016-3942 is template injection, where an expression in a template tag is compiled into the generated function.
 - 980_GHSA-7qcx-jmrc-h2rr: Removed '/package/' prefix from paths; code set to actual line text.
@@ -212,12 +213,14 @@ express-brute 823_GHSA-984p-xq9m-4rjw). The other fields of the reviews are unch
 - 989_GHSA-hq8g-qq57-5275: File path fixed: model.js -> lib/model.js.
 - GHSA-2m8v-572m-ff2v: Location 4/6 sinks util.execSafe('ps', args) are a package wrapper; sink moved to its spawn(cmd, args, options) (lib/util.js:399). Locations 4 and 6 then coincide; location 6 removed.
 - GHSA-2mm9-c2fx-c7m4: isExternal bypass lets a remote markdown page skip purify.sanitize; source set to the URL read 'var href = location.href;' in getCurrentPath (7957), sink to the innerHTML write in _renderTo (7627) (was the url.match line inside isExternal).
+- GHSA-333x-qr3v-g4xx: Sink moved from the platform-command call (lib/generator.js:32) to the call that runs the command: childProcess.exec(cmd, callback) (node_modules/platform-command/platforms/childProcess/command.js:5, Node.js stack trace).
 - GHSA-35jh-r3h4-6jhm: File path typo fixed: lodhash.js -> lodash.js.
 - GHSA-39q4-p535-c852: File fixed: lib/index.js -> php/net-gopher/gopher_parsedir.js; block extended to include the line applying the regex (dirent.match(entryPattern)).
 - GHSA-3crj-w4f5-gwh4: Sink moved to new(Function)('return (' + expression + ')') in tree/javascript.js (20), which the JavaScript node's eval runs; location 1 (Variable eval for @{} interpolation, same source) reaches that same sink and was merged into it. The e() escape function (functions.js 215-216) and the parser for `...` JavaScript (parser.js 1001-1016) are not dangerous operations and are not locations.
 - GHSA-4gfq-6m28-m5mg: Location 2 (driveList, sink line 115) removed: driveListWindows runs the constant command "wmic logicaldisk get caption,providername,drivetype,volumename", and driveList has only the parameter callback. Location 1 (detail, sink line 46) puts the drive name into the wmic command and is kept.
 - GHSA-4r62-v4vq-hr96: Blocks shifted +73 lines to the shipped lib/marked.esm.js: strong/em regex objects (1202-1213), text/punctuation (1217-1218), _blockSkip/_overlapSkip (1227-1228); codes set to actual text.
 - GHSA-4wv4-mgfq-598v: File path fixed: index.js -> lib/index.js.
+- GHSA-6c3f-p5wp-34mh: Sink moved from the async-execute call (lib/reset/index.js:11) to the call that runs the command: exec(script, ...) of child_process (node_modules/async-execute/index.js:10, Node.js stack trace). Location 2 (lib/reset/index.js:15) removed: it runs only when destination is a number (typeof check on line 14), and Math.abs of a number gives only digits; reset(5) runs `git reset HEAD~5 --hard`.
 - GHSA-6fw4-hr69-g3rv: Source line moved 11 -> 44 (setter: function(path)).
 - GHSA-7p8h-86p5-wv3p: In this version the $.get callback parameter is named `prop` (line 188) and the jQuery .html() write of the fetched value is at line 191; moved source and sink to these lines.
 - GHSA-8f89-2fwj-5v5r: Sink code corrected to the shipped text `tmp[k] = klona(x[k]);` (line 9).

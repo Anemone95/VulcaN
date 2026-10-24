@@ -17,21 +17,9 @@
                     "code": "module.exports = function (port) {"
                 },
                 "sink": {
-                    "file": "index.js",
-                    "lineno": 11,
-                    "code": "return sh("
-                }
-            },
-            {
-                "source": {
-                    "file": "index.js",
-                    "lineno": 5,
-                    "code": "module.exports = function (port) {"
-                },
-                "sink": {
-                    "file": "index.js",
-                    "lineno": 16,
-                    "code": "return sh("
+                    "file": "node_modules/execa/index.js",
+                    "lineno": 204,
+                    "code": "spawned = childProcess.spawn(parsed.cmd, parsed.args, parsed.opts);"
                 }
             }
         ]

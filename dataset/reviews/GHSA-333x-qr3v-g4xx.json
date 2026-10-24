@@ -19,9 +19,9 @@
                     "code": "exports.trimImages = function (files, options, callback) {"
                 },
                 "sink": {
-                    "file": "lib/generator.js",
-                    "lineno": 32,
-                    "code": "exec('convert' + scale + ' ' + fuzz + ' -define png:exclude-chunks=date \"' + file.originalPath + '\" -bordercolor transparent -border 1 -trim \"' + file.path + '\"', next);"
+                    "file": "node_modules/platform-command/platforms/childProcess/command.js",
+                    "lineno": 5,
+                    "code": "return childProcess.exec(cmd, callback);"
                 }
             }
         ]
