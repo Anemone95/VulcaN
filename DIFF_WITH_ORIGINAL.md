@@ -38,13 +38,12 @@ detection tools. It holds 943 advisory reviews.
   the repository keeps a placeholder or an older version; their trees are the version tag (the `gitHead`), and
   package.json gets the published version. pivottable-1.6.2 and smart-extend-1.7.4 have CoffeeScript sources; their
   repositories keep the compiled `dist/`, which is renamed to `_dist/` with the `main` of package.json, like
-  `build/` of umount. `misc/taint/vulcan/use_sources.py` of jelly-benchmarks performs the replacement, and
-  `install.py` installs the production dependencies. Four trees do not install as they are, and their files are
-  restored after the install: graphql-shield without its `resolutions` field (a yarn selector that pnpm does not
-  parse, for a development dependency); apollo-server-azure-functions and @prisma/sdk with the `dependencies` of
-  the published package.json (the repository has `file:` and `workspace:` references),
-  apollo-server-azure-functions also without `devDependencies`; @sap-cloud-sdk/core without its `.npmrc` (its
-  `@sap` registry `npm.sap.com` does not resolve).
+  `build/` of umount. `get_source_code.py` performs the replacement, and `install.py` installs the production
+  dependencies. Four trees do not install as they are, and their files are restored after the install:
+  graphql-shield without its `resolutions` field (a yarn selector that pnpm does not parse, for a development
+  dependency); apollo-server-azure-functions and @prisma/sdk with the `dependencies` of the published package.json
+  (the repository has `file:` and `workspace:` references), apollo-server-azure-functions also without
+  `devDependencies`; @sap-cloud-sdk/core without its `.npmrc` (its `@sap` registry `npm.sap.com` does not resolve).
 
 | Advisory | Package | Repository | Ref |
 |---|---|---|---|
