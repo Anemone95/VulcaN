@@ -4,7 +4,7 @@ This repository holds the VulcaN dataset of reviewed npm advisories, prepared fo
 (jelly-benchmarks, `misc/taint/vulcan/`). The original dataset is the state of commit `e72589b4a` (2023-04-04, the
 last commit of the VulcaN authors): 957 advisory reviews. This repository differs from it in four ways: the
 packages are extracted with their dependencies installed (23 package directories hold their repository source
-instead of the compiled code), 14 advisories are removed, the vulnerability locations of 222 reviews and the
+instead of the compiled code), 14 advisories are removed, the vulnerability locations of 224 reviews and the
 `correct_cwe` text of 15 reviews are corrected, and the reviews no longer hold the scores of the vulnerability
 detection tools. It holds 943 advisory reviews.
 
@@ -23,6 +23,10 @@ detection tools. It holds 943 advisory reviews.
 - ids-enterprise-4.18.1 (955_GHSA-crfx-5phg-hmw9) ships only `dist/`, and its repository is not public. `dist/` is
   renamed to `_dist/`, and the `main` of its package.json and the two locations of its review follow
   (`_dist/js/sohoxi.js`).
+- tiny-http-2.0.8 (342_GHSA-cch6-5x4h-6qc5) and react-marked-markdown-1.4.6 (668_GHSA-m7qm-r2r5-f77q) also ship
+  their code in `dist/`, and their repositories are no longer on GitHub. `dist/` is renamed to `_dist/`; the `main`
+  of the tiny-http package.json, the `require` path of each `index.js` (`./_dist/...`) and the locations of their
+  reviews follow.
 - The 23 package directories of the table below (klona-1.1.0 is in two of them) ship their code only in compiled
   directories (`dist/`, `build/`) or bundles. Each of these package directories is replaced by the repository tree
   (for a monorepo, the directory of the package) at the commit whose package.json has the same name and version:

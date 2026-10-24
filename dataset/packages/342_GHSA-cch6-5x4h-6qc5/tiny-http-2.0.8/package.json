@@ -6,7 +6,7 @@
   "bin": {
     "http": "index.js"
   },
-  "main": "dist/http.js",
+  "main": "_dist/http.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

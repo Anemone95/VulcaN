@@ -12,24 +12,24 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/http.js",
+                    "file": "_dist/http.js",
                     "lineno": 231,
                     "code": "this.filename = path.join(this.conf.WEB_ROOT, this.uri);"
                 },
                 "sink": {
-                    "file": "dist/http.js",
+                    "file": "_dist/http.js",
                     "lineno": 325,
                     "code": "fs.readFile(this.filename, function(err, content) {"
                 }
             },
             {
                 "source": {
-                    "file": "dist/http.js",
+                    "file": "_dist/http.js",
                     "lineno": 237,
                     "code": "handle: function(pathname, ext) {"
                 },
                 "sink": {
-                    "file": "dist/http.js",
+                    "file": "_dist/http.js",
                     "lineno": 273,
                     "code": "fs.readdir(parentDirectory, function(error, files) {"
                 }

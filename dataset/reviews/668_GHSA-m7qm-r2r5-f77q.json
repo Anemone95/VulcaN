@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/components/MarkdownPreview.js",
+                    "file": "_dist/components/MarkdownPreview.js",
                     "lineno": 97,
                     "code": "renderer.link = function (href, title, text) {"
                 },
                 "sink": {
-                    "file": "dist/components/MarkdownPreview.js",
+                    "file": "_dist/components/MarkdownPreview.js",
                     "lineno": 98,
                     "code": "return '<a target=\"_blank\" rel=\"noopener noreferrer\" href=\"' + href + '\" title=\"' + title + '\">' + text + '</a>';"
                 }
