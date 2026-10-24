@@ -21,6 +21,5 @@
     "test": "tape 'test/**/*-test.js' && eslint index.js src test && tsc",
     "prepublishOnly": "yarn test && yarn build",
     "postpublish": "git push && git push --tags"
-  },
-  "gitHead": "49a57c10b309addc513a52a38e1959ee169d4758"
+  }
 }

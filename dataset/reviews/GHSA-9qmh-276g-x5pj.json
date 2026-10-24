@@ -11,26 +11,26 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/immer.cjs.development.js",
-                    "lineno": 1346,
-                    "code": "function applyPatches_(draft, patches) {"
+                    "file": "src/plugins/patches.ts",
+                    "lineno": 208,
+                    "code": "function applyPatches_<T>(draft: T, patches: Patch[]): T {"
                 },
                 "sink": {
-                    "file": "dist/immer.cjs.development.js",
-                    "lineno": 1378,
-                    "code": "return base[key] = value;"
+                    "file": "src/plugins/patches.ts",
+                    "lineno": 234,
+                    "code": "return (base[key] = value)"
                 }
             },
             {
                 "source": {
-                    "file": "dist/immer.cjs.development.js",
-                    "lineno": 1346,
-                    "code": "function applyPatches_(draft, patches) {"
+                    "file": "src/plugins/patches.ts",
+                    "lineno": 208,
+                    "code": "function applyPatches_<T>(draft: T, patches: Patch[]): T {"
                 },
                 "sink": {
-                    "file": "dist/immer.cjs.development.js",
-                    "lineno": 1393,
-                    "code": "return base[key] = value;"
+                    "file": "src/plugins/patches.ts",
+                    "lineno": 245,
+                    "code": "return (base[key] = value)"
                 }
             }
         ]

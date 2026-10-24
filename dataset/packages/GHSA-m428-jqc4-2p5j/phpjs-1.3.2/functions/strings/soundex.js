@@ -1,4 +1,4 @@
-function soundex(str) {
+function soundex (str) {
   //  discuss at: http://phpjs.org/functions/soundex/
   // original by: Jonas Raoni Soares Silva (http://www.jsfromhell.com)
   // original by: Arnout Kazemier (http://www.3rd-Eden.com)
@@ -16,9 +16,9 @@ function soundex(str) {
   //   returns 3: 'E460'
 
   str = (str + '')
-    .toUpperCase();
+    .toUpperCase()
   if (!str) {
-    return '';
+    return ''
   }
   var sdx = [0, 0, 0, 0],
     m = {
@@ -43,19 +43,19 @@ function soundex(str) {
     },
     i = 0,
     j, s = 0,
-    c, p;
+    c, p
 
   while ((c = str.charAt(i++)) && s < 4) {
     if (j = m[c]) {
       if (j !== p) {
-        sdx[s++] = p = j;
+        sdx[s++] = p = j
       }
     } else {
-      s += i === 1;
-      p = 0;
+      s += i === 1
+      p = 0
     }
   }
 
-  sdx[0] = str.charAt(0);
-  return sdx.join('');
+  sdx[0] = str.charAt(0)
+  return sdx.join('')
 }

@@ -12,26 +12,26 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/index.js",
-                    "lineno": 41,
-                    "code": "var dir = path.join(DIRECTORY, req.url);"
+                    "file": "src/index.ts",
+                    "lineno": 52,
+                    "code": "const dir = path.join(DIRECTORY, req.url);"
                 },
                 "sink": {
-                    "file": "dist/index.js",
-                    "lineno": 42,
+                    "file": "src/index.ts",
+                    "lineno": 53,
                     "code": "if (fs.existsSync(dir)) {"
                 }
             },
             {
                 "source": {
-                    "file": "dist/index.js",
-                    "lineno": 41,
-                    "code": "var dir = path.join(DIRECTORY, req.url);"
+                    "file": "src/index.ts",
+                    "lineno": 52,
+                    "code": "const dir = path.join(DIRECTORY, req.url);"
                 },
                 "sink": {
-                    "file": "dist/index.js",
-                    "lineno": 44,
-                    "code": "var children = fs.readdirSync(dir)"
+                    "file": "src/index.ts",
+                    "lineno": 55,
+                    "code": "const children = fs.readdirSync(dir)"
                 }
             }
         ]

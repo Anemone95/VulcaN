@@ -1,6 +1,6 @@
-function strncmp(str1, str2, lgth) {
+function strncmp (str1, str2, lgth) {
   //       discuss at: http://phpjs.org/functions/strncmp/
-  //      original by: Waldo Malqui Silva
+  //      original by: Waldo Malqui Silva (http://waldo.malqui.info)
   //         input by: Steve Hilder
   //      improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
   //       revised by: gorthaur
@@ -11,9 +11,9 @@ function strncmp(str1, str2, lgth) {
   //        returns 2: -1
 
   var s1 = (str1 + '')
-    .substr(0, lgth);
+    .substr(0, lgth)
   var s2 = (str2 + '')
-    .substr(0, lgth);
+    .substr(0, lgth)
 
-  return ((s1 == s2) ? 0 : ((s1 > s2) ? 1 : -1));
+  return ((s1 == s2) ? 0 : ((s1 > s2) ? 1 : -1))
 }

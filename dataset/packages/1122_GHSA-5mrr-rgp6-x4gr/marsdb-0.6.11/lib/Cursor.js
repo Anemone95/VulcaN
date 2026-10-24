@@ -32,7 +32,7 @@ export const PIPELINE_PROCESSORS = {
 class BasicCursor extends AsyncEventEmitter {}
 _each(PIPELINE_PROCESSORS, (v, procName) => {
   BasicCursor.prototype[procName] = v.method;
-});n
+});
 
 
 /**

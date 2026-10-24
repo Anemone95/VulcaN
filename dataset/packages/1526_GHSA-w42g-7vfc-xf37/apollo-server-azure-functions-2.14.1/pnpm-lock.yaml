@@ -29,10 +29,6 @@ importers:
       graphql-tools:
         specifier: ^4.0.0
         version: 4.0.8(graphql@15.10.3)
-    devDependencies:
-      apollo-server-integration-testsuite:
-        specifier: ^2.14.1
-        version: 2.23.0
 
 packages:
 
@@ -143,8 +139,8 @@ packages:
   '@types/node@10.17.60':
     resolution: {integrity: sha512-F0KIgDJfy2nA3zMLmWGKxcH2ZVEtCZXHHdOQs2gSaQ27+lNeEfGxzkIw90aXswATX7AZ33tahPbzy6KAfUreVw==}
 
-  '@types/node@26.6.4':
-    resolution: {integrity: sha512-ldVPDCzj7fsaGZrLB0NuHuTvJcsNasysBAqMolr/cgxrLd1xbqxIr3XJiPnHHJUCxj5sNF1vnRj9aWnrVh5Jcg==}
+  '@types/node@26.6.5':
+    resolution: {integrity: sha512-uMzsv9stDdofIZBx4UGh4Z9ZgXnGC9seRDscilBcTHAeOFk67MZg/k9bWVfO+bk4qZmG+l52hRnLwUiH2LnJTg==}
 
   '@types/qs@6.15.1':
     resolution: {integrity: sha512-GZHUBZR9hckSUhrxmp1nG6NwdpM9fCunJwyThLW1X3AyHgd9IlHb6VANpQQqDr2o/qQp6McZ3y/IA2rVzKzSbw==}
@@ -228,9 +224,6 @@ packages:
     peerDependencies:
       graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
 
-  apollo-server-integration-testsuite@2.23.0:
-    resolution: {integrity: sha512-uiSo0CBDzp3CAdLgRE3F8wLCOxK933p+Xs6ILKvOwg8zWYStoAtl5Bvhr7qG43DsFFZ15+dSlxkuSeAgS1SfqA==}
-
   apollo-server-plugin-base@0.14.0:
     resolution: {integrity: sha512-nTNSFuBhZURGjtWptdVqwemYUOdsvABj/GSKzeNvepiEubiv4N0rt4Gvy1inHDiMbo98wQTdF/7XohNcB9A77g==}
     engines: {node: '>=6'}
@@ -309,8 +302,8 @@ packages:
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
 
-  core-js-pure@3.50.0:
-    resolution: {integrity: sha512-6GP3Pxz4IKyWjAfa747vIu/jilB5z29JWROLqH/b+pXVcpgh6tM06ZIBwSuglgVqzDYURhOK6oEzTrG0bCHitA==}
+  core-js-pure@3.51.0:
+    resolution: {integrity: sha512-NE4SFDJ+qzQeqHG2vVSNwopzS6zZNPYJ5kinIqs+OofTqGzOmICgT89E/yvS9XY7rwb3eU1utWXTJ9nVFqv74A==}
 
   cssfilter@0.0.10:
     resolution: {integrity: sha512-FAaLDaplstoRsDR8XGYH51znUN0UY7nMc6Z9/fvE8EXGwvJE9hu7W2vHwx1+bd6gCYnln9nLbzxFTrcO9YQDZw==}
@@ -827,8 +820,8 @@ packages:
       utf-8-validate:
         optional: true
 
-  xss@1.0.15:
-    resolution: {integrity: sha512-FVdlVVC67WOIPvfOwhoMETV72f6GbW7aOabBC3WxN/oUdoEMDyLz4OgRv5/gck2ZeNqEQu+Tb0kloovXOfpYVg==}
+  xss@1.0.17:
+    resolution: {integrity: sha512-+SEr5IDSgTBnhT6bnnf0mVRHT91+HU517zkahLNhkWLz8retCgeR1YDT4OknLiExA5+chn2Wy7z3KyjvnD8A2w==}
     engines: {node: '>= 0.10.0'}
     hasBin: true
 
@@ -882,7 +875,7 @@ snapshots:
 
   '@apollographql/graphql-playground-html@1.6.27':
     dependencies:
-      xss: 1.0.15
+      xss: 1.0.17
 
   '@apollographql/graphql-upload-8-fork@8.1.4(graphql@15.10.3)':
     dependencies:
@@ -923,16 +916,16 @@ snapshots:
 
   '@types/accepts@1.3.7':
     dependencies:
-      '@types/node': 26.6.4
+      '@types/node': 26.6.5
 
   '@types/body-parser@1.19.6':
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 26.6.4
+      '@types/node': 26.6.5
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 26.6.4
+      '@types/node': 26.6.5
 
   '@types/content-disposition@0.5.9': {}
 
@@ -941,11 +934,11 @@ snapshots:
       '@types/connect': 3.4.38
       '@types/express': 5.0.6
       '@types/keygrip': 1.0.6
-      '@types/node': 26.6.4
+      '@types/node': 26.6.5
 
   '@types/express-serve-static-core@5.1.3':
     dependencies:
-      '@types/node': 26.6.4
+      '@types/node': 26.6.5
       '@types/qs': 6.15.1
       '@types/range-parser': 1.2.7
       '@types/send': 1.2.1
@@ -958,7 +951,7 @@ snapshots:
 
   '@types/fs-capacitor@2.0.0':
     dependencies:
-      '@types/node': 26.6.4
+      '@types/node': 26.6.5
 
   '@types/http-assert@1.5.6': {}
 
@@ -979,13 +972,13 @@ snapshots:
       '@types/http-errors': 2.0.5
       '@types/keygrip': 1.0.6
       '@types/koa-compose': 3.2.9
-      '@types/node': 26.6.4
+      '@types/node': 26.6.5
 
   '@types/long@4.0.2': {}
 
   '@types/node@10.17.60': {}
 
-  '@types/node@26.6.4':
+  '@types/node@26.6.5':
     dependencies:
       undici-types: 8.9.0
 
@@ -995,16 +988,16 @@ snapshots:
 
   '@types/send@1.2.1':
     dependencies:
-      '@types/node': 26.6.4
+      '@types/node': 26.6.5
 
   '@types/serve-static@2.2.0':
     dependencies:
       '@types/http-errors': 2.0.5
-      '@types/node': 26.6.4
+      '@types/node': 26.6.5
 
   '@types/ws@7.4.7':
     dependencies:
-      '@types/node': 26.6.4
+      '@types/node': 26.6.5
 
   '@wry/equality@0.1.11':
     dependencies:
@@ -1031,7 +1024,7 @@ snapshots:
 
   apollo-graphql@0.9.7(graphql@15.10.3):
     dependencies:
-      core-js-pure: 3.50.0
+      core-js-pure: 3.51.0
       graphql: 15.10.3
       lodash.sortby: 4.7.0
       sha.js: 2.4.12
@@ -1106,8 +1099,6 @@ snapshots:
   apollo-server-errors@2.5.0(graphql@15.10.3):
     dependencies:
       graphql: 15.10.3
-
-  apollo-server-integration-testsuite@2.23.0: {}
 
   apollo-server-plugin-base@0.14.0(graphql@15.10.3):
     dependencies:
@@ -1211,7 +1202,7 @@ snapshots:
 
   commander@2.20.3: {}
 
-  core-js-pure@3.50.0: {}
+  core-js-pure@3.51.0: {}
 
   cssfilter@0.0.10: {}
 
@@ -1899,7 +1890,7 @@ snapshots:
 
   ws@7.5.13: {}
 
-  xss@1.0.15:
+  xss@1.0.17:
     dependencies:
       commander: 2.20.3
       cssfilter: 0.0.10

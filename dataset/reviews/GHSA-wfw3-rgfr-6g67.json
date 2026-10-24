@@ -11,10 +11,10 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "dist/ag-grid.js",
-                    "start_lineno": 5653,
-                    "end_lineno": 5667,
-                    "code": "GridApi.prototype.setRowData = function (rowData) {if (this.gridOptionsWrapper.isRowModelDefault()) {if (this.gridOptionsWrapper.isDeltaRowDataMode()) {var _a = this.immutableService.createTransactionForRowData(rowData), transaction = _a[0], orderIdMap = _a[1];this.clientSideRowModel.updateRowData(transaction, orderIdMap);}else {this.selectionController.reset();this.clientSideRowModel.setRowData(rowData);}}else {console.log('cannot call setRowData unless using normal row model');}};"
+                    "file": "src/ts/gridApi.ts",
+                    "start_lineno": 232,
+                    "end_lineno": 244,
+                    "code": "public setRowData(rowData: any[]) { if (this.gridOptionsWrapper.isRowModelDefault()) { if (this.gridOptionsWrapper.isDeltaRowDataMode()) { let [transaction, orderIdMap] = this.immutableService.createTransactionForRowData(rowData); this.clientSideRowModel.updateRowData(transaction, orderIdMap); } else { this.selectionController.reset(); this.clientSideRowModel.setRowData(rowData); } } else { console.log('cannot call setRowData unless using normal row model'); } }"
                 }
             }
         ]

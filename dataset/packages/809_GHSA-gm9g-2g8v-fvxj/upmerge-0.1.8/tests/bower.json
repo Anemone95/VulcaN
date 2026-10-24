@@ -1,0 +1,21 @@
+{
+  "name": "JavaScript Object Merge",
+  "version": "0.0.1",
+  "authors": [
+    "Fog"
+  ],
+  "description": "JavaScript Object Merge",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "JavaScript",
+    "Object",
+    "Merge"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "qunit": "~1.22.0"
+  }
+}

@@ -11,13 +11,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/js/bootstrap-select.js",
-                    "lineno": 1502,
+                    "file": "js/bootstrap-select.js",
+                    "lineno": 1478,
                     "code": "$selectOptions = this.$element.find('option'),"
                 },
                 "sink": {
-                    "file": "dist/js/bootstrap-select.js",
-                    "lineno": 1578,
+                    "file": "js/bootstrap-select.js",
+                    "lineno": 1554,
                     "code": "this.$button.find('.filter-option-inner-inner')[0].innerHTML = title;"
                 }
             }

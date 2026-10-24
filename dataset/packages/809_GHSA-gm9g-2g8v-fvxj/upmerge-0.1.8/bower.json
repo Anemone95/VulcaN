@@ -1,0 +1,26 @@
+{
+  "name": "UpMerge",
+  "description": "JavaScript Object Merge and Clone for Client or Server side",
+  "main": "build/upmerge.js",
+  "authors": [
+    "Pavel Pushkaryov"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "JavaScript",
+    "Merge",
+    "Clone",
+    "Object"
+  ],
+  "homepage": "https://github.com/jazzfog/UpMerge",
+  "moduleType": [
+    "globals"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

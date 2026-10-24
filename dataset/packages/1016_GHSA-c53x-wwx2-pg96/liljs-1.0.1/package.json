@@ -22,9 +22,7 @@
     "docs": "jsdoc src/liljs.js -d docs",
     "default": "yarn run babel && yarn run minify && yarn run docs"
   },
-  "dependencies": {
-    "@berslucas/liljs": "^1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",

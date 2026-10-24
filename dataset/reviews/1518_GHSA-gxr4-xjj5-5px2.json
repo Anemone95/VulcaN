@@ -24,25 +24,13 @@
             },
             {
                 "source": {
-                    "file": "dist/jquery.js",
-                    "lineno": 4817,
+                    "file": "src/manipulation/buildFragment.js",
+                    "lineno": 46,
                     "code": "tmp.innerHTML = wrap[ 1 ] + jQuery.htmlPrefilter( elem ) + wrap[ 2 ];"
                 },
                 "sink": {
-                    "file": "dist/jquery.js",
-                    "lineno": 5979,
-                    "code": "return html.replace( rxhtmlTag, \"<$1></$2>\" );"
-                }
-            },
-            {
-                "source": {
-                    "file": "dist/jquery.js",
-                    "lineno": 6141,
-                    "code": "html: function( value ) {"
-                },
-                "sink": {
-                    "file": "dist/jquery.js",
-                    "lineno": 5979,
+                    "file": "src/manipulation.js",
+                    "lineno": 241,
                     "code": "return html.replace( rxhtmlTag, \"<$1></$2>\" );"
                 }
             }

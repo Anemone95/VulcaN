@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "package/dist/smart-extend.js",
+                    "file": "_dist/smart-extend.js",
                     "lineno": 20,
                     "code": "return target && Object.prototype.toString.call(target) === '[object Object]' || isArray(target);"
                 },
                 "sink": {
-                    "file": "/package/dist/smart-extend.js",
+                    "file": "_dist/smart-extend.js",
                     "lineno": 79,
-                    "code": "default: target[key] = sourceValue;"
+                    "code": "target[key] = sourceValue;"
                 }
             }
         ]

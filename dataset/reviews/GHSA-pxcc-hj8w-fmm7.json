@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/getPackedPackage.js",
-                    "lineno": 23,
-                    "code": "async function getPackedPackage(name, target, packageDir) {"
+                    "file": "src/getPackedPackage.ts",
+                    "lineno": 19,
+                    "code": "export async function getPackedPackage("
                 },
                 "sink": {
-                    "file": "dist/getPackedPackage.js",
-                    "lineno": 50,
-                    "code": "await execa_1.default.command(packCMD, {"
+                    "file": "src/getPackedPackage.ts",
+                    "lineno": 58,
+                    "code": "await execa.command(packCMD, {"
                 }
             }
         ]

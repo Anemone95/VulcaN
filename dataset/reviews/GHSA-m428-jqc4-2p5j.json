@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "build/npm.js",
-                    "lineno": 6339,
-                    "code": "exports.parse_str = function (str, array) {"
+                    "file": "functions/strings/parse_str.js",
+                    "lineno": 1,
+                    "code": "function parse_str (str, array) {"
                 },
                 "sink": {
-                    "file": "build/npm.js",
-                    "lineno": 6421,
-                    "code": "lastObj[key] = value;"
+                    "file": "functions/strings/parse_str.js",
+                    "lineno": 114,
+                    "code": "lastObj[key] = value"
                 }
             }
         ]

@@ -12,13 +12,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "build/api/web/index.js",
-                    "lineno": 64,
+                    "file": "src/api/web/index.js",
+                    "lineno": 43,
                     "code": "const base = Utils.combineBaseUrl(Utils.getWebProtocol(req), req.get('host'), config.url_prefix);"
                 },
                 "sink": {
-                    "file": "build/api/web/index.js",
-                    "lineno": 69,
+                    "file": "src/api/web/index.js",
+                    "lineno": 51,
                     "code": "res.send(webPage);"
                 }
             }

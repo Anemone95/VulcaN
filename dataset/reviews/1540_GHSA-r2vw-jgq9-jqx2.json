@@ -11,10 +11,10 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "dist/util/jwt.js",
-                    "start_lineno": 149,
-                    "end_lineno": 159,
-                    "code": "verificationKeyURL = getVerificationKeyURL(token); \n if (options.cacheVerificationKeys && \n exports.verificationKeyCache.get(verificationKeyURL)) { \n key = exports.verificationKeyCache.get(verificationKeyURL); \n return [2 /*return*/, verifyJwtWithKey(token, key.value).catch(function (error) { \n logger.warn('Unable to verify JWT with cached key, fetching new verification key.'); \n logger.warn(\"Original error: \" + error.message); \n return fetchAndCacheKeyAndVerify(creds, verificationKeyURL, token, options); \n })]; \n } \n return [2 /*return*/, fetchAndCacheKeyAndVerify(creds, verificationKeyURL, token, options)]; // Verify only here"
+                    "file": "src/util/jwt.ts",
+                    "start_lineno": 117,
+                    "end_lineno": 140,
+                    "code": "const verificationKeyURL = getVerificationKeyURL(token); if ( options.cacheVerificationKeys && verificationKeyCache.get(verificationKeyURL) ) { const key = verificationKeyCache.get(verificationKeyURL) as TokenKey; return verifyJwtWithKey(token, key.value).catch(error => { logger.warn( 'Unable to verify JWT with cached key, fetching new verification key.' ); logger.warn(`Original error: ${error.message}`); return fetchAndCacheKeyAndVerify( creds, verificationKeyURL, token, options ); }); } return fetchAndCacheKeyAndVerify(creds, verificationKeyURL, token, options); // Verify only here"
                 }
             }
         ]

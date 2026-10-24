@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "/dist/squel.js",
-                    "lineno": 1677,
-                    "code": "value: function _set(field, value) "
+                    "file": "src/core.js",
+                    "lineno": 1274,
+                    "code": "_set (field, value, valueOptions = {}) {"
                 },
                 "sink": {
-                    "file": "/dist/squel.js",
-                    "lineno": 1699,
-                    "code": " this._values[0][index] = value;"
+                    "file": "src/core.js",
+                    "lineno": 1294,
+                    "code": "this._values[0][index] = value;"
                 }
             }
         ]

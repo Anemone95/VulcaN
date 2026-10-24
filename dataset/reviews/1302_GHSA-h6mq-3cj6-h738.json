@@ -11,82 +11,58 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "/dist/showdown.js",
-                    "start_lineno": 2834,
-                    "end_lineno": 2837,
-                    "code": "result += ' target=\"\u00a8E95Eblank\"';\n   }\n  result += '>' + linkText + '</a>';"
-                }
-            },
-            {
-                "block": {
-                    "file": "/dist/showdown.js",
-                    "start_lineno": 2873,
-                    "end_lineno": 2875,
-                    "code": " target = ' target=\"\u00a8E95Eblank\"';\n     }\n  return st + '<a href=\"' + lnk + '\"' + target + '>' + mentions + '</a>';"
-                }
-            },
-            {
-                "block": {
-                    "file": "/dist/showdown.js",
-                    "start_lineno": 2907,
-                    "end_lineno": 2909,
-                    "code": " target = ' target=\"\u00a8E95Eblank\"';\n           }\n     return lmc + '<a href=\"' + link + '\"' + target + '>' + lnkTxt + '</a>' + append + tmc;"
-                }
-            },
-            {
-                "block": {
-                    "file": "/src/subParsers/anchors.js",
+                    "file": "src/subParsers/anchors.js",
                     "start_lineno": 51,
                     "end_lineno": 54,
-                    "code": " result += ' target=\"\u00a8E95Eblank\"';\n          }\n      \n         result += '>' + linkText + '</a>';"
+                    "code": "result += ' target=\"¨E95Eblank\"'; } result += '>' + linkText + '</a>';"
                 }
             },
             {
                 "block": {
-                    "file": "/src/subParsers/anchors.js",
+                    "file": "src/subParsers/anchors.js",
                     "start_lineno": 90,
                     "end_lineno": 92,
-                    "code": " target = ' target=\"\u00a8E95Eblank\"';\n          }\n          return st + '<a href=\"' + lnk + '\"' + target + '>' + mentions + '</a>';"
+                    "code": "target = ' target=\"¨E95Eblank\"'; } return st + '<a href=\"' + lnk + '\"' + target + '>' + mentions + '</a>';"
                 }
             },
             {
                 "block": {
-                    "file": "/src/subParsers/autoLinks.js",
+                    "file": "src/subParsers/autoLinks.js",
                     "start_lineno": 25,
                     "end_lineno": 27,
-                    "code": "  target = ' target=\"\u00a8E95Eblank\"';\n           }\n       return lmc + '<a href=\"' + link + '\"' + target + '>' + lnkTxt + '</a>' + append + tmc;"
+                    "code": "target = ' target=\"¨E95Eblank\"'; } return lmc + '<a href=\"' + link + '\"' + target + '>' + lnkTxt + '</a>' + append + tmc;"
                 }
             },
             {
                 "block": {
-                    "file": "/test/features/#379.openLinksInNewWindow-breaks-em-markdup.html",
+                    "file": "test/features/#379.openLinksInNewWindow-breaks-em-markdup.html",
                     "start_lineno": 1,
                     "end_lineno": 2,
-                    "code": "  <p>My <a href=\"http://example.com\" target=\"_blank\">link</a> is <em>important</em></p>\n    <p>My <a href=\"http://example.com\" target=\"_blank\">link</a> is <strong>important</strong></p>"
+                    "code": "<p>My <a href=\"http://example.com\" target=\"_blank\">link</a> is <em>important</em></p> <p>My <a href=\"http://example.com\" target=\"_blank\">link</a> is <strong>important</strong></p>"
                 }
             },
             {
                 "block": {
-                    "file": "/test/features/openLinksInNewWindow/simple-cases.html",
+                    "file": "test/features/openLinksInNewWindow/simple-cases.html",
                     "start_lineno": 1,
                     "end_lineno": 2,
-                    "code": " <p><a href=\"www.google.com\" target=\"_blank\">foo</a></p>\n                    <p>a link <a href=\"http://www.google.com\" target=\"_blank\">http://www.google.com</a></p>"
+                    "code": "<p><a href=\"www.google.com\" target=\"_blank\">foo</a></p> <p>a link <a href=\"http://www.google.com\" target=\"_blank\">http://www.google.com</a></p>"
                 }
             },
             {
                 "block": {
-                    "file": "/test/features/openLinksInNewWindow/simple.html",
+                    "file": "test/features/openLinksInNewWindow/simple.html",
                     "start_lineno": 1,
                     "end_lineno": 2,
-                    "code": " <p><a href=\"www.google.com\" target=\"_blank\">foo</a></p>\n        <p>a link <a href=\"http://www.google.com\" target=\"_blank\">http://www.google.com</a></p>"
+                    "code": "<p><a href=\"www.google.com\" target=\"_blank\">foo</a></p> <p>a link <a href=\"http://www.google.com\" target=\"_blank\">http://www.google.com</a></p>"
                 }
             },
             {
                 "block": {
-                    "file": "/test/features/openLinksInNewWindow/simplifiedAutoLink.html",
+                    "file": "test/features/openLinksInNewWindow/simplifiedAutoLink.html",
                     "start_lineno": 1,
                     "end_lineno": 1,
-                    "code": " <p>this is <a href=\"http://www.google.com\" target=\"_blank\">http://www.google.com</a> autolink</p>"
+                    "code": "<p>this is <a href=\"http://www.google.com\" target=\"_blank\">http://www.google.com</a> autolink</p>"
                 }
             }
         ]

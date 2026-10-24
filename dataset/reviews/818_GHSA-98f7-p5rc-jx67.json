@@ -12,25 +12,25 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "/src/dist/js/materialize.js",
-                    "lineno": 88,
+                    "file": "js/cash.js",
+                    "lineno": 61,
                     "code": "parseHTML(selector) :"
                 },
                 "sink": {
-                    "file": "/src/dist/js/materialize.js",
-                    "lineno": 56,
+                    "file": "js/cash.js",
+                    "lineno": 31,
                     "code": "frag.body.innerHTML = str;"
                 }
             },
             {
                 "source": {
-                    "file": "/src/dist/js/materialize.js",
-                    "lineno": 5455,
+                    "file": "js/toasts.js",
+                    "lineno": 308,
                     "code": "return new Toast(options);"
                 },
                 "sink": {
-                    "file": "/src/dist/js/materialize.js",
-                    "lineno": 4498,
+                    "file": "js/tooltip.js",
+                    "lineno": 71,
                     "code": "tooltipContentEl.innerHTML = this.options.html;"
                 }
             }

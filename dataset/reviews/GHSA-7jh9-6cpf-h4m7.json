@@ -11,13 +11,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/hello.all.js",
-                    "lineno": 1440,
+                    "file": "src/hello.js",
+                    "lineno": 1287,
                     "code": "responseHandler: function(window, parent) {"
                 },
                 "sink": {
-                    "file": "dist/hello.all.js",
-                    "lineno": 1545,
+                    "file": "src/hello.js",
+                    "lineno": 1392,
                     "code": "location.assign(decodeURIComponent(p.oauth_redirect));"
                 }
             }

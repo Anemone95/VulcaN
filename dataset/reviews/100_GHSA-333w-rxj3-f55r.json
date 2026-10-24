@@ -12,13 +12,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "build/uri.js",
-                    "lineno": 169,
-                    "code": "function parse(uriString, options) {"
+                    "file": "src/uri.ts",
+                    "lineno": 289,
+                    "code": "function parse(uriString:string, options:URIOptions = {}):URIComponents {"
                 },
                 "sink": {
-                    "file": "build/uri.js",
-                    "lineno": 175,
+                    "file": "src/uri.ts",
+                    "lineno": 301,
                     "code": "matches = uriString.match(protocol.URI_REF);"
                 }
             }

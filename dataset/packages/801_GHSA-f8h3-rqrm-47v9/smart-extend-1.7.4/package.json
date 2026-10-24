@@ -2,7 +2,7 @@
   "name": "smart-extend",
   "version": "1.7.4",
   "description": "Merge/extend objects (shallow/deep) with global/individual filters and more features",
-  "main": "dist/smart-extend.js",
+  "main": "_dist/smart-extend.js",
   "module": "dist/smart-extend.esm.js",
   "unpkg": "dist/smart-extend.min.js",
   "mocha_opts": "-u tdd --compilers coffee:coffee-register --slow 1000 --timeout 5000",

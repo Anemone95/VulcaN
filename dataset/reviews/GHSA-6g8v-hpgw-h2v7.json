@@ -11,25 +11,25 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/gsap.js",
-                    "lineno": 3333,
-                    "code": "config: function config(value) {"
+                    "file": "src/gsap-core.js",
+                    "lineno": 2669,
+                    "code": "config(value) {"
                 },
                 "sink": {
-                    "file": "dist/gsap.js",
-                    "lineno": 226,
+                    "file": "src/gsap-core.js",
+                    "lineno": 148,
                     "code": "base[p] = _isObject(toMerge[p]) ? _mergeDeep(base[p] || (base[p] = {}), toMerge[p]) : toMerge[p];"
                 }
             },
             {
                 "source": {
-                    "file": "dist/gsap.js",
-                    "lineno": 3329,
-                    "code": "defaults: function defaults(value) {"
+                    "file": "src/gsap-core.js",
+                    "lineno": 2665,
+                    "code": "defaults(value) {"
                 },
                 "sink": {
-                    "file": "dist/gsap.js",
-                    "lineno": 226,
+                    "file": "src/gsap-core.js",
+                    "lineno": 148,
                     "code": "base[p] = _isObject(toMerge[p]) ? _mergeDeep(base[p] || (base[p] = {}), toMerge[p]) : toMerge[p];"
                 }
             }

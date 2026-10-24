@@ -11,10 +11,10 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "build/rendertron.js",
-                    "start_lineno": 53,
-                    "end_lineno": 60,
-                    "code": "restricted(href) { const parsedUrl = url.parse(href); const protocol = parsedUrl.protocol || ''; if (!protocol.match(/^https?/)) { return true; } return false;"
+                    "file": "src/rendertron.ts",
+                    "start_lineno": 71,
+                    "end_lineno": 80,
+                    "code": "restricted(href: string): boolean { const parsedUrl = url.parse(href); const protocol = parsedUrl.protocol || ''; if (!protocol.match(/^https?/)) { return true; } return false; }"
                 }
             }
         ]

@@ -11,10 +11,10 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "dist/next-server/lib/router/router.js",
-                    "start_lineno": 119,
-                    "end_lineno": 119,
-                    "code": "const nameEl=document.getElementsByName(hash)[0];if(nameEl){nameEl.scrollIntoView();}}urlIsNew(asPath){return this.asPath!==asPath;}_resolveHref(parsedHref,pages){const{pathname}=parsedHref;const cleanPathname=(0,_denormalizePagePath.denormalizePagePath)(delBasePath(pathname));if(cleanPathname==='/404'||cleanPathname==='/_error'){return parsedHref;}// handle resolving href for dynamic routes"
+                    "file": "next-server/lib/router/router.ts",
+                    "start_lineno": 838,
+                    "end_lineno": 841,
+                    "code": "const nameEl = document.getElementsByName(hash)[0] if (nameEl) { nameEl.scrollIntoView() }"
                 }
             }
         ]

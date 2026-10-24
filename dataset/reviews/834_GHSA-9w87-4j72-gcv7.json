@@ -11,9 +11,9 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "dist/generate-and-save.js",
-                    "start_lineno": 42,
-                    "end_lineno": 42,
+                    "file": "src/generate-and-save.ts",
+                    "start_lineno": 6,
+                    "end_lineno": 6,
                     "code": "process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';"
                 }
             }

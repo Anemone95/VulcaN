@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/liljs.js",
-                    "lineno": 20,
-                    "code": "var render = function render(property) {"
+                    "file": "src/liljs.js",
+                    "lineno": 17,
+                    "code": "const render = property => {"
                 },
                 "sink": {
-                    "file": "dist/liljs.js",
-                    "lineno": 28,
-                    "code": "value ? elem.innerHTML = value : elem.innerHTML = state[property].value;"
+                    "file": "src/liljs.js",
+                    "lineno": 26,
+                    "code": "(elem.innerHTML = value) :"
                 }
             }
         ]

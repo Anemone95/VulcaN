@@ -11,26 +11,26 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/gitlog.cjs.development.js",
-                    "lineno": 197,
-                    "code": "function gitlog(userOptions, cb) {"
+                    "file": "src/index.ts",
+                    "lineno": 325,
+                    "code": "function gitlog<Field extends CommitField = DefaultField>("
                 },
                 "sink": {
-                    "file": "dist/gitlog.cjs.development.js",
-                    "lineno": 216,
-                    "code": "var stdout = child_process.execSync(command, execOptions).toString();"
+                    "file": "src/index.ts",
+                    "lineno": 348,
+                    "code": "const stdout = execSync(command, execOptions).toString();"
                 }
             },
             {
                 "source": {
-                    "file": "dist/gitlog.cjs.development.js",
-                    "lineno": 197,
-                    "code": "function gitlog(userOptions, cb) {"
+                    "file": "src/index.ts",
+                    "lineno": 325,
+                    "code": "function gitlog<Field extends CommitField = DefaultField>("
                 },
                 "sink": {
-                    "file": "dist/gitlog.cjs.development.js",
-                    "lineno": 227,
-                    "code": "child_process.exec(command, execOptions, function (err, stdout, stderr) {"
+                    "file": "src/index.ts",
+                    "lineno": 359,
+                    "code": "exec(command, execOptions, (err, stdout, stderr) => {"
                 }
             }
         ]

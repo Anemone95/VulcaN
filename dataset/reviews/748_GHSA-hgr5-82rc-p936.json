@@ -11,13 +11,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/md-data-table.js",
-                    "lineno": 1041,
+                    "file": "app/modules/main/directives/body/mdtCellDirective.js",
+                    "lineno": 60,
                     "code": "transclude(function (clone) {"
                 },
                 "sink": {
-                    "file": "dist/md-data-table.js",
-                    "lineno": 1380,
+                    "file": "app/modules/main/directives/helpers/mdtAddHtmlContentToCellDirective.js",
+                    "lineno": 45,
                     "code": "element.append(val);"
                 }
             }

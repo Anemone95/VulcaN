@@ -3,8 +3,8 @@
 This repository holds the VulcaN dataset of reviewed npm advisories, prepared for taint analysis with jelly-taint
 (jelly-benchmarks, `misc/taint/vulcan/`). The original dataset is the state of commit `e72589b4a` (2023-04-04, the
 last commit of the VulcaN authors): 957 advisory reviews. This repository differs from it in four ways: the
-packages are extracted with their dependencies installed (23 package directories hold their repository source
-instead of the compiled code), 14 advisories are removed, the vulnerability locations of 224 reviews and the
+packages are extracted with their dependencies installed (69 package directories hold their repository source
+instead of the compiled code), 14 advisories are removed, the vulnerability locations of 258 reviews and the
 `correct_cwe` text of 15 reviews are corrected, and the reviews no longer hold the scores of the vulnerability
 detection tools. It holds 943 advisory reviews.
 
@@ -27,16 +27,24 @@ detection tools. It holds 943 advisory reviews.
   their code in `dist/`, and their repositories are no longer on GitHub. `dist/` is renamed to `_dist/`; the `main`
   of the tiny-http package.json, the `require` path of each `index.js` (`./_dist/...`) and the locations of their
   reviews follow.
-- The 23 package directories of the table below (klona-1.1.0 is in two of them) ship their code only in compiled
-  directories (`dist/`, `build/`) or bundles. Each of these package directories is replaced by the repository tree
-  (for a monorepo, the directory of the package) at the commit whose package.json has the same name and version:
-  the `gitHead` of the npm registry, the version tag, or the version commit after the `gitHead`
-  (kill-process-on-port, react-draft-wysiwyg). The published files are not kept. graphql-shield uses
-  semantic-release, which keeps the version `0.0.0-semantic-release` in the repository and writes the version when
-  it publishes; its tree is the tag `v6.0.5` (the `gitHead`), and its package.json gets the version `6.0.5`.
-  `misc/taint/vulcan/use_sources.py` of jelly-benchmarks performs the replacement, and `install.py` installs the
-  production dependencies; graphql-shield is installed without its `resolutions` field (a yarn selector that pnpm
-  does not parse, for a development dependency), and its package.json is restored after the install.
+- The 69 package directories of the table below ship their code, or the annotated file, in compiled directories
+  (`dist/`, `build/`) or bundles; klona-1.1.0, takeapeek-0.2.2, materialize-css-1.0.0, verdaccio-3.11.7 and
+  swagger-ui-2.2.0 are in two of them each. 23 of them ship nothing else, and the other 46 also ship their source
+  or reach the compiled code only through `require`. Each of these package directories is replaced by a git
+  checkout of the repository (for a monorepo, the directory of the package) at the commit whose package.json has
+  the same name and version: the `gitHead` of the npm registry, the version tag, or the version commit after the
+  `gitHead` (kill-process-on-port, react-draft-wysiwyg, liljs). The published files are not kept. The release tool
+  of graphql-shield, immer, next-auth and @prisma/sdk writes the version into package.json when it publishes, and
+  the repository keeps a placeholder or an older version; their trees are the version tag (the `gitHead`), and
+  package.json gets the published version. pivottable-1.6.2 and smart-extend-1.7.4 have CoffeeScript sources; their
+  repositories keep the compiled `dist/`, which is renamed to `_dist/` with the `main` of package.json, like
+  `build/` of umount. `misc/taint/vulcan/use_sources.py` of jelly-benchmarks performs the replacement, and
+  `install.py` installs the production dependencies. Four trees do not install as they are, and their files are
+  restored after the install: graphql-shield without its `resolutions` field (a yarn selector that pnpm does not
+  parse, for a development dependency); apollo-server-azure-functions and @prisma/sdk with the `dependencies` of
+  the published package.json (the repository has `file:` and `workspace:` references),
+  apollo-server-azure-functions also without `devDependencies`; @sap-cloud-sdk/core without its `.npmrc` (its
+  `@sap` registry `npm.sap.com` does not resolve).
 
 | Advisory | Package | Repository | Ref |
 |---|---|---|---|
@@ -63,6 +71,52 @@ detection tools. It holds 943 advisory reviews.
 | GHSA-qcg2-h349-vwm3 | react-draft-wysiwyg-1.14.5 | jpuri/react-draft-wysiwyg | `9f6f4d2d9e0d` |
 | GHSA-rrqm-p222-8ph2 | dynamoose-2.6.0 | dynamoose/dynamoose | `255485328e33` |
 | GHSA-xmh9-rg6f-j3mr | identity-token-verifier-0.5.1 | solid/identity-token-verifier | `0cbb50406717` |
+| 100_GHSA-333w-rxj3-f55r | uri-js-2.1.1 | garycourt/uri-js | `7c1ac11617a1` |
+| 1016_GHSA-c53x-wwx2-pg96 | liljs-1.0.1 | bersLucas/liljs | `b2b233f6042d` |
+| 1038_GHSA-4q2f-8g74-qm56 | takeapeek-0.2.2 | giodamelio/takeapeek | `a6778a4b5290` |
+| 1122_GHSA-5mrr-rgp6-x4gr | marsdb-0.6.11 | c58/marsdb | `33856a1f929d` |
+| 124_GHSA-v2jq-9475-r5g8 | bootstrap-tagsinput-0.7.1 | timschlechter/bootstrap-tagsinput | `be96ad787f17` |
+| 1302_GHSA-h6mq-3cj6-h738 | showdown-1.9.0 | showdownjs/showdown | `8afa1fff0e1d` |
+| 139_GHSA-cjj8-wfrx-jqcf | pivottable-1.6.2 | nicolaskruchten/pivottable | `e9687f56db7c` |
+| 1488_GHSA-6chw-6frg-f759 | acorn-6.4.0 | acornjs/acorn/acorn | `6.4.0` |
+| 1518_GHSA-gxr4-xjj5-5px2 | jquery-3.4.1 | jquery/jquery | `3.4.1` |
+| 1522_GHSA-9r7h-6639-v5mw | bootstrap-select-1.13.5 | snapappointments/bootstrap-select | `6950fba02067` |
+| 1526_GHSA-w42g-7vfc-xf37 | apollo-server-azure-functions-2.14.1 | apollographql/apollo-server/packages/apollo-server-azure-functions | `2da65ef92040` |
+| 1538_GHSA-5vj8-3v2h-h38v | next-5.0.0 | vercel/next.js | `4697cbc48585` |
+| 1540_GHSA-r2vw-jgq9-jqx2 | core-1.21.1 | SAP/cloud-sdk/packages/core | `951e55ca8066` |
+| 326_GHSA-cmh5-qc8w-xvcq | i18next-3.4.3 | i18next/i18next | `dbf369399e7e` |
+| 536_GHSA-g36h-6r4f-3mqp | string-3.3.3 | jprichardson/string.js | `21eb9f67a545` |
+| 575_GHSA-4qhx-g9wp-g9m6 | squel-5.13.0 | hiddentao/squel | `d76904543849` |
+| 648_GHSA-8xqr-4cpm-wx7g | react-svg-2.2.17 | tanem/react-svg | `9fa13da92cc4` |
+| 658_GHSA-rvg8-pwq2-xj7q | base64url-2.0.0 | brianloveswords/base64url | `59b00b9bfa6c` |
+| 678_GHSA-pv4c-p2j5-38j4 | url-parse-1.4.1 | unshiftio/url-parse | `89045148cd7a` |
+| 740_GHSA-23xp-j737-282v | takeapeek-0.2.2 | giodamelio/takeapeek | `a6778a4b5290` |
+| 748_GHSA-hgr5-82rc-p936 | md-data-table-2.2.0 | iamisti/mdDataTable | `85f0902f8191` |
+| 801_GHSA-f8h3-rqrm-47v9 | smart-extend-1.7.4 | danielkalen/smart-extend | `933fc50902d2` |
+| 809_GHSA-gm9g-2g8v-fvxj | upmerge-0.1.8 | jazzfog/UpMerge | `bfbb14e4ff2f` |
+| 818_GHSA-98f7-p5rc-jx67 | materialize-css-1.0.0 | Dogfalo/materialize | `80e8ed370487` |
+| 822_GHSA-gh4g-3gm9-5wrq | shave-2.5.2 | dollarshaveclub/shave | `852b5372baab` |
+| 832 | verdaccio-3.11.7 | verdaccio/verdaccio | `0b1b3556d9c0` |
+| 833_GHSA-78j5-gcmf-vqc8 | verdaccio-3.11.7 | verdaccio/verdaccio | `0b1b3556d9c0` |
+| 834_GHSA-9w87-4j72-gcv7 | graphql-code-generator-0.18.0 | dotansimha/graphql-codegen/packages/graphql-codegen-cli | `v0.18.0` |
+| 962_GHSA-9r3m-mhfm-39cm | bigint-money-0.6.1 | evert/bigint-money | `001aebccfe5c` |
+| 986_GHSA-vp93-gcx5-4w52 | swagger-ui-2.2.0 | swagger-api/swagger-ui | `36c5fd89d410` |
+| 988_GHSA-w992-2gmj-9xxj | swagger-ui-2.2.0 | swagger-api/swagger-ui | `36c5fd89d410` |
+| GHSA-4228-7qvx-f4rq | devcert-1.1.1 | davewasmer/devcert | `e1389685b9f9` |
+| GHSA-67mm-m3wx-j7fr | gitlog-4.0.3 | domharrington/node-gitlog | `256a9617fcaa` |
+| GHSA-6g8v-hpgw-h2v7 | gsap-3.5.1 | greensock/GSAP | `3.5.1` |
+| GHSA-6hwh-rqwf-cxxr | vega-util-1.13.0 | vega/vega/packages/vega-util | `49a57c10b309` |
+| GHSA-7752-f4gf-94gc | materialize-css-1.0.0 | Dogfalo/materialize | `80e8ed370487` |
+| GHSA-7jh9-6cpf-h4m7 | hellojs-1.18.4 | MrSwitch/hello.js | `3b79ec93781b` |
+| GHSA-9qmh-276g-x5pj | immer-8.0.0 | immerjs/immer | `v8.0.0` |
+| GHSA-c4w7-xm78-47vh | y18n-5.0.4 | yargs/y18n | `f91f68f5b7ab` |
+| GHSA-m428-jqc4-2p5j | phpjs-1.3.2 | kvz/phpjs | `v1.3.2` |
+| GHSA-pg53-56cg-4m8q | next-auth-3.2.1 | nextauthjs/next-auth | `v3.2.1` |
+| GHSA-pxcc-hj8w-fmm7 | sdk-2.19.0 | prisma/prisma/src/packages/sdk | `2.19.0` |
+| GHSA-qwp9-52h8-xgg8 | jointjs-3.2.0 | clientIO/joint | `a27cf94bab4f` |
+| GHSA-wfw3-rgfr-6g67 | ag-grid-18.1.2 | ag-grid/ag-grid/packages/ag-grid | `18.1.2` |
+| GHSA-x56p-c8cg-q435 | next-9.5.3 | vercel/next.js/packages/next | `b6df8104068f` |
+| GHSA-xr9h-9m79-x29g | rendertron-2.0.1 | GoogleChrome/rendertron | `2d95df815661` |
 
 ## 2. Removed advisories
 
@@ -300,34 +354,84 @@ express-brute 823_GHSA-984p-xq9m-4rjw). The other fields of the reviews are unch
 - GHSA-whq6-mj2r-mjqc: File path corrected to lib/lsof.js.
 - GHSA-xmxh-g7wj-8m4m: File path corrected to lib/curl-transport.js.
 
-The locations of the 23 reviews of the packages that section 1 replaces by their repository source point to the
-source files (5 of these reviews are also in the list above). Each line is mapped with the source map that the
-published package ships or with the line of the same code, and is checked by hand; `code` is the text of the
-source line (for a block, its lines).
+The locations of the 69 reviews of the packages that section 1 replaces by their repository source point to the
+source files (16 of these reviews are also in the list above). Each line is mapped with the source map that the
+published package ships or with the line of the same code, and is checked by hand; `code` is the text of the source
+line (for a block, its lines). Where a review annotates the same code in the source and in a compiled copy, the
+locations coincide after the mapping and are merged (13 locations of 7 reviews), and upmerge location 3 (the
+minified `build/upmerge.js`, a copy of locations 1 and 2) is removed. The annotated source of swagger-ui
+988_GHSA-w992-2gmj-9xxj is in swagger-client, which the published `dist/swagger-ui.js` bundles and the repository
+does not hold; the source is the `initialize` of MainView, which receives the converted specification as its model.
 
+- 100_GHSA-333w-rxj3-f55r: source build/uri.js:169 → src/uri.ts:289; sink build/uri.js:175 → src/uri.ts:301.
+- 1016_GHSA-c53x-wwx2-pg96: source dist/liljs.js:20 → src/liljs.js:17; sink dist/liljs.js:28 → src/liljs.js:26.
+- 1038_GHSA-4q2f-8g74-qm56: block dist/index.js:39–62 → src/index.ts:50–75.
 - 1121_GHSA-hx78-272p-mqqh: block dist/rules.js:129–131 → src/rules.ts:163–165.
+- 1122_GHSA-5mrr-rgp6-x4gr: source dist/DocumentMatcher.js:412 → lib/DocumentMatcher.js:368; sink dist/DocumentMatcher.js:419 → lib/DocumentMatcher.js:375.
 - 1176_GHSA-c3m8-x3cg-qm2c: source dist/lib/transform-directives-for-browser.js:32 → lib/transform-directives-for-browser.ts:46; sink dist/lib/transform-directives-for-browser.js:52 → lib/transform-directives-for-browser.ts:75.
 - 1180_GHSA-6jg8-7333-554w: block dist/realms-shim.cjs.js:1003–1013 → src/sourceParser.js:19–29.
 - 1220_GHSA-5v7r-jg9r-vq44: block 1 src/build/SimpleCrypto.js:38–42 → src/SimpleCrypto.ts:47–51; block 2 src/build/SimpleCrypto.js:58–62 → src/SimpleCrypto.ts:70–74.
+- 124_GHSA-v2jq-9475-r5g8: source dist/bootstrap-tagsinput.js:108 → src/bootstrap-tagsinput.js:108; sink dist/bootstrap-tagsinput.js:136 → src/bootstrap-tagsinput.js:136.
+- 1302_GHSA-h6mq-3cj6-h738: block 1 /dist/showdown.js:2834–2837 → src/subParsers/anchors.js:51–54; block 2 /dist/showdown.js:2873–2875 → src/subParsers/anchors.js:90–92; block 3 /dist/showdown.js:2907–2909 → src/subParsers/autoLinks.js:25–27; block 4 /src/subParsers/anchors.js:51–54 → src/subParsers/anchors.js:51–54; location 4 equals location 1 after the mapping and is merged; block 5 /src/subParsers/anchors.js:90–92 → src/subParsers/anchors.js:90–92; location 5 equals location 2 after the mapping and is merged; block 6 /src/subParsers/autoLinks.js:25–27 → src/subParsers/autoLinks.js:25–27; location 6 equals location 3 after the mapping and is merged; block 7 /test/features/#379.openLinksInNewWindow-breaks-em-markdup.html:1–2 → test/features/#379.openLinksInNewWindow-breaks-em-markdup.html:1–2; block 8 /test/features/openLinksInNewWindow/simple-cases.html:1–2 → test/features/openLinksInNewWindow/simple-cases.html:1–2; block 9 /test/features/openLinksInNewWindow/simple.html:1–2 → test/features/openLinksInNewWindow/simple.html:1–2; block 10 /test/features/openLinksInNewWindow/simplifiedAutoLink.html:1 → test/features/openLinksInNewWindow/simplifiedAutoLink.html:1.
+- 139_GHSA-cjj8-wfrx-jqcf: sink 1 dist/pivot.js:791 → _dist/pivot.js:791; source 1 dist/pivot.js:737 → _dist/pivot.js:737; sink 2 dist/pivot.js:800 → _dist/pivot.js:800; source 2 dist/pivot.js:737 → _dist/pivot.js:737.
 - 1463_GHSA-4r97-78gf-q24v: source package/dist/klona.js:4 → src/index.js:4; sink package/dist/klona.js:9 → src/index.js:9.
+- 1488_GHSA-6chw-6frg-f759: block dist/acorn.js:3199–3210 → src/regexp.js:43–54.
 - 1517_GHSA-gm9x-q798-hmr4: source dist/index.js:1 → src/index.ts:28; sink dist/index.js:1 → src/index.ts:6.
+- 1518_GHSA-gxr4-xjj5-5px2: source 1 src/manipulation.js:403 → src/manipulation.js:403; sink 1 src/manipulation.js:241 → src/manipulation.js:241; source 2 dist/jquery.js:4817 → src/manipulation/buildFragment.js:46; sink 2 dist/jquery.js:5979 → src/manipulation.js:241; source 3 dist/jquery.js:6141 → src/manipulation.js:403; sink 3 dist/jquery.js:5979 → src/manipulation.js:241; location 3 equals location 1 after the mapping and is merged.
+- 1522_GHSA-9r7h-6639-v5mw: source dist/js/bootstrap-select.js:1502 → js/bootstrap-select.js:1478; sink dist/js/bootstrap-select.js:1578 → js/bootstrap-select.js:1554.
+- 1526_GHSA-w42g-7vfc-xf37: block 1 dist/ApolloServer.js:17–22 → src/ApolloServer.ts:27–35; block 2 src/ApolloServer.ts:27–35 → src/ApolloServer.ts:27–35; location 2 equals location 1 after the mapping and is merged.
+- 1538_GHSA-5vj8-3v2h-h38v: source /dist/server/index.js:709 → server/index.js:244; sink /dist/server/require.js:33 → server/require.js:5.
+- 1540_GHSA-r2vw-jgq9-jqx2: block dist/util/jwt.js:149–159 → src/util/jwt.ts:117–140.
+- 326_GHSA-cmh5-qc8w-xvcq: source 1 i18next.js:1177 → i18next.js:1177; sink 1 i18next.js:1190 → i18next.js:1190; source 2 dist/commonjs/Interpolator.js:33 → src/Interpolator.js:11; sink 2 dist/commonjs/Interpolator.js:46 → src/Interpolator.js:20; source 3 dist/es/Interpolator.js:18 → src/Interpolator.js:11; sink 3 dist/es/Interpolator.js:31 → src/Interpolator.js:20; location 3 equals location 2 after the mapping and is merged; source 4 dist/umd/i18next.js:1177 → src/Interpolator.js:11; sink 4 dist/umd/i18next.js:1190 → src/Interpolator.js:20; location 4 equals location 2 after the mapping and is merged.
+- 536_GHSA-g36h-6r4f-3mqp: source 1 dist/string.js:839 → lib/string.js:762; sink 1 dist/string.js:695 → lib/string.js:618; source 2 dist/string.js:839 → lib/string.js:762; sink 2 dist/string.js:700 → lib/string.js:623.
+- 575_GHSA-4qhx-g9wp-g9m6: source /dist/squel.js:1677 → src/core.js:1274; sink /dist/squel.js:1699 → src/core.js:1294.
+- 648_GHSA-8xqr-4cpm-wx7g: block dist/ReactSVG.js:203 → src/index.js:13.
+- 658_GHSA-rvg8-pwq2-xj7q: source dist/pad-string.js:2 → src/pad-string.ts:1; sink dist/pad-string.js:12 → src/pad-string.ts:13.
+- 678_GHSA-pv4c-p2j5-38j4: source 1 index.js:149 → index.js:149; sink 1 index.js:274 → index.js:274; source 2 index.js:290 → index.js:290; sink 2 index.js:364 → index.js:364; source 3 dist/url-parse.js:151 → index.js:149; sink 3 dist/url-parse.js:276 → index.js:274; location 3 equals location 1 after the mapping and is merged; source 4 dist/url-parse.js:292 → index.js:290; sink 4 dist/url-parse.js:366 → index.js:364; location 4 equals location 2 after the mapping and is merged.
+- 740_GHSA-23xp-j737-282v: source 1 dist/index.js:41 → src/index.ts:52; sink 1 dist/index.js:42 → src/index.ts:53; source 2 dist/index.js:41 → src/index.ts:52; sink 2 dist/index.js:44 → src/index.ts:55.
+- 748_GHSA-hgr5-82rc-p936: source dist/md-data-table.js:1041 → app/modules/main/directives/body/mdtCellDirective.js:60; sink dist/md-data-table.js:1380 → app/modules/main/directives/helpers/mdtAddHtmlContentToCellDirective.js:45.
 - 751_GHSA-w32g-5hqp-gg6q: source dist/mermaid.js:50748 → src/diagrams/flowchart/flowDb.js:214; sink dist/mermaid.js:51119 → src/diagrams/flowchart/flowRenderer.js:90.
+- 801_GHSA-f8h3-rqrm-47v9: source package/dist/smart-extend.js:20 → _dist/smart-extend.js:20; sink /package/dist/smart-extend.js:79 → _dist/smart-extend.js:79.
+- 809_GHSA-gm9g-2g8v-fvxj: block 1 package/src/upmerge.js:143 → src/upmerge.js:143; block 2 package/src/upmerge.js:147 → src/upmerge.js:147; location 3 removed.
 - 814_GHSA-6677-83pp-f862: source dist/devalue.js:216 → src/index.ts:249; sink dist/devalue.js:217 → src/index.ts:250.
+- 818_GHSA-98f7-p5rc-jx67: source 1 /src/dist/js/materialize.js:88 → js/cash.js:61; sink 1 /src/dist/js/materialize.js:56 → js/cash.js:31; source 2 /src/dist/js/materialize.js:5455 → js/toasts.js:308; sink 2 /src/dist/js/materialize.js:4498 → js/tooltip.js:71.
+- 822_GHSA-gh4g-3gm9-5wrq: source 1 dist/jquery.shave.js:7 → src/shave.js:1; sink 1 dist/jquery.shave.js:68 → src/shave.js:60; source 2 dist/shave.es.js:8 → src/shave.js:1; sink 2 dist/shave.es.js:64 → src/shave.js:60; location 2 equals location 1 after the mapping and is merged; source 3 dist/shave.js:14 → src/shave.js:1; sink 3 dist/shave.js:70 → src/shave.js:60; location 3 equals location 1 after the mapping and is merged; source 4 src/shave.js:1 → src/shave.js:1; sink 4 src/shave.js:60 → src/shave.js:60; location 4 equals location 1 after the mapping and is merged.
+- 832: source package/build/lib/utils.js:518 → src/lib/utils.js:535; sink package/build/lib/utils.js:520 → src/lib/utils.js:537.
+- 833_GHSA-78j5-gcmf-vqc8: source build/api/web/index.js:64 → src/api/web/index.js:43; sink build/api/web/index.js:69 → src/api/web/index.js:51.
+- 834_GHSA-9w87-4j72-gcv7: block dist/generate-and-save.js:42 → src/generate-and-save.ts:6.
 - 883_GHSA-fj93-7wm4-8x2g: source dist/jquery.mobile.js:5319 → js/widgets/pagecontainer.js:870; sink dist/jquery.mobile.js:1815 → external/jquery/plugins/jquery.hashchange.js:330.
+- 962_GHSA-9r3m-mhfm-39cm: block dist/util.js:92–107 → src/util.ts:108–122.
+- 986_GHSA-vp93-gcx5-4w52: block 1 src/main/javascript/helpers/handlebars.js:6–7 → src/main/javascript/helpers/handlebars.js:6–7; block 2 dist/swagger-ui.js:3047–3048 → src/main/javascript/helpers/handlebars.js:6–7; location 2 equals location 1 after the mapping and is merged.
+- 988_GHSA-w992-2gmj-9xxj: source dist/swagger-ui.js:6349 → src/main/javascript/view/MainView.js:11; sink dist/swagger-ui.js:22351 → src/main/javascript/view/MainView.js:79.
 - GHSA-2cf2-2383-h4jv: source dist/index.js:44 → src/index.js:21; sink dist/index.js:46 → src/index.js:23.
+- GHSA-4228-7qvx-f4rq: source dist/index.js:33 → src/index.ts:68; sink dist/utils.js:22 → src/utils.ts:22.
 - GHSA-4j46-mp85-mv8c: source dist/index.es.js:14 → src/index.js:15; sink dist/index.es.js:108 → src/index.js:107.
 - GHSA-57f3-gghm-9mhc: block dist/jspdf.es.js:10699 → src/modules/addimage.js:633.
 - GHSA-5pm8-492c-92p5: source package/dist/chartkick.js:28 → src/helpers.js:14; sink package/dist/chartkick.js:40 → src/helpers.js:26.
 - GHSA-5wqj-f379-6jh4: source 1 build/main/lib/index.js:38 → src/lib/index.ts:51; sink 1 build/main/lib/index.js:9 → src/lib/index.ts:16; source 2 build/main/lib/index.js:38 → src/lib/index.ts:51; sink 2 build/main/lib/index.js:15 → src/lib/index.ts:23.
+- GHSA-67mm-m3wx-j7fr: source 1 dist/gitlog.cjs.development.js:197 → src/index.ts:325; sink 1 dist/gitlog.cjs.development.js:216 → src/index.ts:348; source 2 dist/gitlog.cjs.development.js:197 → src/index.ts:325; sink 2 dist/gitlog.cjs.development.js:227 → src/index.ts:359.
+- GHSA-6g8v-hpgw-h2v7: source 1 dist/gsap.js:3333 → src/gsap-core.js:2669; sink 1 dist/gsap.js:226 → src/gsap-core.js:148; source 2 dist/gsap.js:3329 → src/gsap-core.js:2665; sink 2 dist/gsap.js:226 → src/gsap-core.js:148.
+- GHSA-6hwh-rqwf-cxxr: source build/vega-util.js:172 → src/mergeConfig.js:4; sink build/vega-util.js:203 → src/mergeConfig.js:35.
+- GHSA-7752-f4gf-94gc: source 1 /src/dist/js/materialize.js:88 → js/cash.js:61; sink 1 /src/dist/js/materialize.js:56 → js/cash.js:31; source 2 /src/dist/js/materialize.js:5455 → js/toasts.js:308; sink 2 /src/dist/js/materialize.js:4498 → js/tooltip.js:71.
 - GHSA-79jw-6wg7-r9g4: source dist/mixme.cjs.js:24 → lib/index.js:4; sink dist/mixme.cjs.js:53 → lib/index.js:30.
+- GHSA-7jh9-6cpf-h4m7: source dist/hello.all.js:1440 → src/hello.js:1287; sink dist/hello.all.js:1545 → src/hello.js:1392.
 - GHSA-85g2-29m8-qf2p: source dist/src/utils/CollideUtil.js:26 → src/utils/CollideUtil.ts:28; sink dist/src/utils/CollideUtil.js:79 → src/utils/CollideUtil.ts:88.
 - GHSA-8f89-2fwj-5v5r: source dist/klona.js:1 → src/index.js:1; sink dist/klona.js:9 → src/index.js:9.
+- GHSA-9qmh-276g-x5pj: source 1 dist/immer.cjs.development.js:1346 → src/plugins/patches.ts:208; sink 1 dist/immer.cjs.development.js:1378 → src/plugins/patches.ts:234; source 2 dist/immer.cjs.development.js:1346 → src/plugins/patches.ts:208; sink 2 dist/immer.cjs.development.js:1393 → src/plugins/patches.ts:245.
+- GHSA-c4w7-xm78-47vh: source build/index.cjs:94 → lib/index.ts:137; sink build/index.cjs:99 → lib/index.ts:142.
 - GHSA-fpm5-vv97-jfwg: source dist/index.node.cjs.js:395 → src/deepCopy.ts:21; sink dist/index.node.cjs.js:437 → src/deepCopy.ts:68.
 - GHSA-jqh7-w5pr-cr56: source dist/src/auth/create-enable-cookies.js:14 → src/auth/create-enable-cookies.ts:21; sink dist/src/auth/create-enable-cookies.js:21 → src/auth/create-enable-cookies.ts:30.
 - GHSA-jxwx-85vp-gvwm: source dist/jquery.validate.js:1427 → src/core.js:1409; sink dist/jquery.validate.js:1433 → src/core.js:1415.
+- GHSA-m428-jqc4-2p5j: source build/npm.js:6339 → functions/strings/parse_str.js:1; sink build/npm.js:6421 → functions/strings/parse_str.js:114.
+- GHSA-pg53-56cg-4m8q: block 1 dist/adapters/prisma/index.js:489–493 → src/adapters/prisma/index.js:287; block 2 dist/adapters/prisma/index.js:517–521 → src/adapters/prisma/index.js:303.
+- GHSA-pxcc-hj8w-fmm7: source dist/getPackedPackage.js:23 → src/getPackedPackage.ts:19; sink dist/getPackedPackage.js:50 → src/getPackedPackage.ts:58.
 - GHSA-qcg2-h349-vwm3: block dist/react-draft-wysiwyg.js:7 → src/decorators/Link/index.js:59.
+- GHSA-qwp9-52h8-xgg8: source dist/joint.js:8537 → src/util/util.mjs:140; sink dist/joint.js:8549 → src/util/util.mjs:152.
 - GHSA-rrqm-p222-8ph2: source dist/utils/object/set.js:2 → lib/utils/object/set.ts:3; sink dist/utils/object/set.js:14 → lib/utils/object/set.ts:18.
+- GHSA-wfw3-rgfr-6g67: block dist/ag-grid.js:5653–5667 → src/ts/gridApi.ts:232–244.
+- GHSA-x56p-c8cg-q435: block dist/next-server/lib/router/router.js:119 → next-server/lib/router/router.ts:838–841.
 - GHSA-xmh9-rg6f-j3mr: source 1 dist/lib/DPoP.js:13 → src/lib/DPoP.ts:14; sink 1 dist/lib/DPoP.js:17 → src/lib/DPoP.ts:25; source 2 dist/guards/DPoPJWKGuard.js:42 → src/guards/DPoPJWKGuard.ts:41; sink 2 dist/guards/DPoPJWKGuard.js:43 → src/guards/DPoPJWKGuard.ts:42; source 3 dist/guards/DPoPJWKGuard.js:63 → src/guards/DPoPJWKGuard.ts:63; sink 3 dist/guards/DPoPJWKGuard.js:64 → src/guards/DPoPJWKGuard.ts:64; source 4 dist/guards/DPoPJWKGuard.js:63 → src/guards/DPoPJWKGuard.ts:63; sink 4 dist/guards/DPoPJWKGuard.js:66 → src/guards/DPoPJWKGuard.ts:66.
+- GHSA-xr9h-9m79-x29g: block build/rendertron.js:53–60 → src/rendertron.ts:71–80.
 
 The `correct_cwe` of 15 reviews has a space before or after the CWE id (for example `"CWE-78 "`), and the space is
 removed: 1087_GHSA-rmmc-8cqj-hfp3, 1227_GHSA-gr4j-r575-g665, 1343_GHSA-89mq-4x47-5v83, 1517_GHSA-gm9x-q798-hmr4,

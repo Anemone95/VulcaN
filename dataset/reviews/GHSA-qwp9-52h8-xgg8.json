@@ -11,13 +11,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/joint.js",
-                    "lineno": 8537,
-                    "code": "var setByPath = function(obj, path, value, delimiter) {"
+                    "file": "src/util/util.mjs",
+                    "lineno": 140,
+                    "code": "export const setByPath = function(obj, path, value, delimiter) {"
                 },
                 "sink": {
-                    "file": "dist/joint.js",
-                    "lineno": 8549,
+                    "file": "src/util/util.mjs",
+                    "lineno": 152,
                     "code": "diver[keys[len - 1]] = value;"
                 }
             }

@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/pad-string.js",
-                    "lineno": 2,
-                    "code": "function padString(input) {"
+                    "file": "src/pad-string.ts",
+                    "lineno": 1,
+                    "code": "export default function padString(input: string): string {"
                 },
                 "sink": {
-                    "file": "dist/pad-string.js",
-                    "lineno": 12,
-                    "code": "var buffer = new Buffer(paddedStringLength);"
+                    "file": "src/pad-string.ts",
+                    "lineno": 13,
+                    "code": "let buffer = new Buffer(paddedStringLength);"
                 }
             }
         ]

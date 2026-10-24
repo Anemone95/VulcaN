@@ -12,26 +12,26 @@
         "vulnerability_location": [
             {
                 "sink": {
-                    "file": "dist/pivot.js",
+                    "file": "_dist/pivot.js",
                     "lineno": 791,
                     "code": "th.innerHTML = c;"
                 },
                 "source": {
-                    "file": "dist/pivot.js",
+                    "file": "_dist/pivot.js",
                     "lineno": 737,
-                    "code": " pivotTableRenderer = function(pivotData, opts) {"
+                    "code": "pivotTableRenderer = function(pivotData, opts) {"
                 }
             },
             {
                 "sink": {
-                    "file": "dist/pivot.js",
+                    "file": "_dist/pivot.js",
                     "lineno": 800,
                     "code": "th.innerHTML = colKey[j];"
                 },
                 "source": {
-                    "file": "dist/pivot.js",
+                    "file": "_dist/pivot.js",
                     "lineno": 737,
-                    "code": " pivotTableRenderer = function(pivotData, opts) {"
+                    "code": "pivotTableRenderer = function(pivotData, opts) {"
                 }
             }
         ]

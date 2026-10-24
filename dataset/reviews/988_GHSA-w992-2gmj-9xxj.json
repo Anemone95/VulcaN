@@ -11,13 +11,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/swagger-ui.js",
-                    "lineno": 6349,
-                    "code": "SwaggerSpecConverter.prototype.apiInfo = function(obj, swagger) {"
+                    "file": "src/main/javascript/view/MainView.js",
+                    "lineno": 11,
+                    "code": "initialize: function(opts){"
                 },
                 "sink": {
-                    "file": "dist/swagger-ui.js",
-                    "lineno": 22351,
+                    "file": "src/main/javascript/view/MainView.js",
+                    "lineno": 79,
                     "code": "$(this.el).html(Handlebars.templates.main(this.model));"
                 }
             }

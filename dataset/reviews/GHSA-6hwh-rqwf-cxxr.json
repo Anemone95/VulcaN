@@ -18,13 +18,13 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "build/vega-util.js",
-                    "lineno": 172,
-                    "code": "function mergeConfig(...configs) {"
+                    "file": "src/mergeConfig.js",
+                    "lineno": 4,
+                    "code": "export function mergeConfig(...configs) {"
                 },
                 "sink": {
-                    "file": "build/vega-util.js",
-                    "lineno": 203,
+                    "file": "src/mergeConfig.js",
+                    "lineno": 35,
                     "code": "o[k] = value[k];"
                 }
             }

@@ -1,4 +1,4 @@
-function array_keys(input, search_value, argStrict) {
+function array_keys (input, search_value, argStrict) {
   //  discuss at: http://phpjs.org/functions/array_keys/
   // original by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
   //    input by: Brett Zamir (http://brett-zamir.me)
@@ -12,30 +12,31 @@ function array_keys(input, search_value, argStrict) {
 
   var search = typeof search_value !== 'undefined',
     tmp_arr = [],
-    strict = !! argStrict,
+    strict = !!argStrict,
     include = true,
-    key = '';
+    key = ''
 
-  if (input && typeof input === 'object' && input.change_key_case) { // Duck-type check for our own array()-created PHPJS_Array
-    return input.keys(search_value, argStrict);
+  if (input && typeof input === 'object' && input.change_key_case) {
+    // Duck-type check for our own array()-created PHPJS_Array
+    return input.keys(search_value, argStrict)
   }
 
   for (key in input) {
     if (input.hasOwnProperty(key)) {
-      include = true;
+      include = true
       if (search) {
         if (strict && input[key] !== search_value) {
-          include = false;
+          include = false
         } else if (input[key] != search_value) {
-          include = false;
+          include = false
         }
       }
 
       if (include) {
-        tmp_arr[tmp_arr.length] = key;
+        tmp_arr[tmp_arr.length] = key
       }
     }
   }
 
-  return tmp_arr;
+  return tmp_arr
 }

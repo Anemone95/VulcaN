@@ -1,20 +1,20 @@
-function bcscale(scale) {
+function bcscale (scale) {
   //  discuss at: http://phpjs.org/functions/bcscale/
-  // original by: lmeyrick (https://sourceforge.net/projects/bcmath-js/)this.
+  // original by: lmeyrick (https://sourceforge.net/projects/bcmath-js/)
   //  depends on: _phpjs_shared_bc
   //   example 1: bcscale(1);
   //   returns 1: 3
   //        todo: implement these testcases
 
-  var libbcmath = this._phpjs_shared_bc();
+  var libbcmath = this._phpjs_shared_bc()
 
-  scale = parseInt(scale, 10);
+  scale = parseInt(scale, 10)
   if (isNaN(scale)) {
-    return false;
+    return false
   }
   if (scale < 0) {
-    return false;
+    return false
   }
-  libbcmath.scale = scale;
-  return true;
+  libbcmath.scale = scale
+  return true
 }

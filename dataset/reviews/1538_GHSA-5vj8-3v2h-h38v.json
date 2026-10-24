@@ -11,14 +11,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "/dist/server/index.js",
-                    "lineno": 709,
-                    "code": "p = _path.join.apply(undefined, [_this3.dist, 'static'].concat((0, _toConsumableArray3.default)(params.path || [])));"
+                    "file": "server/index.js",
+                    "lineno": 244,
+                    "code": "const p = join(this.dist, 'static', ...(params.path || []))"
                 },
                 "sink": {
-                    "file": "/dist/server/require.js",
-                    "lineno": 33,
-                    "code": "return _context.abrupt('return', require(f));"
+                    "file": "server/require.js",
+                    "lineno": 5,
+                    "code": "return require(f)"
                 }
             }
         ]

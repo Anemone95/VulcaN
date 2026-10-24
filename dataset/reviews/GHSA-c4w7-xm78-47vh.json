@@ -14,14 +14,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "build/index.cjs",
-                    "lineno": 94,
-                    "code": "updateLocale(obj) {"
+                    "file": "lib/index.ts",
+                    "lineno": 137,
+                    "code": "updateLocale (obj: Locale) {"
                 },
                 "sink": {
-                    "file": "build/index.cjs",
-                    "lineno": 99,
-                    "code": "this.cache[this.locale][key] = obj[key];"
+                    "file": "lib/index.ts",
+                    "lineno": 142,
+                    "code": "this.cache[this.locale][key] = obj[key]"
                 }
             }
         ]

@@ -1,3 +1,0 @@
-export declare const extractCustomFields: <EntityT extends import(".").EntityBase, JsonT>(json: Partial<JsonT>, entityConstructor: import(".").Constructable<EntityT, {}>) => import("@sap-cloud-sdk/util").MapType<any>;
-export declare const deserializeEntity: <EntityT extends import(".").EntityBase, JsonT>(json: Partial<JsonT>, entityConstructor: import(".").Constructable<EntityT, {}>, requestHeader?: any) => EntityT;
-//# sourceMappingURL=entity-deserializer.d.ts.map

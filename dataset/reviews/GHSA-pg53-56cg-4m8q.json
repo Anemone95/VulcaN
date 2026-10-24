@@ -11,18 +11,18 @@
         "vulnerability_location": [
             {
                 "block": {
-                    "file": "dist/adapters/prisma/index.js",
-                    "start_lineno": 489,
-                    "end_lineno": 493,
-                    "code": "yield prisma[VerificationRequest].delete({ where: { token: hashedToken } });"
+                    "file": "src/adapters/prisma/index.js",
+                    "start_lineno": 287,
+                    "end_lineno": 287,
+                    "code": "await prisma[VerificationRequest].delete({ where: { token: hashedToken } })"
                 }
             },
             {
                 "block": {
-                    "file": "dist/adapters/prisma/index.js",
-                    "start_lineno": 517,
-                    "end_lineno": 521,
-                    "code": "yield prisma[VerificationRequest].delete({ where: { token: hashedToken } });"
+                    "file": "src/adapters/prisma/index.js",
+                    "start_lineno": 303,
+                    "end_lineno": 303,
+                    "code": "await prisma[VerificationRequest].delete({ where: { token: hashedToken } })"
                 }
             }
         ]

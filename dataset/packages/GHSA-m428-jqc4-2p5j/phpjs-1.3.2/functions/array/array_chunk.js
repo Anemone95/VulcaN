@@ -1,4 +1,4 @@
-function array_chunk(input, size, preserve_keys) {
+function array_chunk (input, size, preserve_keys) {
   //  discuss at: http://phpjs.org/functions/array_chunk/
   // original by: Carlos R. L. Rodrigues (http://www.jsfromhell.com)
   // improved by: Brett Zamir (http://brett-zamir.me)
@@ -12,44 +12,45 @@ function array_chunk(input, size, preserve_keys) {
   //   example 4: array_chunk({1:'Kevin', 2:'van', 3:'Zonneveld'}, 2, true);
   //   returns 4: [{1: 'Kevin', 2: 'van'}, {3: 'Zonneveld'}]
 
+
   var x, p = '',
     i = 0,
     c = -1,
     l = input.length || 0,
-    n = [];
+    n = []
 
   if (size < 1) {
-    return null;
+    return null
   }
 
   if (Object.prototype.toString.call(input) === '[object Array]') {
     if (preserve_keys) {
       while (i < l) {
-        (x = i % size) ? n[c][i] = input[i] : n[++c] = {}, n[c][i] = input[i];
-        i++;
+        (x = i % size) ? n[c][i] = input[i] : n[++c] = {}, n[c][i] = input[i]
+        i++
       }
     } else {
       while (i < l) {
-        (x = i % size) ? n[c][x] = input[i] : n[++c] = [input[i]];
-        i++;
+        (x = i % size) ? n[c][x] = input[i] : n[++c] = [input[i]]
+        i++
       }
     }
   } else {
     if (preserve_keys) {
       for (p in input) {
         if (input.hasOwnProperty(p)) {
-          (x = i % size) ? n[c][p] = input[p] : n[++c] = {}, n[c][p] = input[p];
-          i++;
+          (x = i % size) ? n[c][p] = input[p] : n[++c] = {}, n[c][p] = input[p]
+          i++
         }
       }
     } else {
       for (p in input) {
         if (input.hasOwnProperty(p)) {
-          (x = i % size) ? n[c][x] = input[p] : n[++c] = [input[p]];
-          i++;
+          (x = i % size) ? n[c][x] = input[p] : n[++c] = [input[p]]
+          i++
         }
       }
     }
   }
-  return n;
+  return n
 }

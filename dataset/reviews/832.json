@@ -10,14 +10,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "package/build/lib/utils.js",
-                    "lineno": 518,
-                    "code": "function parseReadme(packageName, readme) "
+                    "file": "src/lib/utils.js",
+                    "lineno": 535,
+                    "code": "function parseReadme(packageName: string, readme: string): string {"
                 },
                 "sink": {
-                    "file": "package/build/lib/utils.js",
-                    "lineno": 520,
-                    "code": "return (0, _marked2.default)(readme);"
+                    "file": "src/lib/utils.js",
+                    "lineno": 537,
+                    "code": "return marked(readme);"
                 }
             }
         ]

@@ -19,14 +19,14 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/index.js",
-                    "lineno": 33,
-                    "code": "function certificateFor(domain, options = {}) {"
+                    "file": "src/index.ts",
+                    "lineno": 68,
+                    "code": "export async function certificateFor<O extends Options>(domain: string, options: O = {} as O): Promise<IReturnData<O>> {"
                 },
                 "sink": {
-                    "file": "dist/utils.js",
+                    "file": "src/utils.ts",
                     "lineno": 22,
-                    "code": "return child_process_1.execFileSync(cmd, args, options);"
+                    "code": "return execFileSync(cmd, args, options);"
                 }
             }
         ]

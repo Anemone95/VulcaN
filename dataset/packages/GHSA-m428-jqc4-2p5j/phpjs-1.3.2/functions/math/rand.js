@@ -1,4 +1,4 @@
-function rand(min, max) {
+function rand (min, max) {
   //  discuss at: http://phpjs.org/functions/rand/
   // original by: Leslie Hoare
   // bugfixed by: Onno Marsman
@@ -6,14 +6,14 @@ function rand(min, max) {
   //   example 1: rand(1, 1);
   //   returns 1: 1
 
-  var argc = arguments.length;
+  var argc = arguments.length
   if (argc === 0) {
-    min = 0;
-    max = 2147483647;
+    min = 0
+    max = 2147483647
   } else if (argc === 1) {
-    throw new Error('Warning: rand() expects exactly 2 parameters, 1 given');
+    throw new Error('Warning: rand() expects exactly 2 parameters, 1 given')
   }
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min
 
   /*
   // See note above for an explanation of the following alternative code
@@ -21,7 +21,8 @@ function rand(min, max) {
   // +   reimplemented by: Brett Zamir (http://brett-zamir.me)
   // -    depends on: srand
   // %          note 1: This is a very possibly imperfect adaptation from the PHP source code
-  var rand_seed, ctx, PHP_RAND_MAX=2147483647; // 0x7fffffff
+  // 0x7fffffff
+  var rand_seed, ctx, PHP_RAND_MAX=2147483647;
 
   if (!this.php_js || this.php_js.rand_seed === undefined) {
     this.srand();
@@ -37,7 +38,8 @@ function rand(min, max) {
     return ((ctx * 1103515245 + 12345) % (PHP_RAND_MAX + 1));
   };
 
-  var php_rand = function (ctxArg) { // php_rand_r
+  var php_rand = function (ctxArg) {
+   // php_rand_r
     this.php_js.rand_seed = do_rand(ctxArg);
     return parseInt(this.php_js.rand_seed, 10);
   };

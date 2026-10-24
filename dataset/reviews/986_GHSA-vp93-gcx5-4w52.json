@@ -14,15 +14,7 @@
                     "file": "src/main/javascript/helpers/handlebars.js",
                     "start_lineno": 6,
                     "end_lineno": 7,
-                    "code": "html = html.replace(/<script\b[^<]*(?:(?!</script>)<[^<]*)*</script>/gi, ''); return new Handlebars.SafeString(html);"
-                }
-            },
-            {
-                "block": {
-                    "file": "dist/swagger-ui.js",
-                    "start_lineno": 3047,
-                    "end_lineno": 3048,
-                    "code": "html = html.replace(/<script\b[^<]*(?:(?!</script>)<[^<]*)*</script>/gi, ''); return new Handlebars.SafeString(html);"
+                    "code": "html = html.replace(/<script\\b[^<]*(?:(?!<\\/script>)<[^<]*)*<\\/script>/gi, ''); return new Handlebars.SafeString(html);"
                 }
             }
         ]
