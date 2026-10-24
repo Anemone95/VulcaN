@@ -4,7 +4,7 @@ This repository holds the VulcaN dataset of reviewed npm advisories, prepared fo
 (jelly-benchmarks, `misc/taint/vulcan/`). The original dataset is the state of commit `e72589b4a` (2023-04-04, the
 last commit of the VulcaN authors): 957 advisory reviews. This repository differs from it in four ways: the
 packages are extracted with their dependencies installed, 14 advisories are removed, the vulnerability locations of
-203 reviews and the `correct_cwe` text of 15 reviews are corrected, and the reviews no longer hold the scores of
+204 reviews and the `correct_cwe` text of 15 reviews are corrected, and the reviews no longer hold the scores of
 the vulnerability detection tools. It holds 943 advisory reviews.
 
 ## 1. Extracted packages
@@ -19,6 +19,9 @@ the vulnerability detection tools. It holds 943 advisory reviews.
 - umount-1.1.6 (1512_GHSA-6q48-vjq2-mwcj) ships its JavaScript only in `build/` (the source is CoffeeScript), and
   jelly-taint does not expand directories named `build`. `build/` is renamed to `_build/`, and the `main` of its
   package.json follows (`_build/umount.js`).
+- ids-enterprise-4.18.1 (955_GHSA-crfx-5phg-hmw9) ships only `dist/`, and its repository is not public. `dist/` is
+  renamed to `_dist/`, and the `main` of its package.json and the two locations of its review follow
+  (`_dist/js/sohoxi.js`).
 
 ## 2. Removed advisories
 

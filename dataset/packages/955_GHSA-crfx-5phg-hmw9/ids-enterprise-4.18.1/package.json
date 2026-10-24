@@ -17,7 +17,7 @@
     "url": "https://github.com/infor-design/enterprise/issues"
   },
   "homepage": "https://github.com/infor-design/enterprise",
-  "main": "dist/js/sohoxi.js",
+  "main": "_dist/js/sohoxi.js",
   "jspm": {
     "main": "dist/js/sohoxi.js"
   },

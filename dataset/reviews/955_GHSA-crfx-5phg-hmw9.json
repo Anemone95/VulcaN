@@ -11,12 +11,12 @@
         "vulnerability_location": [
             {
                 "source": {
-                    "file": "dist/js/sohoxi.js",
+                    "file": "_dist/js/sohoxi.js",
                     "lineno": 33948,
                     "code": "li.children('a').html(icon + text);"
                 },
                 "sink": {
-                    "file": "dist/js/sohoxi.js",
+                    "file": "_dist/js/sohoxi.js",
                     "lineno": 33751,
                     "code": "this.pseudoElem.find('span').html('<span class=\"audible\">' + this.label.text() + ' </span>');"
                 }
