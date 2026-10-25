@@ -4,9 +4,9 @@ This repository holds the VulcaN dataset of reviewed npm advisories, prepared fo
 (jelly-benchmarks, `misc/taint/vulcan/`). The original dataset is the state of commit `e72589b4a` (2023-04-04, the
 last commit of the VulcaN authors): 957 advisory reviews. This repository differs from it in four ways: the
 packages are extracted with their dependencies installed (69 package directories hold their repository source
-instead of the compiled code), 14 advisories are removed, the vulnerability locations of 258 reviews and the
-`correct_cwe` text of 15 reviews are corrected, and the reviews no longer hold the scores of the vulnerability
-detection tools. It holds 943 advisory reviews.
+instead of the compiled code), 14 advisories are removed, the vulnerability locations of 259 reviews, the
+`correct_cwe` of 2 more reviews and the `correct_cwe` text of 15 reviews are corrected, and the reviews no longer
+hold the scores of the vulnerability detection tools. It holds 943 advisory reviews.
 
 ## 1. Extracted packages
 
@@ -142,7 +142,7 @@ their line in `dataset/advisories-with-reviews.txt` and their entry in `install-
 
 ## 3. Corrected reviews
 
-The `vulnerability.vulnerability_location` of these 203 reviews is corrected to match the extracted packages:
+The `vulnerability.vulnerability_location` of these 204 reviews is corrected to match the extracted packages:
 the files the package ships instead of its source files, line numbers of the shipped version, and sinks on the
 line of the dangerous operation. The `correct_cwe` of seven of them is corrected as well (decal
 GHSA-j32x-j8pj-pg2h, preact 835_GHSA-cg48-9hh2-x6mx, express-hbs GHSA-rwxp-hwwf-653v, lodash.merge
@@ -236,6 +236,7 @@ express-brute 823_GHSA-984p-xq9m-4rjw). The other fields of the reviews are unch
 - 412_GHSA-4vfj-c2xf-8r48: Sink line corrected 8 -> 9.
 - 413_GHSA-xj6q-9hx8-mm7f: Source code text corrected (quote characters).
 - 417_GHSA-7g8m-5qh9-9pgw: Sink moved from response.write to the fs.readFile in util4HTML.getHTMLBinary, called with '.' + pathname at controller.js:183.
+- 426_GHSA-ccw5-7vfh-p5hm: The location with the sink simple.js:10 is removed: `fs.readFile(ROOT_DIR + "/cities.dat.txt", …)` reads a constant path. The location with the sink simple.js:36 (`ROOT_DIR + urlObj.pathname`) is kept.
 - 42_GHSA-f5w6-r7rg-mcgq: 'package/' prefix removed from block 0 and its code set to the actual line text (the review had unescaped the regex). Block 1 removed: the is_url regex does not exist in 3.22.0 (isURL is implemented by string splitting).
 - 433_GHSA-78h7-fgq9-625x: Source line corrected 27 -> 25.
 - 439_GHSA-8vmc-g99q-xj94: Sink line corrected 10 -> 9.
@@ -437,6 +438,13 @@ removed: 1087_GHSA-rmmc-8cqj-hfp3, 1227_GHSA-gr4j-r575-g665, 1343_GHSA-89mq-4x47
 156_GHSA-g3xp-v2ff-x5c3, 188_GHSA-5w4p-h4gm-3w26, 264_GHSA-cr8h-x88h-jwj2, 301_GHSA-j3wh-5m26-2pf7,
 3_GHSA-3fw8-66wf-pr7m, 434_GHSA-cxwc-8pqp-2whw, 467_GHSA-68cm-mgv7-vg5c, 578_GHSA-3mpr-hq3p-49h9,
 63_GHSA-rc8h-3fv6-pxv8, 65_GHSA-j3g2-m5jj-6336, 727_GHSA-9hqj-38j2-5jgm.
+
+The `correct_cwe` of 2 more reviews follows the GitHub advisory, and their locations are unchanged:
+- 1335_GHSA-qccf-q7p4-3q3j (safe-object2): CWE-22 → CWE-1321. The advisory is "Prototype Pollution in
+  safe-object2" (CWE-1321), and the location, `init[acc] = curValue` in `setter` (index.js:53), is the
+  prototype-pollution write.
+- 573_GHSA-62g9-6hw5-rwfp (resolve-path): CWE-25 → CWE-22, the CWE of the advisory. The fix (pillarjs/resolve-path
+  fe5b805) changes the annotated line index.js:89, `return resolve(root, path)`.
 
 ## 4. Removed tool scores
 

@@ -18,18 +18,6 @@
                 },
                 "sink": {
                     "file": "simple.js",
-                    "lineno": 10,
-                    "code": "fs.readFile(ROOT_DIR + \"/cities.dat.txt\", function(err, data) {"
-                }
-            },
-            {
-                "source": {
-                    "file": "simple.js",
-                    "lineno": 7,
-                    "code": "http.createServer(function(req, res) {"
-                },
-                "sink": {
-                    "file": "simple.js",
                     "lineno": 36,
                     "code": "fs.readFile(ROOT_DIR + urlObj.pathname, function(err, data) {"
                 }

@@ -5,7 +5,7 @@
         "cwe": "CWE-22",
         "github_link": "https://github.com/advisories/GHSA-qccf-q7p4-3q3j"
     },
-    "correct_cwe": "CWE-22",
+    "correct_cwe": "CWE-1321",
     "correct_package_link": "https://registry.npmjs.org/safe-object2/-/safe-object2-1.0.3.tgz",
     "vulnerability": {
         "vulnerability_location": [
