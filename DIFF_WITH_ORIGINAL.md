@@ -5,7 +5,7 @@ This repository holds the VulcaN dataset of reviewed npm advisories, prepared fo
 last commit of the VulcaN authors): 957 advisory reviews. This repository differs from it in four ways: the
 packages are extracted with their dependencies installed (69 package directories hold their repository source
 instead of the compiled code), 14 advisories are removed, the vulnerability locations of 259 reviews, the
-`correct_cwe` of 2 more reviews and the `correct_cwe` text of 15 reviews are corrected, and the reviews no longer
+`correct_cwe` of 3 more reviews and the `correct_cwe` text of 15 reviews are corrected, and the reviews no longer
 hold the scores of the vulnerability detection tools. It holds 943 advisory reviews.
 
 ## 1. Extracted packages
@@ -439,12 +439,20 @@ removed: 1087_GHSA-rmmc-8cqj-hfp3, 1227_GHSA-gr4j-r575-g665, 1343_GHSA-89mq-4x47
 3_GHSA-3fw8-66wf-pr7m, 434_GHSA-cxwc-8pqp-2whw, 467_GHSA-68cm-mgv7-vg5c, 578_GHSA-3mpr-hq3p-49h9,
 63_GHSA-rc8h-3fv6-pxv8, 65_GHSA-j3g2-m5jj-6336, 727_GHSA-9hqj-38j2-5jgm.
 
-The `correct_cwe` of 2 more reviews follows the GitHub advisory, and their locations are unchanged:
+The `correct_cwe` of 3 more reviews is corrected, and their locations are unchanged. Two follow the GitHub advisory:
 - 1335_GHSA-qccf-q7p4-3q3j (safe-object2): CWE-22 → CWE-1321. The advisory is "Prototype Pollution in
   safe-object2" (CWE-1321), and the location, `init[acc] = curValue` in `setter` (index.js:53), is the
   prototype-pollution write.
 - 573_GHSA-62g9-6hw5-rwfp (resolve-path): CWE-25 → CWE-22, the CWE of the advisory. The fix (pillarjs/resolve-path
   fe5b805) changes the annotated line index.js:89, `return resolve(root, path)`.
+
+One follows the code:
+- GHSA-9m6j-fcg5-2442 (url-parse): CWE-23 → CWE-20 (Improper Input Validation), the CWE of Snyk
+  SNYK-JS-URLPARSE-1078283. The GitHub advisory "Path traversal in url-parse" gives CWE-23, and NVD gives
+  NVD-CWE-noinfo. The "path" is the path of a URL: url-parse 1.4.7 reads `https:\/evil.com/login` as a relative
+  path (`host` is `""`), so an application that checks links with url-parse accepts a link to another site. The
+  annotated line index.js:118, `protocolre.exec(address)`, is the regular expression that the fix (unshiftio/url-parse
+  d1e7e88) changes, and the package does no file access.
 
 ## 4. Removed tool scores
 
