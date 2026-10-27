@@ -17,9 +17,9 @@
                     "code": "name    = ponse.getPathName(req);"
                 },
                 "sink": {
-                    "file": "lib/fs/put.js",
-                    "lineno": 19,
-                    "code": "files.pipe(readStream, name, callback);"
+                    "file": "node_modules/files-io/lib/files.js",
+                    "lineno": 121,
+                    "code": "write       = fs.createWriteStream(write);"
                 }
             },
             {
@@ -29,21 +29,9 @@
                     "code": "name    = ponse.getPathName(req);"
                 },
                 "sink": {
-                    "file": "lib/fs/put.js",
-                    "lineno": 23,
-                    "code": "flop.create(name, callback);"
-                }
-            },
-            {
-                "source": {
-                    "file": "lib/restafary.js",
-                    "lineno": 39,
-                    "code": "name    = ponse.getPathName(req);"
-                },
-                "sink": {
-                    "file": "lib/fs/put.js",
+                    "file": "node_modules/mkdirp/index.js",
                     "lineno": 27,
-                    "code": "files.pipe(readStream, name, {gunzip: true}, callback);"
+                    "code": "xfs.mkdir(p, mode, function (er) {"
                 }
             },
             {
@@ -53,9 +41,9 @@
                     "code": "name    = ponse.getPathName(req);"
                 },
                 "sink": {
-                    "file": "lib/fs/patch.js",
-                    "lineno": 21,
-                    "code": "patch(name, data, options, callback);"
+                    "file": "node_modules/patchfile/lib/patchfile.js",
+                    "lineno": 49,
+                    "code": "fs.writeFile(name, diffResult, callback);"
                 }
             },
             {
@@ -65,9 +53,9 @@
                     "code": "name    = ponse.getPathName(req);"
                 },
                 "sink": {
-                    "file": "lib/fs/get.js",
-                    "lineno": 21,
-                    "code": "flop.read(name, callback);"
+                    "file": "node_modules/readify/node_modules/es6-promisify/dist/promisify.js",
+                    "lineno": 75,
+                    "code": "var response = original.apply(target, args);"
                 }
             },
             {
@@ -77,9 +65,9 @@
                     "code": "name    = ponse.getPathName(req);"
                 },
                 "sink": {
-                    "file": "lib/fs/get.js",
-                    "lineno": 25,
-                    "code": "flop.read(name, 'size', callback);"
+                    "file": "node_modules/trammel/lib/size.js",
+                    "lineno": 76,
+                    "code": "stat(dir, getStat.bind(null, dir));"
                 }
             },
             {
@@ -89,9 +77,9 @@
                     "code": "name    = ponse.getPathName(req);"
                 },
                 "sink": {
-                    "file": "lib/fs/get.js",
-                    "lineno": 29,
-                    "code": "flop.read(name, 'time raw', callback);"
+                    "file": "node_modules/timem/lib/timem.js",
+                    "lineno": 19,
+                    "code": "fs.stat(filename, function(error, stat) {"
                 }
             },
             {
@@ -101,9 +89,9 @@
                     "code": "name    = ponse.getPathName(req);"
                 },
                 "sink": {
-                    "file": "lib/fs/get.js",
-                    "lineno": 33,
-                    "code": "beautify(name, callback);"
+                    "file": "node_modules/beautifile/lib/beautifile.js",
+                    "lineno": 39,
+                    "code": "fs.readFile(name, 'utf8', function(error, data) {"
                 }
             },
             {
@@ -113,9 +101,9 @@
                     "code": "name    = ponse.getPathName(req);"
                 },
                 "sink": {
-                    "file": "lib/fs/get.js",
-                    "lineno": 37,
-                    "code": "minify(name, callback);"
+                    "file": "node_modules/minify/lib/minify.js",
+                    "lineno": 79,
+                    "code": "fs.readFile(name, 'utf8', function(error, data) {"
                 }
             },
             {
@@ -137,9 +125,9 @@
                     "code": "name    = ponse.getPathName(req);"
                 },
                 "sink": {
-                    "file": "lib/restafary.js",
-                    "lineno": 193,
-                    "code": "ponse.sendFile(params);"
+                    "file": "node_modules/files-io/lib/files.js",
+                    "lineno": 118,
+                    "code": "read        = fs.createReadStream(read, optionsRead);"
                 }
             },
             {
@@ -149,21 +137,9 @@
                     "code": "name    = ponse.getPathName(req);"
                 },
                 "sink": {
-                    "file": "lib/fs/delete.js",
-                    "lineno": 21,
-                    "code": "flop.delete(name, callback);"
-                }
-            },
-            {
-                "source": {
-                    "file": "lib/restafary.js",
-                    "lineno": 39,
-                    "code": "name    = ponse.getPathName(req);"
-                },
-                "sink": {
-                    "file": "lib/fs/delete.js",
-                    "lineno": 25,
-                    "code": "flop.delete(name, files, callback);"
+                    "file": "node_modules/remy/lib/remy.js",
+                    "lineno": 150,
+                    "code": "fs.unlink(name, function(error) {"
                 }
             }
         ]
