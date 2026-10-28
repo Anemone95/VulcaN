@@ -16,19 +16,7 @@
                 },
                 "sink": {
                     "file": "simplehttpserver.js",
-                    "lineno": 89,
-                    "code": "send(res, indexpath)"
-                }
-            },
-            {
-                "source": {
-                    "file": "simplehttpserver.js",
-                    "lineno": 57,
-                    "code": "mainapp.get('*', function(req, res) {"
-                },
-                "sink": {
-                    "file": "simplehttpserver.js",
-                    "lineno": 95,
+                    "lineno": 76,
                     "code": "fs.readdir(pathname, function(err, list) {"
                 }
             }

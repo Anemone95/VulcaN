@@ -4,9 +4,10 @@ This repository holds the VulcaN dataset of reviewed npm advisories, prepared fo
 (jelly-benchmarks, `misc/taint/vulcan/`). The original dataset is the state of commit `e72589b4a` (2023-04-04, the
 last commit of the VulcaN authors): 957 advisory reviews. This repository differs from it in four ways: the
 packages are extracted with their dependencies installed (69 package directories hold their repository source
-instead of the compiled code), 14 advisories are removed, the vulnerability locations of 259 reviews, the
-`correct_cwe` of 3 more reviews and the `correct_cwe` text of 15 reviews are corrected, and the reviews no longer
-hold the scores of the vulnerability detection tools. It holds 943 advisory reviews.
+instead of the compiled code, and one holds the version of its review), 14 advisories are removed, the
+vulnerability locations of 260 reviews, the `correct_cwe` of 3 more reviews and the `correct_cwe` text of 15
+reviews are corrected, and the reviews no longer hold the scores of the vulnerability detection tools. It holds 943
+advisory reviews.
 
 ## 1. Extracted packages
 
@@ -27,6 +28,12 @@ hold the scores of the vulnerability detection tools. It holds 943 advisory revi
   their code in `dist/`, and their repositories are no longer on GitHub. `dist/` is renamed to `_dist/`; the `main`
   of the tiny-http package.json, the `require` path of each `index.js` (`./_dist/...`) and the locations of their
   reviews follow.
+- simplehttpserver (968): the dataset tarball is simplehttpserver 0.2.0, the version with the fix of the advisory
+  (tikonen/blog d85f8cf, "Dont return paths outside webroot"): its `simplehttpserver.js` rejects a path with `..`
+  and a path outside the web root, and is the same file as in 0.2.1, the patched version of GHSA-gpvj-q7fp-jcch. The
+  package directory is replaced by `simplehttpserver-0.1.1/`, the npm tarball of the review's `correct_package_link`
+  (shasum `55aa6a866e88c4e37a8b5fec69ac538eb49ca721`). Its dependencies are the same as those of 0.2.0, and it keeps
+  the `pnpm-lock.yaml` of 0.2.0 (express 4.13.4, send 0.13.2).
 - The 69 package directories of the table below ship their code, or the annotated file, in compiled directories
   (`dist/`, `build/`) or bundles; klona-1.1.0, takeapeek-0.2.2, materialize-css-1.0.0, verdaccio-3.11.7 and
   swagger-ui-2.2.0 are in two of them each. 23 of them ship nothing else, and the other 46 also ship their source
@@ -142,7 +149,7 @@ their line in `dataset/advisories-with-reviews.txt` and their entry in `install-
 
 ## 3. Corrected reviews
 
-The `vulnerability.vulnerability_location` of these 204 reviews is corrected to match the extracted packages:
+The `vulnerability.vulnerability_location` of these 205 reviews is corrected to match the extracted packages:
 the files the package ships instead of its source files, line numbers of the shipped version, and sinks on the
 line of the dangerous operation. The `correct_cwe` of seven of them is corrected as well (decal
 GHSA-j32x-j8pj-pg2h, preact 835_GHSA-cg48-9hh2-x6mx, express-hbs GHSA-rwxp-hwwf-653v, lodash.merge
@@ -308,6 +315,7 @@ express-brute 823_GHSA-984p-xq9m-4rjw). The other fields of the reviews are unch
 - 962_GHSA-9r3m-mhfm-39cm: Block lines correct; code set to the shipped JS first line (annotation had the TypeScript text).
 - 966_GHSA-pmv6-gf98-p3r5: Sinks moved from the template-literal argument lines to the execa shell calls 'return sh(' (11, 16). Then moved to the call that runs the command: execa.shell reaches childProcess.spawn(parsed.cmd, parsed.args, parsed.opts) (node_modules/execa/index.js:204) in both branches (Node.js stack trace for POSIX and win32). The two locations then coincide (source index.js:5), so they are merged into one.
 - 967_GHSA-45j8-pm75-5v8x: File path fixed: src/helper/route -> src/helper/route.js.
+- 968: The package is now simplehttpserver 0.1.1 (section 1), and the locations follow its lines; the review gave the lines of 0.2.0. Location 1 (sink `send(res, indexpath)`, line 89 of 0.2.0, line 70 of 0.1.1) is removed: a traversal request to a directory with an index.html reaches only fs.stat (simplehttpserver.js:61, 67, node_modules/send/index.js:614), and then send stops with a TypeError at node_modules/send/index.js:520 (`send(res, …)` gives the response in the place of the request), with each send version of 0.13.x, so no file is read. Location 2: sink line 95 -> 76, `fs.readdir(pathname, function(err, list) {`, the call that lists the outside directory (Node.js run of 0.1.1: GET /../pwned/ gives 200 with the list of the outside directory, fs.readdir at simplehttpserver.js:76). The source stays line 57.
 - 97_GHSA-r87w-47m8-22w3: Block moved from (0, eval)('this') (lines 16-17, a constant the patch also removed) to the template compilation new Function("data,view,j,u", code) (1789): CVE-2016-3942 is template injection, where an expression in a template tag is compiled into the generated function.
 - 980_GHSA-7qcx-jmrc-h2rr: Removed '/package/' prefix from paths; code set to actual line text.
 - 988_GHSA-w992-2gmj-9xxj: Sink moved from the property copy swagger.info.description = ... to the HTML write $(this.el).html(Handlebars.templates.main(this.model)) (22351), whose main template inserts info.description unescaped.
